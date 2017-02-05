@@ -448,7 +448,7 @@
       <workItem from="1485862041246" duration="2000" />
       <workItem from="1485862268362" duration="151000" />
       <workItem from="1486138019042" duration="1564000" />
-      <workItem from="1486296549322" duration="1615000" />
+      <workItem from="1486296549322" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="Mappenstructuur en voorlopige basisklassen voor model package toegevoegd voor project">
       <created>1486296904359</created>
@@ -457,11 +457,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486296904359</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mappenstructuur en voorlopige basisklassen voor model package toegevoegd voor project">
+      <created>1486298641304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1486298641304</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4634000" />
+    <option name="totallyTimeSpent" value="4641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="957" y="0" width="970" height="1047" extended-state="0" />
