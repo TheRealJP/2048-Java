@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Grid.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/HighScores.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Tile.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2048(1).pdf" afterPath="$PROJECT_DIR$/2048(1).pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Grid.java" afterPath="$PROJECT_DIR$/src/model/Grid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Player.java" afterPath="$PROJECT_DIR$/src/model/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Tile.java" afterPath="$PROJECT_DIR$/src/model/Tile.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,29 +77,63 @@
       <file leaf-file-name="Grid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="254">
+              <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+              <folding>
+                <element signature="docComment;class#Grid#0" expanded="false" />
+                <element signature="docComment;method#Grid#0;class#Grid#0" expanded="false" />
+                <element signature="method#Grid#0;class#Grid#0" expanded="false" />
+                <element signature="docComment;method#generateNewTile#0;class#Grid#0" expanded="false" />
+                <element signature="method#generateNewTile#0;class#Grid#0" expanded="false" />
+                <element signature="method#getNewTileValue#0;class#Grid#0" expanded="false" />
+                <element signature="method#move#0;class#Grid#0" expanded="false" />
+                <element signature="method#isEmptyTile#0;class#Grid#0" expanded="false" />
+                <element signature="method#slide#0;class#Grid#0" expanded="false" />
+                <element signature="method#slideToEdge#0;class#Grid#0" expanded="false" />
+                <element signature="method#remainingIsZero#0;class#Grid#0" expanded="false" />
+                <element signature="method#slideTo#0;class#Grid#0" expanded="false" />
+                <element signature="method#mergeTile#0;class#Grid#0" expanded="false" />
+                <element signature="docComment;method#noPossibleMove#0;class#Grid#0" expanded="false" />
+                <element signature="method#noPossibleMove#0;class#Grid#0" expanded="false" />
+                <element signature="method#hasEmptyTile#0;class#Grid#0" expanded="false" />
+                <element signature="method#hasEqualNeighbour#0;class#Grid#0" expanded="false" />
+                <element signature="method#toString#0;class#Grid#0" expanded="false" />
+                <element signature="docComment;field#random#0;class#Grid#0" expanded="false" />
+                <element signature="method#printArray#0;class#Grid#0" expanded="false" />
+                <element signature="method#addNewNumbers#0;class#Grid#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="119">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding>
+                <element signature="e#165#166#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="526">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding>
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,6 +195,9 @@
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/model/Tile.java" />
+        <option value="$PROJECT_DIR$/src/model/Grid.java" />
+        <option value="$PROJECT_DIR$/src/model/Player.java" />
       </list>
     </option>
   </component>
@@ -405,12 +433,20 @@
       <workItem from="1485862041246" duration="2000" />
       <workItem from="1485862268362" duration="151000" />
       <workItem from="1486138019042" duration="1564000" />
-      <workItem from="1486296549322" duration="268000" />
+      <workItem from="1486296549322" duration="648000" />
     </task>
+    <task id="LOCAL-00001" summary="Mappenstructuur en voorlopige basisklassen voor model package toegevoegd voor project">
+      <created>1486296904359</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1486296904359</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3287000" />
+    <option name="totallyTimeSpent" value="3667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -459,7 +495,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="Mappenstructuur en voorlopige basisklassen voor model package toegevoegd voor project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mappenstructuur en voorlopige basisklassen voor model package toegevoegd voor project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -594,30 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/HighScores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -632,9 +646,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="526">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/HighScores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#Grid#0" expanded="false" />
+            <element signature="docComment;method#Grid#0;class#Grid#0" expanded="false" />
+            <element signature="method#Grid#0;class#Grid#0" expanded="false" />
+            <element signature="docComment;method#generateNewTile#0;class#Grid#0" expanded="false" />
+            <element signature="method#generateNewTile#0;class#Grid#0" expanded="false" />
+            <element signature="method#getNewTileValue#0;class#Grid#0" expanded="false" />
+            <element signature="method#move#0;class#Grid#0" expanded="false" />
+            <element signature="method#isEmptyTile#0;class#Grid#0" expanded="false" />
+            <element signature="method#slide#0;class#Grid#0" expanded="false" />
+            <element signature="method#slideToEdge#0;class#Grid#0" expanded="false" />
+            <element signature="method#remainingIsZero#0;class#Grid#0" expanded="false" />
+            <element signature="method#slideTo#0;class#Grid#0" expanded="false" />
+            <element signature="method#mergeTile#0;class#Grid#0" expanded="false" />
+            <element signature="docComment;method#noPossibleMove#0;class#Grid#0" expanded="false" />
+            <element signature="method#noPossibleMove#0;class#Grid#0" expanded="false" />
+            <element signature="method#hasEmptyTile#0;class#Grid#0" expanded="false" />
+            <element signature="method#hasEqualNeighbour#0;class#Grid#0" expanded="false" />
+            <element signature="method#toString#0;class#Grid#0" expanded="false" />
+            <element signature="docComment;field#random#0;class#Grid#0" expanded="false" />
+            <element signature="method#printArray#0;class#Grid#0" expanded="false" />
+            <element signature="method#addNewNumbers#0;class#Grid#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
