@@ -6,106 +6,98 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by Jonathan on 05/02/2017.
- */
 public class Grid {
-    //size of the grid
-    private static final int SIZE = 4;
+    // dimensies van het grid
+    private static final int GROOTTE = 4;
 
-    private Tile[][] tiles = new Tile[SIZE][SIZE];
+    private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
 
-    /**
-     * Instantiate n x n grid with all zero values (grid with empty tile).
-     */
+
+    // initialieer n x n grid met 0 waardes (leeg grid)
     public Grid() {
 
-        for (int i = 0; i < tiles[0].length; i++) {
-            for (int j = 0; j < tiles.length; j++) {
-                tiles[i][j] = new Tile();
+        for (int i = 0; i < tegels[0].length; i++) {
+            for (int j = 0; j < tegels.length; j++) {
+                tegels[i][j] = new Tegel();
             }
 
         }
     }
 
-    /**
-     * Generate a tile with a random value of 2 or 4 in a random position.
-     *
-     * @return true if successfully placed a new tile, false if there is no empty tile left.
-     */
-    public boolean generateNewTile() {
+    // genereer een tegel met een random waarde van 2 of 4 in een random positie
+    // return true als een nieuwe tegel geplaatst is, false als er geen lege tegel meer is
+    public boolean genereerNieuweTegel() {
 
-        if (!(hasEmptyTile())) {
+        if (!(heeftLegeTegel())) {
             return false;
         }
 
         Random random = new Random();
 
-        //iterate until an empty tile if found
+        // herhalen tot een lege tegel gevonden is
         while (true) {
 
-            int x = random.nextInt(SIZE);
-            int y = random.nextInt(SIZE);
+            int x = random.nextInt(GROOTTE);
+            int y = random.nextInt(GROOTTE);
 
-            if (tiles[x][y].getValue() == 0) {
+            if (tegels[x][y].getWaarde() == 0) {
 
-                tiles[x][y].setValue(getNewTileValue());
+                tegels[x][y].setWaarde(getNieuweTegelWaarde());
                 return true;
 
             }
-
         }
-
     }
 
-    //get tile value of either 2 or 4
-    private int getNewTileValue() {
+    // nieuwe tegelwaarde van 2 of 4 "getten"
+    private int getNieuweTegelWaarde() {
 
         Random random = new Random();
 
         int rng = random.nextInt(2) + 1;
 
         return (rng * 2);
-
     }
 
+    //TODO: Vertalen naar het nederlands, zonder de uitleg onduidelijk te maken, of een volledig andere uitleg verzinnen, will do this soon. (JVR)
+
     /**
-     * 2048 movement algorithm. The main idea of the algorithm is to create a group / set of tile according to the direction chosen.
-     * For example, if the user want to move the tile to the right, then the group will be the rows of tile. As a result,
+     * 2048 movement algorithm. The main idea of the algorithm is to create a group / set of tile according to the richting chosen.
+     * For example, if the user want to verplaats the tile to the right, then the group will be the rows of tile. As a result,
      * each row will have the same movement algorithm. These rows will be sent to a general method.
-     *
-     * @param direction Determine which direction the player want to slide the tile.
+     * <p>
+     * param richting Determine which richting the player want to schuif the tile.
      */
-    public void move(Direction direction) {
+    public void verplaats(Direction richting) {
 
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = 0; i < GROOTTE; i++) {
 
-            //group of tile&
-            List<Tile> tileSet = new ArrayList<Tile>();
+            //groep v/d tegel
+            List<Tegel> tegelSet = new ArrayList<Tegel>();
 
-            for (int j = 0; j < SIZE; j++) {
+            for (int j = 0; j < GROOTTE; j++) {
 
-                switch (direction) {
+                switch (richting) {
 
                     case LEFT:
-                        tileSet.add(tiles[i][j]);
+                        tegelSet.add(tegels[i][j]);
                         break;
                     case RIGHT:
-                        tileSet.add(tiles[i][SIZE - j - 1]);
+                        tegelSet.add(tegels[i][GROOTTE - j - 1]);
                         break;
                     case UP:
-                        tileSet.add(tiles[j][i]);
+                        tegelSet.add(tegels[j][i]);
                         break;
                     case DOWN:
-                        tileSet.add(tiles[SIZE - j - 1][i]);
+                        tegelSet.add(tegels[GROOTTE - j - 1][i]);
                         break;
                     default:
                         break;
 
                 }
             }
-            if (!(isEmptyTile(tileSet))) {
-                slide(tileSet); //main tile group algorithm
+            if (!(isLegeTegel(tegelSet))) {
+                schuif(tegelSet); // hoofdtegel groep algoritme
             }
 
 
@@ -113,9 +105,9 @@ public class Grid {
 
     }
 
-    private boolean isEmptyTile(List<Tile> tileSet) {
-        for (Tile tile : tileSet) {
-            if (tile.getValue() != 0) {
+    private boolean isLegeTegel(List<Tegel> tegelSet) {
+        for (Tegel tegel : tegelSet) {
+            if (tegel.getWaarde() != 0) {
                 return false;
             }
         }
@@ -124,54 +116,54 @@ public class Grid {
 
     }
 
-    //main tile group algorithm
-    private void slide(List<Tile> tileSet) {
-        slideToEdge(tileSet);
-        mergeTile(tileSet);
+    //hoofdtegel groep algoritme
+    private void schuif(List<Tegel> tegelSet) {
+        schuifNaarKant(tegelSet);
+        tegelsSamenvoegen(tegelSet);
 
     }
 
-    //slide all tile into the edge, in case there is a zero in between
-    private void slideToEdge(List<Tile> tileSet) {
-        for (int i = 0; i < tileSet.size(); i++) {
-            if (remainingIsZero(tileSet, i)) {
+    //schuif alle tegels naar een kant in het geval dat er een nul tussen zit
+    private void schuifNaarKant(List<Tegel> tegelSet) {
+        for (int i = 0; i < tegelSet.size(); i++) {
+            if (overblijvendeTegelIsNul(tegelSet, i)) {
                 return;
             }
 
-            while (tileSet.get(i).getValue() == 0) {
-                slideTo(tileSet, i);
+            while (tegelSet.get(i).getWaarde() == 0) {
+                schuifNaar(tegelSet, i);
             }
         }
     }
 
-    private boolean remainingIsZero(List<Tile> tileSet, int i) {
+    private boolean overblijvendeTegelIsNul(List<Tegel> tegelSet, int i) {
 
-        List<Tile> remainingTile = new ArrayList<Tile>();
+        List<Tegel> overblijvendeTegel = new ArrayList<Tegel>();
 
-        for (int j = i; j < tileSet.size(); j++) {
-            remainingTile.add(tileSet.get(j));
+        for (int j = i; j < tegelSet.size(); j++) {
+            overblijvendeTegel.add(tegelSet.get(j));
         }
 
-        return (isEmptyTile(remainingTile));
+        return (isLegeTegel(overblijvendeTegel));
 
     }
 
-    private void slideTo(List<Tile> tileSet, int index) {
-        for (int j = index; j < tileSet.size() - 1; j++) {
-            tileSet.get(j).setValue(tileSet.get(j + 1).getValue());
+    private void schuifNaar(List<Tegel> tegelSet, int index) {
+        for (int j = index; j < tegelSet.size() - 1; j++) {
+            tegelSet.get(j).setWaarde(tegelSet.get(j + 1).getWaarde());
         }
-        tileSet.get(tileSet.size() - 1).clear();
+        tegelSet.get(tegelSet.size() - 1).clear();
     }
 
-    //Merge tile, if tile in the direction has the same value.
-    private void mergeTile(List<Tile> tileSet) {
+    // tegel samenvoegen als de tegels in de richting waarin we schuiven dezelfde waarde hebben.
+    private void tegelsSamenvoegen(List<Tegel> tegelSet) {
 
-        for (int i = 0; i < tileSet.size() - 1; i++) {
+        for (int i = 0; i < tegelSet.size() - 1; i++) {
 
-            if (tileSet.get(i).equals(tileSet.get(i + 1))) {
-                tileSet.get(i).merge(tileSet.get(i + 1));
-                tileSet.get(i + 1).clear();
-                slideTo(tileSet, i + 1);
+            if (tegelSet.get(i).equals(tegelSet.get(i + 1))) {
+                tegelSet.get(i).merge(tegelSet.get(i + 1));
+                tegelSet.get(i + 1).clear();
+                schuifNaar(tegelSet, i + 1);
 
             }
 
@@ -179,60 +171,54 @@ public class Grid {
 
     }
 
-    /**
-     * Check for losing condition. Losing implies no possible move can be made to change the tile.
-     *
-     * @return true, if no possible move left
-     */
-    public boolean noPossibleMove() {
+    // Controleren of er nog mogelijkheden zijn, als er geen mogelijkheden meer zijn om te "verplaatsen" is de speler verloren
+    public boolean geenMogelijkheden() {
 
-        if (hasEmptyTile()) {
+        if (heeftLegeTegel()) {
             return false;
         }
 
-        return !(hasEqualNeighbour());
+        return !(heeftGelijkeBuur());
 
     }
 
-    private boolean hasEmptyTile() {
+    private boolean heeftLegeTegel() {
 
-        for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
+        for (int i = 0; i < GROOTTE; i++) {
+            for (int j = 0; j < GROOTTE; j++) {
 
-                if (tiles[i][j].getValue() == 0) {
+                if (tegels[i][j].getWaarde() == 0) {
                     return true;
                 }
             }
         }
 
         return false;
-
     }
 
-    private boolean hasEqualNeighbour() {
+    private boolean heeftGelijkeBuur() {
 
-        for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
+        for (int i = 0; i < GROOTTE; i++) {
+            for (int j = 0; j < GROOTTE; j++) {
 
-                //check the tile in the right of the chosen tile. Ignore last column.
-                if (j < SIZE - 1) {
+                //controleer de tegel aan de rechterkant van de gekozen tegen, negeer de laatste kolom.
+                if (j < GROOTTE - 1) {
 
-                    if (tiles[i][j].equals(tiles[i][j + 1])) {
+                    if (tegels[i][j].equals(tegels[i][j + 1])) {
                         return true;
                     }
 
                 }
 
-                //check the tile below the chosen tile. Ignore last row.
-                if (i < SIZE - 1) {
+                //controleer de tegel onder de gekozen tegel, negeer de laatste rij.
+                if (i < GROOTTE - 1) {
 
-                    if (tiles[i][j].equals(tiles[i + 1][j])) {
+                    if (tegels[i][j].equals(tegels[i + 1][j])) {
                         return true;
                     }
                 }
             }
         }
-
         return false;
     }
 
@@ -240,49 +226,46 @@ public class Grid {
 
         StringBuilder sb = new StringBuilder();
 
-        for (Tile[] tileRow : tiles) {
-            for (Tile tile : tileRow) {
-                sb.append(tile);
+        for (Tegel[] tegelRow : tegels) {
+            for (Tegel tegel : tegelRow) {
+                sb.append(tegel);
                 sb.append(" ");
             }
             sb.append("\n");
         }
 
         return sb.toString();
-
     }
 
 
-    /**
-     * EVERYTHING DOWN HERE = terminal game test methods
-     */
+    // terminal test methodes
     Random random = new Random();
 
     public void printArray() {
-        for (Tile[] tile : tiles) {
+        for (Tegel[] tegel : tegels) {
             System.out.printf("%6d%6d%6d%6d%n",
-                    tile[0].getValue(), tile[1].getValue(), tile[2].getValue(), tile[3].getValue());
+                    tegel[0].getWaarde(), tegel[1].getWaarde(), tegel[2].getWaarde(), tegel[3].getWaarde());
         }
         System.out.printf("%n");
     }
 
-    public void addNewNumbers() {
-        ArrayList<Integer> emptySpacesX = new ArrayList<>();
-        ArrayList<Integer> emptySpacesY = new ArrayList<>();
+    public void nieuweGetallenToevoegen() {
+        ArrayList<Integer> legePlaatsenX = new ArrayList<>();
+        ArrayList<Integer> legePlaatsenY = new ArrayList<>();
         for (Integer x = 0; x < 4; x++) {
             for (Integer y = 0; y < 4; y++) {
-                if (tiles[x][y].getValue() == 0) {
-                    emptySpacesX.add(new Integer(x));
-                    emptySpacesY.add(new Integer(y));
+                if (tegels[x][y].getWaarde() == 0) {
+                    legePlaatsenX.add(new Integer(x));
+                    legePlaatsenY.add(new Integer(y));
                 }
             }
         }
         //willekeurige startpositie van 0-15
-        int choice = random.nextInt(emptySpacesX.size()); //16
-        int newNumber = random.nextInt(10) == 1 ? 4 : 2;
-//        Integer[] coordinates = emptySpaces.get(choice);
-        int X = emptySpacesX.get(choice);
-        int Y = emptySpacesY.get(choice);
-        tiles[X][Y].setValue(newNumber);
+        int keuze = random.nextInt(legePlaatsenX.size()); //16
+        int nieuwGetal = random.nextInt(10) == 1 ? 4 : 2;
+//      Integer[] coordinates = emptySpaces.get(keuze);
+        int X = legePlaatsenX.get(keuze);
+        int Y = legePlaatsenY.get(keuze);
+        tegels[X][Y].setWaarde(nieuwGetal);
     }
 }

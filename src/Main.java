@@ -1,16 +1,11 @@
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.Game;
 
-/**
- * Created by Jonathan on 05/02/2017.
- */
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-/*        Game model = new Game();
+/*        Spel model = new Spel();
         View view = new View();
         new Presenter(model, view);
 
@@ -18,7 +13,7 @@ public class Main extends Application {
 //        scene.getStylesheets().add("css/stylesheet.css");
         primaryStage.setScene(scene);
         primaryStage.setTitle("2048");
-//        primaryStage.getIcons().add(new Image("file:src" + File.separator + "images" + File.separator + "favicon.png"));
+//        primaryStage.getIcons().add(new Image("file:src" + File.separator + "afbeeldingen" + File.separator + "favicon.png"));
 //        primaryStage.setResizable(true);
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(800);
