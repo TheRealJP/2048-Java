@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Grid {
-    // dimensies van het grid
+public class Bord {
+    // dimensies van het bord
     private static final int GROOTTE = 4;
 
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
 
 
-    // initialieer n x n grid met 0 waardes (leeg grid)
-    public Grid() {
+    // initialieer n x n bord met 0 waardes (leeg bord)
+    public Bord() {
 
         for (int i = 0; i < tegels[0].length; i++) {
             for (int j = 0; j < tegels.length; j++) {
