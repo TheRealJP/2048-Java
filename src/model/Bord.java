@@ -6,21 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Grid {
-    // dimensies van het grid
+public class Bord {
+    // dimensies van het bord
     private static final int GROOTTE = 4;
-    private Tegel[][] tegels;
-    private TopScores topScores;
+
+    private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
 
 
-    // initialieer n x n grid met 0 waardes (leeg grid)
-    public Grid() {
-        /**
-         * 2 tegels met een waarde van 2 of 4 in de tegel array laden
-         */
+    // initialieer n x n bord met 0 waardes (leeg bord)
+    public Bord() {
 
-        topScores = new TopScores();
-        tegels = new Tegel[GROOTTE][GROOTTE];
         for (int i = 0; i < tegels[0].length; i++) {
             for (int j = 0; j < tegels.length; j++) {
                 tegels[i][j] = new Tegel();
@@ -29,9 +24,7 @@ public class Grid {
         }
     }
 
-    /**
-     * genereer een tegel in een random positie op het bord
-     */
+    // genereer een tegel met een random waarde van 2 of 4 in een random positie
     // return true als een nieuwe tegel geplaatst is, false als er geen lege tegel meer is
     public boolean genereerNieuweTegel() {
 
@@ -56,12 +49,14 @@ public class Grid {
         }
     }
 
-    /**
-     * Geeft een 2 of een 4. De kans dat er een 4 wordt teruggegeven is 1/10.
-     */
+    // nieuwe tegelwaarde van 2 of 4 "getten"
     private int getNieuweTegelWaarde() {
+
         Random random = new Random();
-        return random.nextInt(10) == 1 ? 4 : 2;
+
+        int rng = random.nextInt(2) + 1;
+
+        return (rng * 2);
     }
 
     //TODO: Vertalen naar het nederlands, zonder de uitleg onduidelijk te maken, of een volledig andere uitleg verzinnen, will do this soon. (JVR)
@@ -98,13 +93,16 @@ public class Grid {
                         break;
                     default:
                         break;
+
                 }
             }
-
             if (!(isLegeTegel(tegelSet))) {
                 schuif(tegelSet); // hoofdtegel groep algoritme
             }
+
+
         }
+
     }
 
     private boolean isLegeTegel(List<Tegel> tegelSet) {
@@ -147,6 +145,7 @@ public class Grid {
         }
 
         return (isLegeTegel(overblijvendeTegel));
+
     }
 
     private void schuifNaar(List<Tegel> tegelSet, int index) {
@@ -173,7 +172,7 @@ public class Grid {
     }
 
     // Controleren of er nog mogelijkheden zijn, als er geen mogelijkheden meer zijn om te "verplaatsen" is de speler verloren
-    public boolean geenMogelijkheden() {  //isVol()
+    public boolean geenMogelijkheden() {
 
         if (heeftLegeTegel()) {
             return false;
@@ -223,15 +222,6 @@ public class Grid {
         return false;
     }
 
-
-    public TopScores getTopScores() {
-        return topScores;
-    }
-
-    /**
-     * --------------------------------------------------------------------
-     */
-
     public String toString() {
 
         StringBuilder sb = new StringBuilder();
@@ -246,6 +236,7 @@ public class Grid {
 
         return sb.toString();
     }
+
 
     // terminal test methodes
     Random random = new Random();
