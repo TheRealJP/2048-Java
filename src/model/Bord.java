@@ -49,12 +49,14 @@ public class Bord {
         }
     }
 
-    /**
-     * 1 op 10 kans om het getal 4 terug te geven
-     */
+    // nieuwe tegelwaarde van 2 of 4 "getten"
     private int getNieuweTegelWaarde() {
+
         Random random = new Random();
-        return random.nextInt(10) == 1 ? 4 : 2;
+
+        int rng = random.nextInt(2) + 1;
+
+        return (rng * 2);
     }
 
     //TODO: Vertalen naar het nederlands, zonder de uitleg onduidelijk te maken, of een volledig andere uitleg verzinnen, will do this soon. (JVR)
