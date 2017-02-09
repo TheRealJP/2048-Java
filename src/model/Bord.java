@@ -57,14 +57,11 @@ public class Bord {
         return random.nextInt(10) == 1 ? 4 : 2;
     }
 
-    //TODO: Vertalen naar het nederlands, zonder de uitleg onduidelijk te maken, of een volledig andere uitleg verzinnen, will do this soon. (JVR)
-
     /**
-     * 2048 movement algorithm. The main idea of the algorithm is to create a group / set of tile according to the richting chosen.
-     * For example, if the user want to verplaats the tile to the right, then the group will be the rows of tile. As a result,
-     * each row will have the same movement algorithm. These rows will be sent to a general method.
-     * <p>
-     * param richting Determine which richting the player want to schuif the tile.
+     * Dit is het hoofdalgoritme van het spel, we maken een groep/set aan adhv de richting waar de gebruiker naar schuift,
+     * bv, wanneer een gebruiker op de toets voor naar links te schuiven drukt, dan zal de groep bestaan uit alle rijen tegels (horizontaal).
+     * Hierdoor kunnen we alle tegels op de horizontale rijen in dezelfde richting doen bewegen.
+     * de parameter richting geeft aan in welke richting de gebruiker schuift.
      */
     public void verplaats(Direction richting) {
 
