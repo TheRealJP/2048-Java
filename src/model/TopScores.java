@@ -5,29 +5,37 @@ import java.util.Collections;
 
 public class TopScores {
 
-ArrayList<Speler> spelerLijst;
+    private ArrayList<Speler> spelerLijst;
 
     public TopScores() {
 
         spelerLijst = new ArrayList<Speler>();
+        getTopSpelers();
     }
 
-    private void sorteer(ArrayList<Speler> spelerLijst){
-
+    // arraylist sorteren op score
+    private void sorteer(ArrayList<Speler> spelerLijst) {
         Collections.sort(spelerLijst);
     }
 
-    public String getTopSpelers(ArrayList<Speler> spelerLijst){
+    // top spelers lezen uit bestand
+    public String getTopSpelers() {
 
-        String resultaat="";
+        String resultaat = "";
 
-        //TODO: text uit bestand ophalen en returnen als string
+        //TODO: HighScores lezen uit bestand
 
         return resultaat;
     }
 
-    public void voegSpelerToe(Speler speler){
-
+    // speler toevoegen
+    public void voegSpelerToe(Speler speler) {
         spelerLijst.add(speler);
+    }
+
+    // top spelers schrijven naar bestand
+    public void setTopSpelers(ArrayList<Speler> spelerLijst) {
+
+        //TODO: HighScores opslaan in bestand
     }
 }
