@@ -1,10 +1,13 @@
 package model;
 
 import com.sun.javafx.scene.traversal.Direction;
+import javafx.scene.control.Label;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static com.sun.javafx.scene.traversal.Direction.*;
 
 public class Bord {
     // dimensies van het bord
@@ -22,6 +25,16 @@ public class Bord {
             }
 
         }
+    }
+
+    public Label[][] tegelsNaarLabels() {
+        Label[][] dummyMatrix = new Label[GROOTTE][GROOTTE];
+        for (int x = 0; x < tegels.length; x++) {
+            for (int y = 0; y < tegels[x].length; y++) {
+                dummyMatrix[x][y] = new Label(tegels[x][y].getWaarde() + "");
+            }
+        }
+        return dummyMatrix;
     }
 
     // genereer een tegel met een random waarde van 2 of 4 in een random positie
@@ -167,7 +180,7 @@ public class Bord {
     }
 
     // Controleren of er nog mogelijkheden zijn, als er geen mogelijkheden meer zijn om te "verplaatsen" is de speler verloren
-    public boolean geenMogelijkheden() {
+    public boolean isVol() {
 
         if (heeftLegeTegel()) {
             return false;
