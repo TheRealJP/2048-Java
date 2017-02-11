@@ -6,13 +6,13 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
-public class SpelView extends BorderPane {
+public class BordView extends BorderPane {
     private Label[][] labels;
     private Label currentScore;
     private Label highScore;
     private GridPane grid;
 
-    public SpelView() {
+    public BordView() {
         initialiseNodes();
         layoutNodes();
     }

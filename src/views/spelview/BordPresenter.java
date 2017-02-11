@@ -5,14 +5,14 @@ import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import model.Bord;
 
-public class SpelPresenter {
+public class BordPresenter {
     private Bord model;
-    private SpelView view;
+    private BordView view;
 
     //TODO: aantalMoves variabele zou nog verplaats moeten worden naar een andere model (Spel), mag niet in presenter blijven, vergeet ook niet dat deze teller ook in elke move case staat
     int aantalMoves = 0;
 
-    public SpelPresenter(Bord model, SpelView view) {
+    public BordPresenter(Bord model, BordView view) {
         this.model = model;
         this.view = view;
         addEventHandlers();

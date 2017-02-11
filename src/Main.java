@@ -2,8 +2,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Bord;
-import views.spelview.SpelPresenter;
-import views.spelview.SpelView;
+import views.spelview.BordPresenter;
+import views.spelview.BordView;
 
 public class Main extends Application {
 
@@ -11,8 +11,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Bord model = new Bord();
-        SpelView view = new SpelView();
-        new SpelPresenter(model, view);
+        BordView view = new BordView();
+        new BordPresenter(model, view);
         Scene scene = new Scene(view);
         primaryStage.setScene(scene);
         primaryStage.setTitle("2048");
