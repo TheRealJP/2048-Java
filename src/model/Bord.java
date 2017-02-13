@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static com.sun.javafx.scene.traversal.Direction.*;
 
 public class Bord {
     // dimensies van het bord
@@ -248,6 +247,21 @@ public class Bord {
 
     // terminal test methodes
     Random random = new Random();
+
+
+    public int[][] getTegels(){
+
+        int[][] values = new int[4][4];
+
+        for (int i = 0; i < tegels.length; i++) {
+            for (int j = 0; j < tegels[i].length; j++) {
+                values[i][j]=tegels[i][j].getWaarde();
+            }
+        }
+
+        return values;
+    }
+
 
     public void printArray() {
         for (Tegel[] tegel : tegels) {
