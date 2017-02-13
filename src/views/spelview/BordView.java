@@ -8,15 +8,16 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 
 public class BordView extends BorderPane {
-    private Label[][] labels = new Label[4][4];
+    private Label[][] labels;
+    private static int GRIDSIZE = 4;
     private Label currentScore;
     private Label highScore;
     private GridPane grid;
-    private boolean firstTime = true;
 
     public BordView() {
         initialiseNodes();
         layoutNodes();
+        addLabelsToGrid();
     }
 
     private void initialiseNodes() {
@@ -24,17 +25,15 @@ public class BordView extends BorderPane {
         currentScore = new Label();
         highScore = new Label();
         grid = new GridPane();
+        labels = new Label[GRIDSIZE][GRIDSIZE];
     }
 
     private void layoutNodes() {
-
         grid.setAlignment(Pos.CENTER);
-        grid.setHgap(5);
-        grid.setVgap(5);
         grid.setPadding(new Insets(10));
         this.setCenter(grid);
         grid.setGridLinesVisible(true);
-
+        grid.setMinSize(200,200);
     }
 
     public GridPane getGrid() {
@@ -43,27 +42,11 @@ public class BordView extends BorderPane {
 
     public void setLabels(int[][] waardes) {
 
-        if (firstTime) {
+        for (int x = 0; x < labels.length; x++) {
+            for (int y = 0; y < labels[x].length; y++) {
 
-            for (int x = 0; x < labels.length; x++) {
-                for (int y = 0; y < labels[x].length; y++) {
-
-                    labels[x][y] = new Label("" + waardes[y][x]);
-                    grid.add(labels[x][y], x, y);
-                    GridPane.setMargin(labels[x][y], new Insets(50));
-                    labels[x][y].setFont(new Font(50)); // fontsize instellen (wss tijdelijk tot css)
-                    firstTime = false;
-                }
+                labels[x][y].textProperty().setValue("" + waardes[y][x]);
             }
-        } else {
-
-            for (int x = 0; x <labels.length; x++) {
-                for (int y = 0; y < labels[x].length; y++) {
-
-                    labels[x][y].textProperty().setValue(""+waardes[y][x]);
-                }
-            }
-
         }
     }
 
@@ -75,7 +58,19 @@ public class BordView extends BorderPane {
         return currentScore;
     }
 
+    // labels toevoegen aan grid (doen we bij initializer)
     public void addLabelsToGrid() {
+        for (int x = 0; x < labels.length; x++) {
+            for (int y = 0; y < labels[x].length; y++) {
 
+                labels[x][y] = new Label();
+                labels[x][y].setMinWidth(80);
+                labels[x][y].setMinHeight(80);
+                labels[x][y].setAlignment(Pos.CENTER);
+                grid.add(labels[x][y], x, y);
+                GridPane.setMargin(labels[x][y], new Insets(50));
+                labels[x][y].setFont(new Font(40)); // fontsize instellen (wss tijdelijk tot css)
+            }
+        }
     }
 }

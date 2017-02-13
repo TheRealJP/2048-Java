@@ -5,8 +5,6 @@ import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import model.Bord;
 
-import java.util.ArrayList;
-
 public class BordPresenter {
     private Bord model;
     private BordView view;
@@ -32,22 +30,18 @@ public class BordPresenter {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
                     // print statements zijn voor terminal tests
                     case UP:
-                        System.out.println("UP");
                         model.verplaats(Direction.UP);
                         ++aantalMoves;
                         break;
                     case DOWN:
-                        System.out.println("DOWN");
                         model.verplaats(Direction.DOWN);
                         ++aantalMoves;
                         break;
                     case RIGHT:
-                        System.out.println("RIGHT");
                         model.verplaats(Direction.RIGHT);
                         ++aantalMoves;
                         break;
                     case LEFT:
-                        System.out.println("LEFT");
                         model.verplaats(Direction.LEFT);
                         ++aantalMoves;
                         break;
@@ -56,15 +50,15 @@ public class BordPresenter {
                         break;
                 }
 
-                // testcode, moet waarschijnlijk nog herwerkt worden
+                // als het bord niet vol is, nieuwe tegel genereren
                 if (!model.isVol()) {
-                    System.out.println("NIEUWE TEGEL");
                     model.genereerNieuweTegel();
 
                     // console testcode
                     System.out.println("Aantal moves: "+aantalMoves);
                     System.out.println();
                     System.out.println(model.toString());
+                    // view refreshen
                     updateView();
                 }
             }

@@ -2,7 +2,6 @@ package model;
 
 import com.sun.javafx.scene.traversal.Direction;
 import javafx.scene.control.Label;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
