@@ -8,7 +8,6 @@ public class TopScores {
     private ArrayList<Speler> spelerLijst;
 
     public TopScores() {
-
         spelerLijst = new ArrayList<Speler>();
         getTopSpelers();
     }
@@ -26,6 +25,10 @@ public class TopScores {
         //TODO: HighScores lezen uit bestand
 
         return resultaat;
+    }
+
+    public int getTopScoreVanSpeler(Speler speler) {
+        return speler.getScore();
     }
 
     // speler toevoegen

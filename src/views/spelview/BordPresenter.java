@@ -20,13 +20,17 @@ public class BordPresenter {
     }
 
     private void addEventHandlers() {
+        //start spel met 2 tegels
+        for (int i = 0; i < 2; i++) {
+            model.genereerNieuweTegel();
+        }
+
 
         view.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
 
                 switch (event.getCode()) {
-
                     // KeyCode.UP, DOWN, RIGHT, LEFT
                     // print statements zijn voor terminal tests
                     case UP:
@@ -48,25 +52,38 @@ public class BordPresenter {
                     default:
                         event.consume();
                         break;
+
                 }
 
-                // als het bord niet vol is, nieuwe tegel genereren
-                if (!model.isVol()) {
+                //zorgt ervoor dat alleen arrowkeys nieuwe tegels genereren
+                if (!model.isVol() && event.getCode().isArrowKey()) {
+
+                    // als het bord niet vol is, nieuwe tegel genereren
                     model.genereerNieuweTegel();
 
-                    // console testcode
-                    System.out.println("Aantal moves: "+aantalMoves);
-                    System.out.println();
-                    System.out.println(model.toString());
                     // view refreshen
                     updateView();
+
+                    // console testcode
+                    System.out.println("Aantal moves: " + aantalMoves);
+                    System.out.println();
+                    System.out.println(model.toString());
+
                 }
+
+                if (model.isVol()) {
+                    // TODO: 14/02/2017 roep verlorenView op
+                }
+
+                // TODO: 14/02/2017 boolean die checkt naar de waarde 2048 in het grid,
+                // TODO: if TRUE? --> roep gewonnenView op
+
             }
         });
     }
 
     private void updateView() {
-
         view.setLabels(model.getTegels());
     }
+
 }

@@ -3,10 +3,11 @@ package model;
 public class Speler implements Comparable<Speler> {
 
     private String naam;
-    private int score;
+    private int score = 0;
 
     public Speler(String name) {
         this.naam = name;
+        this.score = 0;
     }
 
     public String getNaam() {
@@ -14,7 +15,7 @@ public class Speler implements Comparable<Speler> {
     }
 
     public void setScore(int score) {
-        this.score = score;
+        this.score += score;
     }
 
     public int getScore() {
@@ -30,6 +31,6 @@ public class Speler implements Comparable<Speler> {
     // toString om te kunnen schrijven/lezen van het "highscores.txt" bestand
     @Override
     public String toString() {
-        return String.format("%-40s %d",this.getNaam(),this.getScore());
+        return String.format("%-40s %d", this.getNaam(), this.getScore());
     }
 }

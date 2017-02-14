@@ -14,10 +14,12 @@ public class Main extends Application {
         BordView view = new BordView();
         new BordPresenter(model, view);
         Scene scene = new Scene(view);
+        scene.getStylesheets().add("css/stylesheet.css");
         primaryStage.setScene(scene);
         primaryStage.setTitle("2048");
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(800);
+        primaryStage.setResizable(false);
         primaryStage.show();
         view.getGrid().requestFocus(); // deze call doen we zodat de arrowkeys worden herkend
     }
