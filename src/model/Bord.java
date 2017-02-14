@@ -248,13 +248,13 @@ public class Bord {
     Random random = new Random();
 
 
-    public int[][] getTegels(){
+    public String[][] getTegels(){
 
-        int[][] values = new int[4][4];
+        String[][] values = new String[4][4];
 
         for (int i = 0; i < tegels.length; i++) {
             for (int j = 0; j < tegels[i].length; j++) {
-                values[i][j]=tegels[i][j].getWaarde();
+                values[i][j]=tegels[i][j].getWaarde()==0?" ":""+tegels[i][j].getWaarde();
             }
         }
 

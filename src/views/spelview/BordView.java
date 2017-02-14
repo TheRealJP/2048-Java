@@ -40,12 +40,12 @@ public class BordView extends BorderPane {
         return this.grid;
     }
 
-    public void setLabels(int[][] waardes) {
+    public void setLabels(String[][] waardes) {
 
         for (int x = 0; x < labels.length; x++) {
             for (int y = 0; y < labels[x].length; y++) {
 
-                labels[x][y].textProperty().setValue("" + waardes[y][x]);
+                labels[x][y].textProperty().setValue(waardes[y][x]);
             }
         }
     }
