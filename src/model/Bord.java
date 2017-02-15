@@ -7,23 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static com.sun.javafx.scene.traversal.Direction.*;
 
 public class Bord {
     // dimensies van het bord
     private static final int GROOTTE = 4;
-
+    private TopScores topScores;
+    private Speler speler;
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
 
 
-    // initialieer n x n bord met 0 waardes (leeg bord)
+    // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
-
         for (int i = 0; i < tegels[0].length; i++) {
             for (int j = 0; j < tegels.length; j++) {
                 tegels[i][j] = new Tegel();
             }
-
         }
     }
 
@@ -40,13 +38,11 @@ public class Bord {
     // genereer een tegel met een random waarde van 2 of 4 in een random positie
     // return true als een nieuwe tegel geplaatst is, false als er geen lege tegel meer is
     public boolean genereerNieuweTegel() {
-
         if (!(heeftLegeTegel())) {
             return false;
         }
 
         Random random = new Random();
-
         // herhalen tot een lege tegel gevonden is
         while (true) {
 
@@ -54,7 +50,6 @@ public class Bord {
             int y = random.nextInt(GROOTTE);
 
             if (tegels[x][y].getWaarde() == 0) {
-
                 tegels[x][y].setWaarde(getNieuweTegelWaarde());
                 return true;
 
@@ -62,9 +57,7 @@ public class Bord {
         }
     }
 
-    /**
-     * 1 op 10 kans om het getal 4 terug te geven
-     */
+    // 1 op 10 kans om het getal 4 terug te geven
     private int getNieuweTegelWaarde() {
         Random random = new Random();
         return random.nextInt(10) == 1 ? 4 : 2;
@@ -76,17 +69,15 @@ public class Bord {
      * Hierdoor kunnen we alle tegels op de horizontale rijen in dezelfde richting doen bewegen.
      * de parameter richting geeft aan in welke richting de gebruiker schuift.
      */
-    public void verplaats(Direction richting) {
 
+    public void verplaats(Direction richting) {
         for (int i = 0; i < GROOTTE; i++) {
 
             //groep v/d tegel
             List<Tegel> tegelSet = new ArrayList<Tegel>();
-
             for (int j = 0; j < GROOTTE; j++) {
 
                 switch (richting) {
-
                     case LEFT:
                         tegelSet.add(tegels[i][j]);
                         break;
@@ -101,16 +92,12 @@ public class Bord {
                         break;
                     default:
                         break;
-
                 }
             }
             if (!(isLegeTegel(tegelSet))) {
                 schuif(tegelSet); // hoofdtegel groep algoritme
             }
-
-
         }
-
     }
 
     private boolean isLegeTegel(List<Tegel> tegelSet) {
@@ -147,16 +134,15 @@ public class Bord {
     private boolean overblijvendeTegelIsNul(List<Tegel> tegelSet, int i) {
 
         List<Tegel> overblijvendeTegel = new ArrayList<Tegel>();
-
         for (int j = i; j < tegelSet.size(); j++) {
             overblijvendeTegel.add(tegelSet.get(j));
         }
 
         return (isLegeTegel(overblijvendeTegel));
-
     }
 
     private void schuifNaar(List<Tegel> tegelSet, int index) {
+
         for (int j = index; j < tegelSet.size() - 1; j++) {
             tegelSet.get(j).setWaarde(tegelSet.get(j + 1).getWaarde());
         }
@@ -167,16 +153,17 @@ public class Bord {
     private void tegelsSamenvoegen(List<Tegel> tegelSet) {
 
         for (int i = 0; i < tegelSet.size() - 1; i++) {
-
             if (tegelSet.get(i).equals(tegelSet.get(i + 1))) {
                 tegelSet.get(i).merge(tegelSet.get(i + 1));
+
+               /* //score van speler verhogen met de waarde van de samengevoegde tegels
+                speler.setScore(tegelSet.get(i).getWaarde() + tegelSet.get(i + 1).getWaarde());*/
+
+                //de waarde van de tegel op positie i+1 verwijderen
                 tegelSet.get(i + 1).clear();
                 schuifNaar(tegelSet, i + 1);
-
             }
-
         }
-
     }
 
     // Controleren of er nog mogelijkheden zijn, als er geen mogelijkheden meer zijn om te "verplaatsen" is de speler verloren
@@ -185,22 +172,18 @@ public class Bord {
         if (heeftLegeTegel()) {
             return false;
         }
-
         return !(heeftGelijkeBuur());
-
     }
 
     private boolean heeftLegeTegel() {
 
         for (int i = 0; i < GROOTTE; i++) {
             for (int j = 0; j < GROOTTE; j++) {
-
                 if (tegels[i][j].getWaarde() == 0) {
                     return true;
                 }
             }
         }
-
         return false;
     }
 
@@ -211,16 +194,13 @@ public class Bord {
 
                 //controleer de tegel aan de rechterkant van de gekozen tegen, negeer de laatste kolom.
                 if (j < GROOTTE - 1) {
-
                     if (tegels[i][j].equals(tegels[i][j + 1])) {
                         return true;
                     }
-
                 }
 
                 //controleer de tegel onder de gekozen tegel, negeer de laatste rij.
                 if (i < GROOTTE - 1) {
-
                     if (tegels[i][j].equals(tegels[i + 1][j])) {
                         return true;
                     }
@@ -230,26 +210,35 @@ public class Bord {
         return false;
     }
 
+    public String[][] getTegels() {
+
+        String[][] values = new String[4][4];
+
+        for (int i = 0; i < tegels.length; i++) {
+            for (int j = 0; j < tegels[i].length; j++) {
+                values[i][j] = tegels[i][j].getWaarde() == 0 ? " " : "" + tegels[i][j].getWaarde();
+            }
+        }
+
+        return values;
+    }
+
     public String toString() {
-
         StringBuilder sb = new StringBuilder();
-
-        for (Tegel[] tegelRow : tegels) {
-            for (Tegel tegel : tegelRow) {
+        for (Tegel[] tegelRij : tegels) {
+            for (Tegel tegel : tegelRij) {
                 sb.append(tegel);
                 sb.append(" ");
             }
             sb.append("\n");
         }
-
         return sb.toString();
     }
 
+/*------------------------------------------ terminal test methodes----------------------------------------------------*/
 
-    // terminal test methodes
-    Random random = new Random();
-
-    public void printArray() {
+//    Random random = new Random();
+ /*   public void printArray() {
         for (Tegel[] tegel : tegels) {
             System.out.printf("%6d%6d%6d%6d%n",
                     tegel[0].getWaarde(), tegel[1].getWaarde(), tegel[2].getWaarde(), tegel[3].getWaarde());
@@ -275,5 +264,5 @@ public class Bord {
         int X = legePlaatsenX.get(keuze);
         int Y = legePlaatsenY.get(keuze);
         tegels[X][Y].setWaarde(nieuwGetal);
-    }
+    }*/
 }
