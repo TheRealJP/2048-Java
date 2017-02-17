@@ -3,19 +3,22 @@ package model;
 public class Speler implements Comparable<Speler> {
 
     private String naam;
-    private int score = 0;
+    private static int score = 0;
 
     public Speler(String name) {
         this.naam = name;
-        this.score = 0;
     }
 
     public String getNaam() {
         return naam;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
     public void setScore(int score) {
-        this.score += score;
+        Speler.score += score;
     }
 
     public int getScore() {

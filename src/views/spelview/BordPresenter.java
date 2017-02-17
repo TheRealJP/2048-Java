@@ -4,11 +4,12 @@ import com.sun.javafx.scene.traversal.Direction;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import model.Bord;
+import model.Speler;
+import model.TopScores;
 
 public class BordPresenter {
     private Bord model;
     private BordView view;
-
     //TODO: aantalMoves variabele zou nog verplaats moeten worden naar een andere model (Spel), mag niet in presenter blijven, vergeet ook niet dat deze teller ook in elke move case staat
     private int aantalMoves = 0;
 
@@ -17,6 +18,8 @@ public class BordPresenter {
         this.view = view;
         addEventHandlers();
         updateView();
+        // deze call doen we zodat de arrowkeys worden herkend
+        view.getGrid().requestFocus();
     }
 
     private void addEventHandlers() {
@@ -24,7 +27,6 @@ public class BordPresenter {
         for (int i = 0; i < 2; i++) {
             model.genereerNieuweTegel();
         }
-
 
         view.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
@@ -52,12 +54,10 @@ public class BordPresenter {
                     default:
                         event.consume();
                         break;
-
                 }
 
                 //zorgt ervoor dat alleen arrowkeys nieuwe tegels genereren
                 if (!model.isVol() && event.getCode().isArrowKey()) {
-
                     // als het bord niet vol is, nieuwe tegel genereren
                     model.genereerNieuweTegel();
 
@@ -68,7 +68,6 @@ public class BordPresenter {
                     System.out.println("Aantal moves: " + aantalMoves);
                     System.out.println();
                     System.out.println(model.toString());
-
                 }
 
                 if (model.isVol()) {
@@ -84,6 +83,8 @@ public class BordPresenter {
 
     private void updateView() {
         view.setLabels(model.getTegels());
-    }
 
+        //voegt score toe aan label
+//        view.getLblCurrentScore().textProperty().setValue(model.getSpeler().getScore() + "");
+    }
 }
