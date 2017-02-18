@@ -68,7 +68,7 @@ public class BordView extends BorderPane {
         //Boxes
         VBox currentScoreBox = new VBox(lblCurrentScore, lblCurrentScoreNumber);
         VBox highScoreBox = new VBox(lblHighScore, lblHighScoreNumber);
-        HBox scores = new HBox(10,currentScoreBox, highScoreBox);
+        HBox scores = new HBox(10, currentScoreBox, highScoreBox);
         VBox buttons = new VBox(20, menu, regels);
         VBox controlsBox = new VBox();
 
@@ -207,20 +207,12 @@ public class BordView extends BorderPane {
         }
     }
 
-    public void setLblCurrentScore(Label lblCurrentScore) {
-        this.lblCurrentScore = lblCurrentScore;
+    public Label getLblHighScoreNumber() {
+        return lblHighScoreNumber;
     }
 
-    public void setLblHighScore(Label lblHighScore) {
-        this.lblHighScore = lblHighScore;
-    }
-
-    public Label getLblHighScore() {
-        return lblHighScore;
-    }
-
-    public Label getLblCurrentScore() {
-        return lblCurrentScore;
+    public Label getLblCurrentScoreNumber() {
+        return lblCurrentScoreNumber;
     }
 
     public Label getLblSpelerNaam() {

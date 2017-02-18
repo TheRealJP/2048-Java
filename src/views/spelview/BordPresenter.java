@@ -10,12 +10,14 @@ import model.TopScores;
 public class BordPresenter {
     private Bord model;
     private BordView view;
+    private Speler speler;
     //TODO: aantalMoves variabele zou nog verplaats moeten worden naar een andere model (Spel), mag niet in presenter blijven, vergeet ook niet dat deze teller ook in elke move case staat
     private int aantalMoves = 0;
 
     public BordPresenter(Bord model, BordView view) {
         this.model = model;
         this.view = view;
+        speler = new Speler();  //TODO: MARK: maken we aan om speler aan te kunnen roepen, kan zijn dat dit anders moet in de toekomst.
         addEventHandlers();
         updateView();
         // deze call doen we zodat de arrowkeys worden herkend
@@ -34,7 +36,6 @@ public class BordPresenter {
 
                 switch (event.getCode()) {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
-                    // print statements zijn voor terminal tests
                     case UP:
                         model.verplaats(Direction.UP);
                         ++aantalMoves;
@@ -82,9 +83,10 @@ public class BordPresenter {
     }
 
     private void updateView() {
+        // labels instellen
         view.setLabels(model.getTegels());
 
         //voegt score toe aan label
-//        view.getLblCurrentScore().textProperty().setValue(model.getSpeler().getScore() + "");
+        view.getLblCurrentScoreNumber().textProperty().setValue("" + speler.getScore());
     }
 }

@@ -9,6 +9,10 @@ public class Speler implements Comparable<Speler> {
         this.naam = name;
     }
 
+    public Speler() {
+        // constructor voor bord model, zodat we score kunnen instellen
+    }
+
     public String getNaam() {
         return naam;
     }

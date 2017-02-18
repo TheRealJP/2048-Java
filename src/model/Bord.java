@@ -12,9 +12,8 @@ public class Bord {
     // dimensies van het bord
     private static final int GROOTTE = 4;
     private TopScores topScores;
-    private Speler speler;
+    private Speler speler = new Speler();  //TODO: MARK: maken we hier aan om de score te kunnen instellen wanneer 2 tegels samenvoegen (kan zijn dat dit anders moet)
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
-
 
     // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
@@ -151,14 +150,13 @@ public class Bord {
 
     // tegel samenvoegen als de tegels in de richting waarin we schuiven dezelfde waarde hebben.
     private void tegelsSamenvoegen(List<Tegel> tegelSet) {
-
         for (int i = 0; i < tegelSet.size() - 1; i++) {
             if (tegelSet.get(i).equals(tegelSet.get(i + 1))) {
                 tegelSet.get(i).merge(tegelSet.get(i + 1));
 
-               /* //score van speler verhogen met de waarde van de samengevoegde tegels
-                speler.setScore(tegelSet.get(i).getWaarde() + tegelSet.get(i + 1).getWaarde());*/
-
+                //score van speler verhogen met de waarde van de samengevoegde tegels
+                // aangezien de setScore methode de score automatisch optelt geven we enkel de waarde door
+                speler.setScore(tegelSet.get(i).getWaarde());
                 //de waarde van de tegel op positie i+1 verwijderen
                 tegelSet.get(i + 1).clear();
                 schuifNaar(tegelSet, i + 1);
@@ -210,16 +208,16 @@ public class Bord {
         return false;
     }
 
+    // we returnen hier een 2-dimentionale array van Strings zodat we deze kunnen gebruiken om de labels in te stellen
     public String[][] getTegels() {
 
         String[][] values = new String[4][4];
-
         for (int i = 0; i < tegels.length; i++) {
             for (int j = 0; j < tegels[i].length; j++) {
+                // als een waarde 0 is, vervangen we deze door een lege string zodat er geen nutteloze 0-en zijn
                 values[i][j] = tegels[i][j].getWaarde() == 0 ? " " : "" + tegels[i][j].getWaarde();
             }
         }
-
         return values;
     }
 
