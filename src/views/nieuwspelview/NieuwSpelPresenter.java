@@ -25,12 +25,12 @@ public class NieuwSpelPresenter {
         view.getBtnSpeel().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                BordView bordView = new BordView();
-                BordPresenter bordPresenter = new BordPresenter(model, bordView);
 
                 if (view.getTxtName().getText().length() >= 3
                         && view.getTxtName().getText().length() <= 10) {
 
+                    BordView bordView = new BordView();
+                    BordPresenter bordPresenter = new BordPresenter(model, bordView);
                     bordView.getLblSpelerNaam().setText(view.getTxtName().getText().toUpperCase());
                     view.getScene().setRoot(bordView);
                     bordView.getScene().getWindow().sizeToScene();
