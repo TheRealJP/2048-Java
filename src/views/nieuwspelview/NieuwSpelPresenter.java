@@ -36,7 +36,6 @@ public class NieuwSpelPresenter {
                     bordView.getScene().getWindow().sizeToScene();
 
                 } else {
-
                     event.consume();
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Player name");
