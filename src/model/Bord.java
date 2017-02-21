@@ -24,16 +24,6 @@ public class Bord {
         }
     }
 
-    public Label[][] tegelsNaarLabels() {
-        Label[][] dummyMatrix = new Label[GROOTTE][GROOTTE];
-        for (int x = 0; x < tegels.length; x++) {
-            for (int y = 0; y < tegels[x].length; y++) {
-                dummyMatrix[x][y] = new Label(tegels[x][y].getWaarde() + "");
-            }
-        }
-        return dummyMatrix;
-    }
-
     // genereer een tegel met een random waarde van 2 of 4 in een random positie
     // return true als een nieuwe tegel geplaatst is, false als er geen lege tegel meer is
     public boolean genereerNieuweTegel() {
@@ -105,16 +95,13 @@ public class Bord {
                 return false;
             }
         }
-
         return true;
-
     }
 
     //hoofdtegel groep algoritme
     private void schuif(List<Tegel> tegelSet) {
         schuifNaarKant(tegelSet);
         tegelsSamenvoegen(tegelSet);
-
     }
 
     //schuif alle tegels naar een kant in het geval dat er een nul tussen zit
@@ -233,6 +220,7 @@ public class Bord {
         return sb.toString();
     }
 
+    //TODO: Dead code verwijderen in de toekomst!
 /*------------------------------------------ terminal test methodes----------------------------------------------------*/
 
 //    Random random = new Random();

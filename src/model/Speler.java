@@ -17,10 +17,6 @@ public class Speler implements Comparable<Speler> {
         return naam;
     }
 
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
-
     public void setScore(int score) {
         Speler.score += score;
     }

@@ -3,7 +3,6 @@ package model;
 public class Tegel {
     private int waarde;
 
-
     // tegel initialiseren met een waarde van 0
     public Tegel() {
         this(0);

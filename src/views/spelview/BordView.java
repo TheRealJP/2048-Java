@@ -15,7 +15,7 @@ import model.Bord;
 import views.nieuwspelview.NieuwSpelView;
 
 public class BordView extends BorderPane {
-    private final int GRIDSIZE = 4;
+    private static final int GRIDSIZE = 4;
 
     private Label[][] labels;
     private Label lblCurrentScore;
