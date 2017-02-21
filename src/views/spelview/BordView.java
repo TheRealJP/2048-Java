@@ -15,7 +15,7 @@ import model.Bord;
 import views.nieuwspelview.NieuwSpelView;
 
 public class BordView extends BorderPane {
-    private static int GRIDSIZE = 4;
+    private final int GRIDSIZE = 4;
 
     private Label[][] labels;
     private Label lblCurrentScore;
@@ -23,7 +23,6 @@ public class BordView extends BorderPane {
     private Label lblCurrentScoreNumber;
     private Label lblHighScoreNumber;
     private Label lblControls;
-    private Label emptyLabel;
     private Label lblSpelerNaam;
 
     private GridPane grid;
@@ -53,7 +52,6 @@ public class BordView extends BorderPane {
         lblCurrentScoreNumber = new Label("0");
         lblHighScoreNumber = new Label("0");
         lblControls = new Label("Controls");
-        emptyLabel = new Label(" ");
         lblSpelerNaam = new Label();
 
         grid = new GridPane();

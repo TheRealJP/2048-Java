@@ -25,7 +25,6 @@ public class NieuwSpelView extends BorderPane {
     }
 
     private void layoutNodes() {
-
         //Boxes
         VBox newGameBox = new VBox(lblNewGame, lblEnterName, txtName, btnSpeel);
         newGameBox.setSpacing(30);
