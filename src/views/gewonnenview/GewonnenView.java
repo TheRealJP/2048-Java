@@ -1,5 +1,6 @@
 package views.gewonnenview;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -29,16 +30,31 @@ public class GewonnenView extends BorderPane {
         btnContinue = new Button("Continue Playing");
         btnNewGame = new Button("New Game");
         btnExit = new Button("Exit");
-
-
     }
 
     private void layoutNodes() {
         VBox tekstBox = new VBox(reached, question, highscore);
-        VBox buttonBox = new VBox(btnContinue, btnNewGame, btnExit);
+        VBox buttonBox = new VBox(10,btnContinue, btnNewGame, btnExit);
         VBox groupBox = new VBox(tekstBox, buttonBox);
+
+        buttonBox.setAlignment(Pos.CENTER);
+        groupBox.setAlignment(Pos.CENTER);
+        tekstBox.setAlignment(Pos.CENTER);
+
+
         setCenter(groupBox);
 
-        reached.setId(  );
+    }
+
+    public Button getBtnContinue() {
+        return btnContinue;
+    }
+
+    public Button getBtnExit() {
+        return btnExit;
+    }
+
+    public Button getBtnNewGame() {
+        return btnNewGame;
     }
 }

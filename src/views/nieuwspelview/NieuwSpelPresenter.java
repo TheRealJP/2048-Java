@@ -41,7 +41,6 @@ public class NieuwSpelPresenter {
                     alert.setTitle("Player name");
                     alert.setContentText("The player name should contain 3 to 10 characters!");
                     alert.showAndWait();
-
                 }
             }
         });

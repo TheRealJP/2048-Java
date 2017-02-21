@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Bord;
+import views.gewonnenview.GewonnenPresenter;
 import views.gewonnenview.GewonnenView;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
@@ -15,9 +16,11 @@ public class Main extends Application {
 
         Bord model = new Bord();
         NieuwSpelView view = new NieuwSpelView();
-        new NieuwSpelPresenter(model, view);
+        GewonnenView gewonnenView = new GewonnenView();
+//        new NieuwSpelPresenter(model, view);
 //        Scene scene = new Scene(view);
-        Scene scene = new Scene(new GewonnenView());
+        new GewonnenPresenter(gewonnenView, model);
+        Scene scene = new Scene(gewonnenView);
         scene.getStylesheets().add("css/stylesheet.css");
         primaryStage.setScene(scene);
         primaryStage.setTitle("2048");
