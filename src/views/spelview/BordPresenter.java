@@ -5,10 +5,7 @@ import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import model.Bord;
 import model.Speler;
-import views.gewonnenview.GewonnenPresenter;
-import views.gewonnenview.GewonnenView;
-import views.verlorenview.VerlorenPresenter;
-import views.verlorenview.VerlorenView;
+import model.TopScores;
 
 public class BordPresenter {
     private Bord model;
@@ -74,23 +71,13 @@ public class BordPresenter {
                     System.out.println(model.toString());
                 }
 
-                // roep verlorenView op
-                // TODO: 21/02/2017 testen
                 if (model.isVol()) {
-                    VerlorenView verlorenView = new VerlorenView();
-                    VerlorenPresenter verlorenPresenter = new VerlorenPresenter(model,verlorenView);
-                    view.getScene().setRoot(verlorenView);
-                    verlorenView.getScene().getWindow().sizeToScene();
+                    // TODO: 14/02/2017 roep verlorenView op
                 }
 
-                // boolean die checkt naar de waarde 2048 in het grid,
-                // if TRUE? --> roep gewonnenView op
-                if (model.heeft2048()) {
-                    GewonnenView gewonnenView = new GewonnenView();
-                    GewonnenPresenter gewonnenPresenter = new GewonnenPresenter(gewonnenView, model);
-                    view.getScene().setRoot(gewonnenView);
-                    gewonnenView.getScene().getWindow().sizeToScene();
-                }
+                // TODO: 14/02/2017 boolean die checkt naar de waarde 2048 in het grid,
+                // TODO: if TRUE? --> roep gewonnenView op
+
             }
         });
     }
@@ -102,6 +89,4 @@ public class BordPresenter {
         //voegt score toe aan label
         view.getLblCurrentScoreNumber().textProperty().setValue("" + speler.getScore());
     }
-
-
 }

@@ -31,7 +31,6 @@ public class NieuwSpelPresenter {
             @Override
             public void handle(ActionEvent event) {
 
-<<<<<<< HEAD
                 startSpel(event);
             }
         });
@@ -42,24 +41,6 @@ public class NieuwSpelPresenter {
             public void handle(KeyEvent event) {
                 if(event.getCode() == KeyCode.ENTER){
                     startSpel(event);
-=======
-                if (view.getTxtName().getText().length() >= 3
-                        && view.getTxtName().getText().length() <= 10) {
-                    model.bordLeegMaken(); // maakt bord/array eerst leeg zodat vorige waardes er niet meer staan
-                    BordView bordView = new BordView();
-                    BordPresenter bordPresenter = new BordPresenter(model, bordView);
-                    bordView.getLblSpelerNaam().setText(view.getTxtName().getText().toUpperCase());
-                    view.getScene().setRoot(bordView);
-                    bordView.getScene().getWindow().sizeToScene();
-
-                } else {
-                    //alertbox voor naamlengte
-                    event.consume();
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Player name");
-                    alert.setContentText("The player name should contain 3 to 10 characters!");
-                    alert.showAndWait();
->>>>>>> TestBranch
                 }
             }
         });

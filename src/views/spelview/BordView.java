@@ -115,7 +115,7 @@ public class BordView extends BorderPane {
         setTop(scores);
         setLeft(buttonPane);
         setRight(controlsBox);
-        setBottom(lblSpelerNaam);
+        this.setBottom(lblSpelerNaam);
 
         //grid settings
         grid.setGridLinesVisible(true);
