@@ -2,10 +2,10 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Bord;
+import views.gewonnenview.GewonnenView;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
-import views.spelview.BordPresenter;
-import views.spelview.BordView;
+
 
 public class Main extends Application {
 
@@ -14,6 +14,7 @@ public class Main extends Application {
 
         Bord model = new Bord();
         NieuwSpelView view = new NieuwSpelView();
+        GewonnenView gewonnenView = new GewonnenView();
         new NieuwSpelPresenter(model, view);
         Scene scene = new Scene(view);
         scene.getStylesheets().add("css/stylesheet.css");

@@ -43,7 +43,6 @@ public class NieuwSpelView extends BorderPane {
         //CSS
         lblEnterName.setId("enterName");
         lblNewGame.setId("newGame");
-
     }
 
     public TextField getTxtName() {

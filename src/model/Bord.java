@@ -52,6 +52,14 @@ public class Bord {
         return random.nextInt(10) == 1 ? 4 : 2;
     }
 
+    public void bordLeegMaken() {
+        for (int i = 0; i < tegels.length ; i++) {
+            for (int j = 0; j < tegels[i].length ; j++) {
+                tegels[i][j] = new Tegel();
+            }
+        }
+    }
+
     /**
      * Dit is het hoofdalgoritme van het spel, we maken een groep/set aan adhv de richting waar de gebruiker naar schuift,
      * bv, wanneer een gebruiker op de toets voor naar links te schuiven drukt, dan zal de groep bestaan uit alle rijen tegels (horizontaal).
@@ -189,6 +197,17 @@ public class Bord {
                     if (tegels[i][j].equals(tegels[i + 1][j])) {
                         return true;
                     }
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean heeft2048() {
+        for (int i = 0; i < tegels.length; i++) {
+            for (int j = 0; j < tegels[i].length; j++) {
+                if (tegels[i][j].getWaarde() == 2048) {
+                    return true;
                 }
             }
         }
