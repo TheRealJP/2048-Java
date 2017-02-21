@@ -36,6 +36,7 @@ public class GewonnenPresenter {
         view.getBtnNewGame().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
                 NieuwSpelView nieuwSpelView = new NieuwSpelView();
                 NieuwSpelPresenter nieuwSpelPresenter = new NieuwSpelPresenter(model, nieuwSpelView);
                 view.getScene().setRoot(nieuwSpelView);

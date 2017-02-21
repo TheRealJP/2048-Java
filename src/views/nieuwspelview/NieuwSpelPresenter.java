@@ -28,7 +28,7 @@ public class NieuwSpelPresenter {
 
                 if (view.getTxtName().getText().length() >= 3
                         && view.getTxtName().getText().length() <= 10) {
-
+                    model.bordLeegMaken(); // maakt bord/array eerst leeg zodat vorige waardes er niet meer staan
                     BordView bordView = new BordView();
                     BordPresenter bordPresenter = new BordPresenter(model, bordView);
                     bordView.getLblSpelerNaam().setText(view.getTxtName().getText().toUpperCase());
@@ -36,6 +36,7 @@ public class NieuwSpelPresenter {
                     bordView.getScene().getWindow().sizeToScene();
 
                 } else {
+                    //alertbox voor naamlengte
                     event.consume();
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Player name");

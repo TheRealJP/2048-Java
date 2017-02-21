@@ -50,16 +50,31 @@ public class Bord {
 
             if (tegels[x][y].getWaarde() == 0) {
                 tegels[x][y].setWaarde(getNieuweTegelWaarde());
+//                tegels[x][y].setWaarde(get1024().getWaarde()); //tester voor gewonnenPresenter
                 return true;
 
             }
         }
     }
 
+    //test methode voor gewonnenPresenter------------------------------------------
+  /*  private Tegel get1024() {
+        return new Tegel(1024);
+    }*/
+    //--------------------------------------------
+
     // 1 op 10 kans om het getal 4 terug te geven
     private int getNieuweTegelWaarde() {
         Random random = new Random();
         return random.nextInt(10) == 1 ? 4 : 2;
+    }
+
+    public void bordLeegMaken() {
+        for (int i = 0; i < tegels.length ; i++) {
+            for (int j = 0; j < tegels[i].length ; j++) {
+                tegels[i][j] = new Tegel();
+            }
+        }
     }
 
     /**
@@ -208,6 +223,17 @@ public class Bord {
         return false;
     }
 
+    public boolean heeft2048() {
+        for (int i = 0; i < tegels.length; i++) {
+            for (int j = 0; j < tegels[i].length; j++) {
+                if (tegels[i][j].getWaarde() == 2048) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     // we returnen hier een 2-dimentionale array van Strings zodat we deze kunnen gebruiken om de labels in te stellen
     public String[][] getTegels() {
 
@@ -233,7 +259,11 @@ public class Bord {
         return sb.toString();
     }
 
-/*------------------------------------------ terminal test methodes----------------------------------------------------*/
+    public Speler getSpeler() {
+        return speler;
+    }
+
+    /*------------------------------------------ terminal test methodes----------------------------------------------------*/
 
 //    Random random = new Random();
  /*   public void printArray() {
