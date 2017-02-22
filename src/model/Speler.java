@@ -21,6 +21,10 @@ public class Speler implements Comparable<Speler> {
         Speler.score += score;
     }
 
+    public void scoreOpNul() {
+        score = 0;
+    }
+
     public int getScore() {
         return score;
     }

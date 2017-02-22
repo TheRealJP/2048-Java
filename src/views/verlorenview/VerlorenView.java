@@ -4,13 +4,15 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class VerlorenView extends BorderPane {
-    private Label reached;
-    private Label score;
+    private Label lblYouLost;
+    private Label lblYourScore;
+    private Label lblscoreNumber;
 
-    private Button btnContinue;
+    private Button btnScoreBoard;
     private Button btnNewGame;
     private Button btnExit;
 
@@ -20,28 +22,36 @@ public class VerlorenView extends BorderPane {
     }
 
     private void initialiseNodes() {
-        reached = new Label("You lost!");
-        score = new Label("Your Score: 0");
+        lblYouLost = new Label("You lost!");
+        lblYourScore = new Label("Your Score: ");
+        lblscoreNumber = new Label("0");
 
-        btnContinue = new Button("Continue Playing");
         btnNewGame = new Button("New Game");
+        btnScoreBoard = new Button("Scoreboard");
         btnExit = new Button("Exit");
     }
 
     private void layoutNodes() {
-        VBox tekstBox = new VBox(reached,score);
-        VBox buttonBox = new VBox(10,btnContinue, btnNewGame, btnExit);
-        VBox groupBox = new VBox(tekstBox, buttonBox);
+        HBox scoreBox = new HBox(lblYourScore, lblscoreNumber); //your score: + 0
+        VBox tekstBox = new VBox(lblYouLost, scoreBox);
+        VBox buttonBox = new VBox(10, btnNewGame, btnScoreBoard, btnExit);
+        VBox groupBox = new VBox(30, tekstBox, buttonBox);
 
         buttonBox.setAlignment(Pos.CENTER);
         groupBox.setAlignment(Pos.CENTER);
         tekstBox.setAlignment(Pos.CENTER);
+        scoreBox.setAlignment(Pos.CENTER);
 
         setCenter(groupBox);
     }
 
-    public Button getBtnContinue() {
-        return btnContinue;
+
+    public void setLblscoreNumber(int score) {
+        this.lblscoreNumber = new Label("" + score);
+    }
+
+    public Button getBtnScoreBoard() {
+        return btnScoreBoard;
     }
 
     public Button getBtnExit() {

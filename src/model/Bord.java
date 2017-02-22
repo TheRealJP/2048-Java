@@ -53,11 +53,14 @@ public class Bord {
     }
 
     public void bordLeegMaken() {
-        for (int i = 0; i < tegels.length ; i++) {
-            for (int j = 0; j < tegels[i].length ; j++) {
+        //zet tegels op null
+        for (int i = 0; i < tegels.length; i++) {
+            for (int j = 0; j < tegels[i].length; j++) {
                 tegels[i][j] = new Tegel();
             }
         }
+        //zet score op nul
+        speler.scoreOpNul();
     }
 
     /**
@@ -225,6 +228,10 @@ public class Bord {
             }
         }
         return values;
+    }
+
+    public Speler getSpeler() {
+        return speler;
     }
 
     public String toString() {

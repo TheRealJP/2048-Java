@@ -1,4 +1,6 @@
 package views.topscoreview;
 
-public class TopScoreView {
+import javafx.scene.layout.BorderPane;
+
+public class TopScoreView extends BorderPane{
 }
