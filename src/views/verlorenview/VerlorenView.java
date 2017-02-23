@@ -45,9 +45,8 @@ public class VerlorenView extends BorderPane {
         setCenter(groupBox);
     }
 
-
-    public void setLblscoreNumber(int score) {
-        this.lblscoreNumber = new Label("" + score);
+    public Label getLblscoreNumber() {
+        return lblscoreNumber;
     }
 
     public Button getBtnScoreBoard() {
