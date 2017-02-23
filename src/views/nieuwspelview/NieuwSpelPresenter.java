@@ -50,12 +50,13 @@ public class NieuwSpelPresenter {
     public void startSpel(Event event){
         if (view.getTxtName().getText().length() >= 3
                 && view.getTxtName().getText().length() <= 10) {
+
             model.bordLeegMaken();
             BordView bordView = new BordView();
             BordPresenter bordPresenter = new BordPresenter(model, bordView);
-            bordView.getLblSpelerNaam().setText(view.getTxtName().getText().toUpperCase());
             view.getScene().setRoot(bordView);
             bordView.getScene().getWindow().sizeToScene();
+            bordView.getLblSpelerNaam().setText(view.getTxtName().getText().toUpperCase());
         } else {
             event.consume();
             Alert alert = new Alert(Alert.AlertType.ERROR);
