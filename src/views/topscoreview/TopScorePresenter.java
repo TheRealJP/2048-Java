@@ -10,5 +10,17 @@ public class TopScorePresenter {
     public TopScorePresenter(Bord model, TopScoreView view) {
         this.model = model;
         this.view = view;
+        addEventHandlers();
+        updateLayout();
+    }
+
+    private void addEventHandlers() {
+
+
+    }
+
+    private void updateLayout() {
+
+
     }
 }
