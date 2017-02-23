@@ -14,7 +14,6 @@ import views.spelview.BordView;
 
 public class NieuwSpelPresenter {
 
-
     private Bord model;
     private NieuwSpelView view;
 
@@ -48,15 +47,19 @@ public class NieuwSpelPresenter {
 
     // met deze methode laden we de bordview in
     public void startSpel(Event event){
+
         if (view.getTxtName().getText().length() >= 3
                 && view.getTxtName().getText().length() <= 10) {
+
             model.bordLeegMaken();
             BordView bordView = new BordView();
-            BordPresenter bordPresenter = new BordPresenter(model, bordView);
-            bordView.getLblSpelerNaam().setText(view.getTxtName().getText().toUpperCase());
+            new BordPresenter(model, bordView);
+            model.getSpeler().setNaam(view.getTxtName().getText().toUpperCase());
+            bordView.getLblSpelerNaam().textProperty().setValue(model.getSpeler().getNaam());
             view.getScene().setRoot(bordView);
             bordView.getScene().getWindow().sizeToScene();
         } else {
+
             event.consume();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Player name");
@@ -69,6 +72,7 @@ public class NieuwSpelPresenter {
         view.getScene().getWindow().setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
+
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setHeaderText("Hierdoor stopt het spel!");
                 alert.setContentText("Ben je zeker?");

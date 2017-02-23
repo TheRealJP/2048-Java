@@ -11,12 +11,13 @@ import java.util.Random;
 public class Bord {
     // dimensies van het bord
     private static final int GROOTTE = 4;
-    private TopScores topScores;
-    private Speler speler = new Speler();  //TODO: MARK: maken we hier aan om de score te kunnen instellen wanneer 2 tegels samenvoegen (kan zijn dat dit anders moet)
+    private Speler speler;
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
 
     // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
+
+        speler = new Speler();
         for (int i = 0; i < tegels[0].length; i++) {
             for (int j = 0; j < tegels.length; j++) {
                 tegels[i][j] = new Tegel();
@@ -41,7 +42,6 @@ public class Bord {
             if (tegels[x][y].getWaarde() == 0) {
                 tegels[x][y].setWaarde(getNieuweTegelWaarde());
                 return true;
-
             }
         }
     }
@@ -234,6 +234,7 @@ public class Bord {
         return speler;
     }
 
+    //TODO: testcode, verwijderen
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (Tegel[] tegelRij : tegels) {
@@ -245,36 +246,4 @@ public class Bord {
         }
         return sb.toString();
     }
-
-    //TODO: Dead code verwijderen in de toekomst!
-/*------------------------------------------ terminal test methodes----------------------------------------------------*/
-
-//    Random random = new Random();
- /*   public void printArray() {
-        for (Tegel[] tegel : tegels) {
-            System.out.printf("%6d%6d%6d%6d%n",
-                    tegel[0].getWaarde(), tegel[1].getWaarde(), tegel[2].getWaarde(), tegel[3].getWaarde());
-        }
-        System.out.printf("%n");
-    }
-
-    public void nieuweGetallenToevoegen() {
-        ArrayList<Integer> legePlaatsenX = new ArrayList<>();
-        ArrayList<Integer> legePlaatsenY = new ArrayList<>();
-        for (Integer x = 0; x < 4; x++) {
-            for (Integer y = 0; y < 4; y++) {
-                if (tegels[x][y].getWaarde() == 0) {
-                    legePlaatsenX.add(new Integer(x));
-                    legePlaatsenY.add(new Integer(y));
-                }
-            }
-        }
-        //willekeurige startpositie van 0-15
-        int keuze = random.nextInt(legePlaatsenX.size()); //16
-        int nieuwGetal = random.nextInt(10) == 1 ? 4 : 2;
-//      Integer[] coordinates = emptySpaces.get(keuze);
-        int X = legePlaatsenX.get(keuze);
-        int Y = legePlaatsenY.get(keuze);
-        tegels[X][Y].setWaarde(nieuwGetal);
-    }*/
 }

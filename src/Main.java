@@ -14,7 +14,6 @@ public class Main extends Application {
 
         Bord model = new Bord();
         NieuwSpelView view = new NieuwSpelView();
-        GewonnenView gewonnenView = new GewonnenView();
         new NieuwSpelPresenter(model, view);
         Scene scene = new Scene(view);
         scene.getStylesheets().add("css/stylesheet.css");

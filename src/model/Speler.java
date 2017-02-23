@@ -1,16 +1,19 @@
 package model;
 
-public class Speler implements Comparable<Speler> {
+import java.io.Serializable;
+
+/**
+ * Serializable om het weg te schrijven met een ObjectOutputStream,
+ * Comparable om de Arraylist met scores te sorteren
+ */
+public class Speler implements Serializable, Comparable<Speler> {
 
     private String naam;
-    private static int score = 0;
-
-    public Speler(String name) {
-        this.naam = name;
-    }
+    private int score;
 
     public Speler() {
-        // constructor voor bord model, zodat we score kunnen instellen
+        // constructor voor bord model, vanuit het bord model roepen we setNaam en setScore op!
+        this.score = 0;
     }
 
     public String getNaam() {
@@ -18,7 +21,7 @@ public class Speler implements Comparable<Speler> {
     }
 
     public void setScore(int score) {
-        Speler.score += score;
+        this.score += score;
     }
 
     public void scoreOpNul() {
@@ -29,13 +32,17 @@ public class Speler implements Comparable<Speler> {
         return score;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
     // om te kunnen sorteren bij topscores
     @Override
     public int compareTo(Speler o) {
         return this.getScore() - o.getScore();
     }
 
-    // toString om te kunnen schrijven/lezen van het "highscores.txt" bestand
+    // TODO: testmethode, wegdoen!
     @Override
     public String toString() {
         return String.format("%-40s %d", this.getNaam(), this.getScore());

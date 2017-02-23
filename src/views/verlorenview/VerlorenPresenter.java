@@ -3,7 +3,6 @@ package views.verlorenview;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.Label;
 import model.Bord;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
@@ -26,7 +25,7 @@ public class VerlorenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 NieuwSpelView nieuwSpelView = new NieuwSpelView();
-                NieuwSpelPresenter nieuwSpelPresenter = new NieuwSpelPresenter(model, nieuwSpelView);
+                new NieuwSpelPresenter(model, nieuwSpelView);
                 verlorenView.getScene().setRoot(nieuwSpelView);
                 nieuwSpelView.getScene().getWindow().sizeToScene();
             }
@@ -36,7 +35,7 @@ public class VerlorenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 TopScoreView topScoreView = new TopScoreView();
-                TopScorePresenter topScorePresenter = new TopScorePresenter(model, topScoreView);
+                new TopScorePresenter(model, topScoreView);
                 verlorenView.getScene().setRoot(topScoreView);
                 topScoreView.getScene().getWindow().sizeToScene();
             }
@@ -51,6 +50,7 @@ public class VerlorenPresenter {
     }
 
     private void updateView() {
-        verlorenView.setLblscoreNumber(model.getSpeler().getScore());
+
+        verlorenView.getLblscoreNumber().textProperty().setValue(""+model.getSpeler().getScore());
     }
 }

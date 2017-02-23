@@ -11,8 +11,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-import model.Bord;
-import views.nieuwspelview.NieuwSpelView;
 
 public class BordView extends BorderPane {
     private static final int GRIDSIZE = 4;
@@ -157,7 +155,7 @@ public class BordView extends BorderPane {
                 labels[x][y].setAlignment(Pos.CENTER);
                 grid.add(labels[x][y], x, y);
                 GridPane.setMargin(labels[x][y], new Insets(50));
-                labels[x][y].setFont(new Font(40));
+                labels[x][y].setFont(new Font(40)); //TODO: Font instellen bij CSS
                 labels[x][y].setId("tegels");
 
                 //CSS - id toewijzen per mogelijke labelwaarde
