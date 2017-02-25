@@ -3,16 +3,15 @@ package model;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class TopScores {
 
-    File file;
-    private List<Speler> spelerLijst;
+    private File file;
+    private ArrayList<Speler> spelerLijst;
 
     public TopScores() {
         spelerLijst = new ArrayList<Speler>();
-        file = new File("src/bestanden/highscores");
+        file = new File("src"+File.separator+"bestanden"+File.separator+"highscores");
         leesTopSpelers();
     }
 
@@ -87,6 +86,11 @@ public class TopScores {
          */
         Collections.sort(spelerLijst);
         schrijfTopSpelers();
+    }
+
+    public ArrayList<Speler> getSpelerLijst() {
+        Collections.reverse(spelerLijst);
+        return spelerLijst;
     }
 
     //TODO: testmethode, wegdoen!

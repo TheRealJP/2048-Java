@@ -93,5 +93,6 @@ public class BordPresenter {
 
         //voegt score toe aan label
         view.getLblCurrentScoreNumber().textProperty().setValue("" + model.getSpeler().getScore());
+        view.getLblHighScoreNumber().textProperty().setValue(""); //TODO: instellen
     }
 }

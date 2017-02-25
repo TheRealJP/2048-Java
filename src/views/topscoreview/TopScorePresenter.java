@@ -1,13 +1,13 @@
 package views.topscoreview;
 
-import model.Bord;
+import model.TopScores;
 
 public class TopScorePresenter {
 
-    private Bord model;
+    private TopScores model;
     private TopScoreView view;
 
-    public TopScorePresenter(Bord model, TopScoreView view) {
+    public TopScorePresenter(TopScores model, TopScoreView view) {
         this.model = model;
         this.view = view;
         addEventHandlers();
@@ -21,6 +21,6 @@ public class TopScorePresenter {
 
     private void updateLayout() {
 
-
+        view.setSpelers(model.getSpelerLijst());
     }
 }
