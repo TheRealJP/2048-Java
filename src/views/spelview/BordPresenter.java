@@ -91,8 +91,8 @@ public class BordPresenter {
         // labels instellen
         view.setLabels(model.getTegels());
 
-        //voegt score toe aan label
+        //voegt score & topscore toe aan label
         view.getLblCurrentScoreNumber().textProperty().setValue("" + model.getSpeler().getScore());
-        view.getLblHighScoreNumber().textProperty().setValue(""); //TODO: instellen
+        view.getLblHighScoreNumber().textProperty().setValue(""+topscore.getTopscore());
     }
 }

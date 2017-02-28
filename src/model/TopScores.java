@@ -104,4 +104,10 @@ public class TopScores {
         }
         return output;
     }
+
+    public int getTopscore(){
+
+        //TODO: de Topscore in bordpresenter instellen op spelerscore wanneer de topscore verbeterd wordt. (kan zijn dat dit al werkt, nog niet getest)
+        return spelerLijst.get(spelerLijst.size()-1).getScore();
+    }
 }
