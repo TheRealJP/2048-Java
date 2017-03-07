@@ -6,11 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
+import javafx.scene.layout.*;
 
 public class BordView extends BorderPane {
     private static final int GRIDSIZE = 4;
@@ -91,7 +87,6 @@ public class BordView extends BorderPane {
         currentScoreBox.setPadding(new Insets(20, 0, 25, 0));
         controlsBox.setPadding(new Insets(10, 35, 10, 35));
         buttonPane.setPadding(new Insets(10, 35, 10, 35));
-        grid.setPadding(new Insets(10));
         menu.setPadding(new Insets(10, 40, 10, 40));
         regels.setPadding(new Insets(10, 40, 10, 40));
         regels.setMinSize(120, 40);
@@ -116,12 +111,10 @@ public class BordView extends BorderPane {
         setBottom(lblSpelerNaam);
 
         //grid settings
-        grid.setGridLinesVisible(true);
-        grid.setMinSize(200, 200);
-        grid.setHgap(8);
-        grid.setVgap(8);
-        controlPane.setHgap(10);
-        controlPane.setVgap(10);
+        grid.setMaxHeight(480);
+        grid.setMaxWidth(480);
+        controlPane.setHgap(1);
+        controlPane.setVgap(1);
 
         //CSS
         lblCurrentScore.setId("currentScore");
@@ -140,29 +133,14 @@ public class BordView extends BorderPane {
     public void setLabels(String[][] waardes) {
         for (int x = 0; x < labels.length; x++) {
             for (int y = 0; y < labels[x].length; y++) {
-                labels[x][y].textProperty().setValue(waardes[y][x]);
-            }
-        }
-    }
-
-    // labels toevoegen aan grid (doen we bij initializer)
-    public void addLabelsToGrid() {
-        for (int x = 0; x < labels.length; x++) {
-            for (int y = 0; y < labels[x].length; y++) {
-                labels[x][y] = new Label();
-                labels[x][y].setMinWidth(45);
-                labels[x][y].setMinHeight(45);
-                labels[x][y].setAlignment(Pos.CENTER);
-                grid.add(labels[x][y], x, y);
-                GridPane.setMargin(labels[x][y], new Insets(50));
-                labels[x][y].setFont(new Font(40)); //TODO: Font instellen bij CSS
-                labels[x][y].setId("tegels");
+                labels[x][y].setText(waardes[y][x]);
 
                 //CSS - id toewijzen per mogelijke labelwaarde
                 //hogere waardes zijn in dit spel niet in rekening gehouden
                 //het spel veranderd van scherm als de waarde 2048 is bereikt
-                switch (labels[x][y].textProperty().getValue()) {
-                    case "0":
+
+                switch (waardes[y][x]) {
+                    case " ":
                         labels[x][y].setId("0");
                         break;
                     case "2":
@@ -198,7 +176,23 @@ public class BordView extends BorderPane {
                     case "2048":
                         labels[x][y].setId("2048");
                         break;
+                    default:
+                        labels[x][y].setId("2048Plus");
+                        break;
                 }
+            }
+        }
+    }
+
+    // labels toevoegen aan grid (doen we bij initializer)
+    private void addLabelsToGrid() {
+        for (int x = 0; x < labels.length; x++) {
+            for (int y = 0; y < labels[x].length; y++) {
+                labels[x][y] = new Label();
+                labels[x][y].setMinWidth(120);
+                labels[x][y].setMinHeight(120);
+                labels[x][y].setAlignment(Pos.CENTER);
+                grid.add(labels[x][y], x, y);
             }
         }
     }

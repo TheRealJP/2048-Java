@@ -31,11 +31,8 @@
 }
 
 #grid {
-    -fx-background-color: #BBADA1;
-    -fx-background-radius: 8;
-    -fx-border-width: 7px;
-    -fx-border-radius: 7px;
-    -fx-border-color: #BBADA1;
+    -fx-background-color: #b6a99b;
+    -fx-background-radius: 7.0;
 }
 
 #lblControl {
@@ -43,6 +40,12 @@
     -fx-font-size: 1.5em;
     -fx-font-weight: bold;
     -fx-alignment: center;
+}
+
+#tegels {
+    -fx-text-fill: #7c685e;
+    -fx-font-size: 3em;
+    -fx-background-color: #b6a99b;
 }
 
 #lblSpeler {
@@ -56,6 +59,7 @@
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
     -fx-font-size: 2.2em;
+
 }
 
 #newGame {
@@ -66,71 +70,5 @@
 }
 
 .text-field {
-    -fx-alignment: center;
-}
-
-#0 {
-    -fx-background-color: #CDC1B4;
-}
-
-#2 {
-    -fx-background-color: #EDE3D9;
-}
-
-#4 {
-    -fx-background-color: #EDE0C8;
-}
-
-#8 {
-    -fx-background-color: #F2B179;
-}
-
-#16 {
-    -fx-background-color: #F59563;
-}
-
-#32 {
-    -fx-background-color: #F47C63;
-}
-
-#64 {
-    -fx-background-color: #F45F43;
-}
-
-#128 {
-    -fx-background-color: #E8CB76;
-}
-
-#256 {
-    -fx-background-color: #ECCA69;
-}
-
-#512 {
-    -fx-background-color: #ECC65A;
-}
-
-#1024 {
-    -fx-background-color: #ECC34D;
-}
-
-#2048 {
-    -fx-background-color: #EBC03F;
-}
-
-#2048Plus {
-    -fx-background-color: #FC232A;
-}
-
-#0, #2, #4, #8, #16, #32, #64, #128, #256, #512, #1024, #2048, #2048, #2048Plus {
-    -fx-text-fill: #F9F6F2;
-    -fx-font-size: 3em;
-    -fx-border-color: #BBADA1;
-    -fx-border-width: 9px;
-    -fx-border-radius: 7px;
-    -fx-font-weight: bold;
-    -fx-background-radius: 15px;
-}
-
-#2,#4{
-    -fx-text-fill: #6F675E;
+    -fx-alignment: center
 }

@@ -21,7 +21,8 @@ public class BordPresenter {
         topscore = new TopScores();
         addEventHandlers();
         updateView();
-        view.getGrid().requestFocus();         // deze call doen we zodat de arrowkeys worden herkend
+        // deze call doen we zodat de arrowkeys worden herkend
+        view.getGrid().requestFocus();
     }
 
     private void addEventHandlers() {
@@ -92,7 +93,7 @@ public class BordPresenter {
         view.setLabels(model.getTegels());
 
         //voegt score & topscore toe aan label
-        view.getLblCurrentScoreNumber().textProperty().setValue("" + model.getSpeler().getScore());
-        view.getLblHighScoreNumber().textProperty().setValue(""+topscore.getTopscore());
+        view.getLblCurrentScoreNumber().setText("" + model.getSpeler().getScore());
+        view.getLblHighScoreNumber().setText(""+topscore.getTopscore());
     }
 }
