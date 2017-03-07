@@ -31,10 +31,8 @@
 }
 
 #grid {
-    -fx-background-color: #b6a99b;
-    -fx-border-color: #7c685e;
-    -fx-border-width: 5px;
-    -fx-background-radius: 7.0;
+    -fx-background-color: #BBADA1;
+    -fx-background-radius: 5px;
 }
 
 #lblControl {
@@ -121,9 +119,15 @@
 }
 
 #0, #2, #4, #8, #16, #32, #64, #128, #256, #512, #1024, #2048, #2048, #2048Plus {
-    -fx-text-fill: #7c685e;
+    -fx-text-fill: #F9F6F2;
     -fx-font-size: 3em;
-    -fx-border-color: #7c685e;
-    -fx-border-width: 2px;
+    -fx-border-color: #BBADA1;
+    -fx-border-width: 5px;
     -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+}
+
+#2,#4{
+    -fx-text-fill: #6F675E;
 }
