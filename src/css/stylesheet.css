@@ -32,7 +32,10 @@
 
 #grid {
     -fx-background-color: #BBADA1;
-    -fx-background-radius: 5px;
+    -fx-background-radius: 8;
+    -fx-border-width: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-color: #BBADA1;
 }
 
 #lblControl {
@@ -122,10 +125,10 @@
     -fx-text-fill: #F9F6F2;
     -fx-font-size: 3em;
     -fx-border-color: #BBADA1;
-    -fx-border-width: 5px;
-    -fx-border-radius: 5px;
+    -fx-border-width: 9px;
+    -fx-border-radius: 7px;
     -fx-font-weight: bold;
-    -fx-background-radius: 5px;
+    -fx-background-radius: 15px;
 }
 
 #2,#4{
