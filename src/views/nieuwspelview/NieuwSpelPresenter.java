@@ -46,7 +46,7 @@ public class NieuwSpelPresenter {
     }
 
     // met deze methode laden we de bordview in
-    public void startSpel(Event event){
+    private void startSpel(Event event){
 
         if (view.getTxtName().getText().length() >= 3
                 && view.getTxtName().getText().length() <= 10) {
@@ -55,7 +55,7 @@ public class NieuwSpelPresenter {
             BordView bordView = new BordView();
             new BordPresenter(model, bordView);
             model.getSpeler().setNaam(view.getTxtName().getText().toUpperCase());
-            bordView.getLblSpelerNaam().textProperty().setValue(model.getSpeler().getNaam());
+            bordView.getLblSpelerNaam().setText(model.getSpeler().getNaam());
             view.getScene().setRoot(bordView);
             bordView.getScene().getWindow().sizeToScene();
         } else {
