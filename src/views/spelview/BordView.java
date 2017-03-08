@@ -4,9 +4,8 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+
 
 public class BordView extends BorderPane {
     private static final int GRIDSIZE = 4;
@@ -20,11 +19,10 @@ public class BordView extends BorderPane {
     private Label lblSpelerNaam;
 
     private GridPane grid;
-
-    private Image up;
-    private Image left;
-    private Image right;
-    private Image down;
+    private Button up;
+    private Button left;
+    private Button right;
+    private Button down;
 
     private Button menu;
     private Button regels;
@@ -50,13 +48,20 @@ public class BordView extends BorderPane {
 
         grid = new GridPane();
 
-        up = new Image("afbeeldingen/up-normal.png", 50, 50, true, true);
-        left = new Image("afbeeldingen/left-normal.png", 50, 50, true, true);
-        down = new Image("afbeeldingen/down-normal.png", 50, 50, true, true);
-        right = new Image("afbeeldingen/right-normal.png", 50, 50, true, true);
+        up = new Button();
+        left = new Button();
+        down = new Button();
+        right = new Button();
     }
 
     private void layoutNodes() {
+
+        // initial styling controls
+        up.setId("UP");
+        left.setId("LEFT");
+        down.setId("DOWN");
+        right.setId("RIGHT");
+
         //Boxes
         VBox currentScoreBox = new VBox(lblCurrentScore, lblCurrentScoreNumber);
         VBox highScoreBox = new VBox(lblHighScore, lblHighScoreNumber);
@@ -69,10 +74,10 @@ public class BordView extends BorderPane {
         GridPane controlPane = new GridPane();
 
         //adding arrowkey images to gridPane
-        controlPane.add(new ImageView(up), 1, 1);
-        controlPane.add(new ImageView(left), 0, 2);
-        controlPane.add(new ImageView(down), 1, 2);
-        controlPane.add(new ImageView(right), 2, 2);
+        controlPane.add(up, 1, 1);
+        controlPane.add(left, 0, 2);
+        controlPane.add(down, 1, 2);
+        controlPane.add(right, 2, 2);
         controlsBox.getChildren().addAll(lblControls, controlPane);
 
         //tussenruimte
@@ -193,6 +198,35 @@ public class BordView extends BorderPane {
                 labels[x][y].setMinHeight(120);
                 labels[x][y].setAlignment(Pos.CENTER);
                 grid.add(labels[x][y], x, y);
+            }
+        }
+    }
+
+    public void setControlButtonsColor(boolean isPressed, String direction) {
+
+        if (!isPressed) {
+
+            up.setId("UP");
+            down.setId("DOWN");
+            left.setId("LEFT");
+            right.setId("RIGHT");
+
+        } else {
+            switch (direction) {
+
+                case "UP":
+                    System.out.println("UP-PRESSED REACHED");
+                    up.setId("UP-PRESSED");
+                    break;
+                case "DOWN":
+                    down.setId("DOWN-PRESSED");
+                    break;
+                case "LEFT":
+                    left.setId("LEFT-PRESSED");
+                    break;
+                case "RIGHT":
+                    right.setId("RIGHT-PRESSED");
+                    break;
             }
         }
     }

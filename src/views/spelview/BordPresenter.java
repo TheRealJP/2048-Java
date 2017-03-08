@@ -35,19 +35,23 @@ public class BordPresenter {
             @Override
             public void handle(KeyEvent event) {
 
-                switch (event.getCode()) {
+                    switch (event.getCode()) {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
                     case UP:
                         model.verplaats(Direction.UP);
+                        view.setControlButtonsColor(true,"UP");
                         break;
                     case DOWN:
                         model.verplaats(Direction.DOWN);
+                        view.setControlButtonsColor(true,"DOWN");
                         break;
                     case RIGHT:
                         model.verplaats(Direction.RIGHT);
+                        view.setControlButtonsColor(true,"RIGHT");
                         break;
                     case LEFT:
                         model.verplaats(Direction.LEFT);
+                        view.setControlButtonsColor(true,"LEFT");
                         break;
                     default:
                         event.consume();
@@ -83,6 +87,30 @@ public class BordPresenter {
                     new GewonnenPresenter(gewonnenView, model);
                     view.getScene().setRoot(gewonnenView);
                     gewonnenView.getScene().getWindow().sizeToScene();
+                }
+            }
+        });
+
+        view.setOnKeyReleased(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+
+                switch (event.getCode()) {
+                    case UP:
+                        view.setControlButtonsColor(false,"UP");
+                        break;
+                    case DOWN:
+                        view.setControlButtonsColor(false,"DOWN");
+                        break;
+                    case RIGHT:
+                        view.setControlButtonsColor(false,"RIGHT");
+                        break;
+                    case LEFT:
+                        view.setControlButtonsColor(false,"LEFT");
+                        break;
+                    default:
+                        event.consume();
+                        break;
                 }
             }
         });
