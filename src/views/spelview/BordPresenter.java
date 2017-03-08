@@ -39,19 +39,19 @@ public class BordPresenter {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
                     case UP:
                         model.verplaats(Direction.UP);
-                        view.setControlButtonsColor(true,"UP");
+                        view.setControlButtonsColor("UP");
                         break;
                     case DOWN:
                         model.verplaats(Direction.DOWN);
-                        view.setControlButtonsColor(true,"DOWN");
+                        view.setControlButtonsColor("DOWN");
                         break;
                     case RIGHT:
                         model.verplaats(Direction.RIGHT);
-                        view.setControlButtonsColor(true,"RIGHT");
+                        view.setControlButtonsColor("RIGHT");
                         break;
                     case LEFT:
                         model.verplaats(Direction.LEFT);
-                        view.setControlButtonsColor(true,"LEFT");
+                        view.setControlButtonsColor("LEFT");
                         break;
                     default:
                         event.consume();
@@ -97,16 +97,10 @@ public class BordPresenter {
 
                 switch (event.getCode()) {
                     case UP:
-                        view.setControlButtonsColor(false,"UP");
-                        break;
                     case DOWN:
-                        view.setControlButtonsColor(false,"DOWN");
-                        break;
                     case RIGHT:
-                        view.setControlButtonsColor(false,"RIGHT");
-                        break;
                     case LEFT:
-                        view.setControlButtonsColor(false,"LEFT");
+                        view.setControlButtonsColor("reset");
                         break;
                     default:
                         event.consume();

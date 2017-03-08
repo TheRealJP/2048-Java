@@ -202,32 +202,28 @@ public class BordView extends BorderPane {
         }
     }
 
-    public void setControlButtonsColor(boolean isPressed, String direction) {
+    public void setControlButtonsColor(String direction) {
 
-        if (!isPressed) {
+        switch (direction) {
 
-            up.setId("UP");
-            down.setId("DOWN");
-            left.setId("LEFT");
-            right.setId("RIGHT");
-
-        } else {
-            switch (direction) {
-
-                case "UP":
-                    System.out.println("UP-PRESSED REACHED");
-                    up.setId("UP-PRESSED");
-                    break;
-                case "DOWN":
-                    down.setId("DOWN-PRESSED");
-                    break;
-                case "LEFT":
-                    left.setId("LEFT-PRESSED");
-                    break;
-                case "RIGHT":
-                    right.setId("RIGHT-PRESSED");
-                    break;
-            }
+            case "UP":
+                up.setId("UP-PRESSED");
+                break;
+            case "DOWN":
+                down.setId("DOWN-PRESSED");
+                break;
+            case "LEFT":
+                left.setId("LEFT-PRESSED");
+                break;
+            case "RIGHT":
+                right.setId("RIGHT-PRESSED");
+                break;
+            case "reset":
+                up.setId("UP");
+                down.setId("DOWN");
+                left.setId("LEFT");
+                right.setId("RIGHT");
+                break;
         }
     }
 
