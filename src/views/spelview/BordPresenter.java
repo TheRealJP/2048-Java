@@ -35,19 +35,23 @@ public class BordPresenter {
             @Override
             public void handle(KeyEvent event) {
 
-                switch (event.getCode()) {
+                    switch (event.getCode()) {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
                     case UP:
                         model.verplaats(Direction.UP);
+                        view.setControlButtonsColor("UP");
                         break;
                     case DOWN:
                         model.verplaats(Direction.DOWN);
+                        view.setControlButtonsColor("DOWN");
                         break;
                     case RIGHT:
                         model.verplaats(Direction.RIGHT);
+                        view.setControlButtonsColor("RIGHT");
                         break;
                     case LEFT:
                         model.verplaats(Direction.LEFT);
+                        view.setControlButtonsColor("LEFT");
                         break;
                     default:
                         event.consume();
@@ -83,6 +87,24 @@ public class BordPresenter {
                     new GewonnenPresenter(gewonnenView, model);
                     view.getScene().setRoot(gewonnenView);
                     gewonnenView.getScene().getWindow().sizeToScene();
+                }
+            }
+        });
+
+        view.setOnKeyReleased(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+
+                switch (event.getCode()) {
+                    case UP:
+                    case DOWN:
+                    case RIGHT:
+                    case LEFT:
+                        view.setControlButtonsColor("reset");
+                        break;
+                    default:
+                        event.consume();
+                        break;
                 }
             }
         });

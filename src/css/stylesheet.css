@@ -131,6 +131,78 @@
     -fx-background-radius: 15px;
 }
 
-#2,#4{
+#2,#4 {
     -fx-text-fill: #6F675E;
+}
+
+#UP{
+    -fx-background-image: url("/afbeeldingen/up-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#DOWN{
+    -fx-background-image: url("/afbeeldingen/down-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#LEFT{
+    -fx-background-image: url("/afbeeldingen/left-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#RIGHT{
+    -fx-background-image: url("/afbeeldingen/right-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#UP-PRESSED{
+    -fx-background-image: url("/afbeeldingen/up-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#DOWN-PRESSED{
+    -fx-background-image: url("/afbeeldingen/down-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#LEFT-PRESSED{
+    -fx-background-image: url("/afbeeldingen/left-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#RIGHT-PRESSED{
+    -fx-background-image: url("/afbeeldingen/right-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
 }
