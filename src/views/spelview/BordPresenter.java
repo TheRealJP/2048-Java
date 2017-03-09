@@ -33,10 +33,8 @@ public class BordPresenter {
     private void addEventHandlers() {
         // TODO: 09/03/2017 goeie trigger zoeken: als opgeslagen spel betreft geen nieuwe tegels genereren zonder ingeduwde arrow keys
         //start spel met 2 tegels als het een nieuw spel is
-        if (!model.bordOpslaan()) {
             for (int i = 0; i < 2; i++) {
                 model.genereerNieuweTegel();
-            }
         }
 
         view.getMenu().setOnAction(new EventHandler<ActionEvent>() {

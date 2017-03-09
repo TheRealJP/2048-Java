@@ -20,6 +20,13 @@ public class MenuView extends VBox {
     private void layoutNodes() {
         setAlignment(Pos.CENTER);
         setSpacing(10);
+
+        //CSS
+        lblMenu.setId("lblMenu");
+        btnContinue.setId("menuBtns");
+        btnSave.setId("menuBtns");
+        btnNew.setId("menuBtns");
+        btnExit.setId("menuBtns");
     }
 
     private void initialiseNodes() {

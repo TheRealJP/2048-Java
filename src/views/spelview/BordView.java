@@ -64,11 +64,10 @@ public class BordView extends BorderPane {
         VBox currentScoreBox = new VBox(lblCurrentScore, lblCurrentScoreNumber);
         VBox highScoreBox = new VBox(lblHighScore, lblHighScoreNumber);
         HBox scores = new HBox(10, currentScoreBox, highScoreBox);
-        VBox buttons = new VBox(20, menu, regels);
+        VBox buttons = new VBox(10, menu, regels);
         VBox controlsBox = new VBox();
 
         //Borderpane inside main borderpane
-        BorderPane buttonPane = new BorderPane(buttons);
         GridPane controlPane = new GridPane();
 
         //adding arrowkey images to gridPane
@@ -89,11 +88,11 @@ public class BordView extends BorderPane {
         highScoreBox.setPadding(new Insets(20, 0, 25, 0));
         currentScoreBox.setPadding(new Insets(20, 0, 25, 0));
         controlsBox.setPadding(new Insets(10, 35, 10, 35));
-        buttonPane.setPadding(new Insets(40, 35, 0, 35));
         menu.setPadding(new Insets(10, 40, 10, 40));
         regels.setPadding(new Insets(10, 40, 10, 40));
         regels.setMinSize(120, 40);
         menu.setMinSize(120, 40);
+        buttons.setPadding(new Insets(45, 35, 10, 35));
 
         //uitlijning
         lblSpelerNaam.setAlignment(Pos.CENTER); // positioneert het label "spelernaam"
@@ -109,7 +108,7 @@ public class BordView extends BorderPane {
         //orientering van elementen op de borderpane
         setCenter(grid);
         setTop(scores);
-        setLeft(buttonPane);
+        setLeft(buttons);
         setRight(controlsBox);
         setBottom(lblSpelerNaam);
 
@@ -118,7 +117,6 @@ public class BordView extends BorderPane {
         grid.setMaxWidth(480);
         controlPane.setHgap(1);
         controlPane.setVgap(1);
-
 
         //CSS
         lblCurrentScore.setId("currentScore");
@@ -140,7 +138,9 @@ public class BordView extends BorderPane {
                 labels[x][y].setText(waardes[y][x]);
 
                 //CSS - id toewijzen per mogelijke labelwaarde
+                //hogere waardes zijn in dit spel niet in rekening gehouden
                 //het spel veranderd van scherm als de waarde 2048 is bereikt
+
                 switch (waardes[y][x]) {
                     case " ":
                         labels[x][y].setId("0");
