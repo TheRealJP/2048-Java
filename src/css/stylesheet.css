@@ -65,6 +65,19 @@
     -fx-font-weight: bold;
 }
 
+#txtName{
+    -fx-text-fill: #7c685e;
+    -fx-pref-height: 40px;
+    -fx-font-size: 2em;
+    -fx-background-color: whitesmoke;
+    -fx-border-color: rgba(0, 0, 0, 0.5);
+    -fx-border-radius: 8px;
+}
+
+#txtName:focused{
+    -fx-border-color: #7c685e;
+}
+
 .text-field {
     -fx-alignment: center;
 }

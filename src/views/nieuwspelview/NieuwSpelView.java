@@ -41,6 +41,7 @@ public class NieuwSpelView extends BorderPane {
         txtName.setCenterShape(true);
 
         //CSS
+        txtName.setId("txtName");
         lblEnterName.setId("enterName");
         lblNewGame.setId("newGame");
     }
