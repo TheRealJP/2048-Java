@@ -138,9 +138,6 @@ public class BordPresenter {
                 }
             }
         });
-
-
-
     }
 
     private void updateView() {

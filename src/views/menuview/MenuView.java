@@ -12,7 +12,6 @@ public class MenuView extends VBox {
     private Button btnNew;
     private Button btnExit;
 
-
     public MenuView() {
         initialiseNodes();
         layoutNodes();

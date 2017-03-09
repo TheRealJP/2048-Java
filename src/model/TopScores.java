@@ -28,8 +28,6 @@ public class TopScores {
                 spelerLijst.add(spelers[i]);
             }
 
-            System.out.println("INITIAL SCOREBOARD: \n" + this.toString()); //TODO: testcode verwijderen
-
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (EOFException e) {
@@ -54,8 +52,6 @@ public class TopScores {
 
             // array wegschrijven naar bestand
             outputStream.writeObject(spelers);
-
-            System.out.println("AFTER GAME SCOREBOARD: \n" + this.toString()); //TODO: testcode verwijderen
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -91,18 +87,6 @@ public class TopScores {
     public ArrayList<Speler> getSpelerLijst() {
         Collections.reverse(spelerLijst);
         return spelerLijst;
-    }
-
-    //TODO: testmethode, wegdoen!
-    @Override
-    public String toString() {
-
-        String output = "";
-
-        for (int i = 0; i < spelerLijst.size(); i++) {
-            output += spelerLijst.get(i).toString() + "\n";
-        }
-        return output;
     }
 
     public int getTopscore(){

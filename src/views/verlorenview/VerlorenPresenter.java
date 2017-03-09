@@ -39,7 +39,6 @@ public class VerlorenPresenter {
                 TopScores topScoresModel = new TopScores();
                 new TopScorePresenter(topScoresModel, topScoreView);
                 verlorenView.getScene().setRoot(topScoreView);
-                //topScoreView.getScene().getWindow().sizeToScene(); TODO: lijn verwijderen
             }
         });
 

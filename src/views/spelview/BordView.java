@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 
-
 public class BordView extends BorderPane {
     private static final int GRIDSIZE = 4;
 
@@ -26,7 +25,6 @@ public class BordView extends BorderPane {
 
     private Button menu;
     private Button regels;
-
 
     public BordView() {
         initialiseNodes();

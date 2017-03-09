@@ -1,7 +1,6 @@
 package model;
 
 import com.sun.javafx.scene.traversal.Direction;
-import javafx.scene.control.Label;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -239,19 +238,6 @@ public class Bord {
         return speler;
     }
 
-    //TODO: testcode, verwijderen
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (Tegel[] tegelRij : tegels) {
-            for (Tegel tegel : tegelRij) {
-                sb.append(tegel);
-                sb.append(" ");
-            }
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
-
     public void bordLaden() {
         // om de bestanden te kunnen lezen, we moeten hier geen inputstream.close doen aangezien we het op deze manier doen (met haakjes)
 
@@ -273,7 +259,6 @@ public class Bord {
         }
     }
 
-
     public boolean bordOpslaan() {
         // om weg te schrijven naar bestand, moet geen outputstream.close, aangezien we met haakjes werken (nieuw in Java 7)
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(spelbestand))) {
@@ -293,10 +278,7 @@ public class Bord {
     public void spelerLaden() {
     }
 
-
     public void spelerOpslaan() {
 
     }
-
-
 }

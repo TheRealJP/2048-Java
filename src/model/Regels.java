@@ -7,9 +7,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-/**
- * Created by Jonathan on 09/03/2017.
- */
 public class Regels {
     private String rules = "";
 

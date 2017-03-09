@@ -53,8 +53,4 @@ public class GewonnenView extends BorderPane {
     public Button getBtnNewGame() {
         return btnNewGame;
     }
-
-    public Label getHighscore() {
-        return highscore;
-    }
 }

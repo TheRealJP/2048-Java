@@ -40,8 +40,4 @@ public class Tegel implements Serializable{ //serializable voor opslagen en lade
     public void clear() {
         this.setWaarde(0);
     }
-
-    public String toString() {
-        return (Integer.toString(this.getWaarde()));
-    }
 }

@@ -16,7 +16,6 @@ public class NieuwSpelView extends BorderPane {
         layoutNodes();
     }
 
-
     private void initialiseNodes() {
         lblEnterName = new Label("What is your name?");
         lblNewGame = new Label("New Game");
