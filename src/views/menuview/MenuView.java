@@ -5,10 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-public class MenuView extends VBox{
+public class MenuView extends VBox {
     private Label lblMenu;
     private Button btnContinue;
-    private Button btnLoad;
     private Button btnSave;
     private Button btnNew;
     private Button btnExit;
@@ -27,17 +26,10 @@ public class MenuView extends VBox{
     private void initialiseNodes() {
         lblMenu = new Label("Menu");
         btnContinue = new Button("Continue Playing");
-        btnLoad = new Button("Load Game");
         btnSave = new Button("Save Game");
         btnNew = new Button("New Game");
         btnExit = new Button("Exit");
-        getChildren().addAll(lblMenu,btnContinue,btnLoad,
-                btnSave,btnNew,btnExit);
-
-    }
-
-    public Button getBtnLoad() {
-        return btnLoad;
+        getChildren().addAll(lblMenu, btnContinue, btnSave, btnNew, btnExit);
     }
 
     public Button getBtnSave() {

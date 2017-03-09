@@ -29,7 +29,6 @@ public class NieuwSpelPresenter {
         view.getBtnSpeel().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
                 startSpel(event);
             }
         });

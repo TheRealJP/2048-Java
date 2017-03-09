@@ -1,8 +1,8 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.Bord;
-import views.gewonnenview.GewonnenView;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
 
@@ -22,6 +22,7 @@ public class Main extends Application {
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(800);
         primaryStage.setResizable(false);
+        primaryStage.getIcons().add(new Image("afbeeldingen/2048icon.png")); //favicon
         primaryStage.show();
     }
 

@@ -3,7 +3,9 @@ package model;
 import com.sun.javafx.scene.traversal.Direction;
 import javafx.scene.control.Label;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -13,6 +15,8 @@ public class Bord {
     private static final int GROOTTE = 4;
     private Speler speler;
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
+    private File spelbestand = new File("src" + File.separator + "bestanden" + File.separator + "spel");
+
 
     // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
@@ -94,6 +98,7 @@ public class Bord {
                         break;
                 }
             }
+
             if (!(isLegeTegel(tegelSet))) {
                 schuif(tegelSet); // hoofdtegel groep algoritme
             }
@@ -246,4 +251,52 @@ public class Bord {
         }
         return sb.toString();
     }
+
+    public void bordLaden() {
+        // om de bestanden te kunnen lezen, we moeten hier geen inputstream.close doen aangezien we het op deze manier doen (met haakjes)
+
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(spelbestand))) {
+
+            // bestand inlezen in array
+            Tegel[][] tegels = (Tegel[][]) inputStream.readObject();
+
+            // opgehaalde array in spelerlijst laden
+            for (int i = 0; i < tegels.length; i++) {
+                for (int j = 0; j < tegels[i].length; j++) {
+                    this.tegels[i][j] = tegels[i][j];
+                }
+            }
+
+            System.out.println(Arrays.deepToString(this.tegels));
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public boolean bordOpslaan() {
+        // om weg te schrijven naar bestand, moet geen outputstream.close, aangezien we met haakjes werken (nieuw in Java 7)
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(spelbestand))) {
+
+            // array wegschrijven naar bestand
+            outputStream.writeObject(tegels);
+            System.out.println(Arrays.deepToString(tegels));
+            System.out.println("game saved");
+            return true;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public void spelerLaden() {
+    }
+
+
+    public void spelerOpslaan() {
+
+    }
+
+
 }

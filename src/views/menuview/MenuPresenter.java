@@ -25,23 +25,22 @@ public class MenuPresenter {
             @Override
             public void handle(ActionEvent event) {
                 BordView bordView = new BordView();
-                new BordPresenter(model,bordView);
+                new BordPresenter(model, bordView);
                 menuView.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
+
+                model.bordLaden();
+                model.spelerLaden();
             }
         });
 
-        menuView.getBtnLoad().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                // TODO: 23/02/2017 save en load game model
-            }
-        });
 
         menuView.getBtnSave().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                // TODO: 23/02/2017 save en load game in model
+                model.bordOpslaan();
+                model.spelerOpslaan();
+
             }
         });
 

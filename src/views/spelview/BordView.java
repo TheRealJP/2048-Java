@@ -238,4 +238,12 @@ public class BordView extends BorderPane {
     public Label getLblSpelerNaam() {
         return lblSpelerNaam;
     }
+
+    public Button getMenu() {
+        return menu;
+    }
+
+    public Button getRegels() {
+        return regels;
+    }
 }

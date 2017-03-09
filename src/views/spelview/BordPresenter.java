@@ -1,12 +1,17 @@
 package views.spelview;
 
 import com.sun.javafx.scene.traversal.Direction;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.control.Alert;
 import javafx.scene.input.KeyEvent;
 import model.Bord;
+import model.Regels;
 import model.TopScores;
 import views.gewonnenview.GewonnenPresenter;
 import views.gewonnenview.GewonnenView;
+import views.menuview.MenuPresenter;
+import views.menuview.MenuView;
 import views.verlorenview.VerlorenPresenter;
 import views.verlorenview.VerlorenView;
 
@@ -26,10 +31,36 @@ public class BordPresenter {
     }
 
     private void addEventHandlers() {
-        //start spel met 2 tegels
-        for (int i = 0; i < 2; i++) {
-            model.genereerNieuweTegel();
+        // TODO: 09/03/2017 goeie trigger zoeken: als opgeslagen spel betreft geen nieuwe tegels genereren zonder ingeduwde arrow keys
+        //start spel met 2 tegels als het een nieuw spel is
+        if (!model.bordOpslaan()) {
+            for (int i = 0; i < 2; i++) {
+                model.genereerNieuweTegel();
+            }
         }
+
+        view.getMenu().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                MenuView menuView = new MenuView();
+                new MenuPresenter(model, menuView);
+                view.getScene().setRoot(menuView);
+                menuView.getScene().getWindow().sizeToScene();
+            }
+        });
+
+        view.getRegels().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Regels regeltekst = new Regels();
+                Alert regels = new Alert(Alert.AlertType.INFORMATION);
+                regels.setTitle("2048");
+                regels.setHeaderText("2048 Game Rules");
+                regels.setContentText(regeltekst.getRegelTekst());
+                regels.show();
+            }
+        });
+
 
         view.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
@@ -81,7 +112,6 @@ public class BordPresenter {
                 // boolean die checkt naar de waarde 2048 in het grid,
                 // if TRUE? --> roep gewonnenView op
                 if (model.heeft2048()) {
-
                     topscore.voegScoreToe(model.getSpeler());
                     GewonnenView gewonnenView = new GewonnenView();
                     new GewonnenPresenter(gewonnenView, model);
@@ -108,6 +138,9 @@ public class BordPresenter {
                 }
             }
         });
+
+
+
     }
 
     private void updateView() {
@@ -116,6 +149,6 @@ public class BordPresenter {
 
         //voegt score & topscore toe aan label
         view.getLblCurrentScoreNumber().setText("" + model.getSpeler().getScore());
-        view.getLblHighScoreNumber().setText(""+topscore.getTopscore());
+        view.getLblHighScoreNumber().setText("" +topscore.getTopscore());
     }
 }
