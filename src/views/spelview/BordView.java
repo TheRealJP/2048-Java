@@ -64,11 +64,10 @@ public class BordView extends BorderPane {
         VBox currentScoreBox = new VBox(lblCurrentScore, lblCurrentScoreNumber);
         VBox highScoreBox = new VBox(lblHighScore, lblHighScoreNumber);
         HBox scores = new HBox(10, currentScoreBox, highScoreBox);
-        VBox buttons = new VBox(20, menu, regels);
+        VBox buttons = new VBox(10, menu, regels);
         VBox controlsBox = new VBox();
 
         //Borderpane inside main borderpane
-        BorderPane buttonPane = new BorderPane(buttons);
         GridPane controlPane = new GridPane();
 
         //adding arrowkey images to gridPane
@@ -89,11 +88,11 @@ public class BordView extends BorderPane {
         highScoreBox.setPadding(new Insets(20, 0, 25, 0));
         currentScoreBox.setPadding(new Insets(20, 0, 25, 0));
         controlsBox.setPadding(new Insets(10, 35, 10, 35));
-        buttonPane.setPadding(new Insets(10, 35, 10, 35));
         menu.setPadding(new Insets(10, 40, 10, 40));
         regels.setPadding(new Insets(10, 40, 10, 40));
         regels.setMinSize(120, 40);
         menu.setMinSize(120, 40);
+        buttons.setPadding(new Insets(45, 35, 10, 35));
 
         //uitlijning
         lblSpelerNaam.setAlignment(Pos.CENTER); // positioneert het label "spelernaam"
@@ -109,7 +108,7 @@ public class BordView extends BorderPane {
         //orientering van elementen op de borderpane
         setCenter(grid);
         setTop(scores);
-        setLeft(buttonPane);
+        setLeft(buttons);
         setRight(controlsBox);
         setBottom(lblSpelerNaam);
 
