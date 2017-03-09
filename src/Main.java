@@ -5,16 +5,18 @@ import javafx.stage.Stage;
 import model.Bord;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
+import views.verlorenview.VerlorenPresenter;
+import views.verlorenview.VerlorenView;
 
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
         Bord model = new Bord();
-        NieuwSpelView view = new NieuwSpelView();
-        new NieuwSpelPresenter(model, view);
+//        NieuwSpelView view = new NieuwSpelView();
+        VerlorenView view = new VerlorenView();
+        new VerlorenPresenter(model, view);
         Scene scene = new Scene(view);
         scene.getStylesheets().add("css/stylesheet.css");
         primaryStage.setScene(scene);

@@ -1,48 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71667ac3-1b60-4caa-887a-5cc372cde6c2" name="Default" comment="Controls are now changing colours while pressed.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/afbeeldingen/2048icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bestanden/spel" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Regels.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/bestanden/highscores.txt" afterPath="" />
+    <list default="true" id="71667ac3-1b60-4caa-887a-5cc372cde6c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Speler.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Speler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Tegel.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Tegel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/TopScores.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/TopScores.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuPresenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$3.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScorePresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScorePresenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScoreView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScoreView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$3.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/bestanden/rules.txt" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/bestanden/rules.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/css/stylesheet.css" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/css/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bestanden/rules.txt" afterPath="$PROJECT_DIR$/src/bestanden/rules.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Bord.java" afterPath="$PROJECT_DIR$/src/model/Bord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Tegel.java" afterPath="$PROJECT_DIR$/src/model/Tegel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bestanden/highscores" afterPath="$PROJECT_DIR$/src/bestanden/highscores" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/stylesheet.css" afterPath="$PROJECT_DIR$/src/css/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" afterPath="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/menuview/MenuView.java" afterPath="$PROJECT_DIR$/src/views/menuview/MenuView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelPresenter.java" afterPath="$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/spelview/BordPresenter.java" afterPath="$PROJECT_DIR$/src/views/spelview/BordPresenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/spelview/BordView.java" afterPath="$PROJECT_DIR$/src/views/spelview/BordView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/verlorenview/VerlorenPresenter.java" afterPath="$PROJECT_DIR$/src/views/verlorenview/VerlorenPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/verlorenview/VerlorenView.java" afterPath="$PROJECT_DIR$/src/views/verlorenview/VerlorenView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,24 +29,34 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/css/stylesheet.css">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="51">
+                    <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MenuPresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state relative-caret-position="255">
+              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,74 +64,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2048icon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/afbeeldingen/2048icon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuView.java">
+      <file leaf-file-name="VerlorenView.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/verlorenview/VerlorenView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="365">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bord.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Bord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tegel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Tegel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BordView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/spelview/BordView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="237" column="36" lean-forward="true" selection-start-line="237" selection-start-column="36" selection-end-line="237" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#8000#8001#0" expanded="true" />
-                <element signature="e#8031#8032#0" expanded="true" />
-                <element signature="e#8058#8059#0" expanded="true" />
-                <element signature="e#8091#8092#0" expanded="true" />
-                <element signature="e#8120#8121#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BordPresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/spelview/BordPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="59" column="30" lean-forward="true" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="down-normal.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/afbeeldingen/down-normal.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -165,11 +88,13 @@
       <find>opsl</find>
       <find>file</find>
       <find>[5]</find>
+      <find>laden</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="TheRealJonathanPeers &lt;jon_athan71@hotmail.com&gt;" />
         <option value="Joni Van Roost &lt;jonivanroost@macbook-pro-van-joni.local&gt;" />
       </list>
     </option>
@@ -184,17 +109,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/views/topscoreview/TopScoreView.java" />
-        <option value="$PROJECT_DIR$/src/css/stylesheet.css" />
-        <option value="$PROJECT_DIR$/src/views/spelview/BordView.java" />
-        <option value="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" />
         <option value="$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelPresenter.java" />
         <option value="$PROJECT_DIR$/src/bestanden/rules.txt" />
         <option value="$PROJECT_DIR$/src/views/menuview/MenuView.java" />
         <option value="$PROJECT_DIR$/src/model/Tegel.java" />
         <option value="$PROJECT_DIR$/src/model/Regels.java" />
-        <option value="$PROJECT_DIR$/src/model/Bord.java" />
         <option value="$PROJECT_DIR$/src/views/spelview/BordPresenter.java" />
+        <option value="$PROJECT_DIR$/src/model/Bord.java" />
+        <option value="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" />
+        <option value="$PROJECT_DIR$/src/views/spelview/BordView.java" />
+        <option value="$PROJECT_DIR$/src/views/verlorenview/VerlorenPresenter.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/css/stylesheet.css" />
+        <option value="$PROJECT_DIR$/src/views/verlorenview/VerlorenView.java" />
       </list>
     </option>
   </component>
@@ -205,10 +132,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="1004" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -268,6 +194,108 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verlorenview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topscoreview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spelview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGameKdg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -308,13 +336,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/bestanden/highscores</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/css/stylesheet.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/gewonnenview/GewonnenPresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/menuview/MenuPresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/topscoreview/TopScorePresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/topscoreview/TopScoreView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/verlorenview/VerlorenPresenter.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelView.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -842,7 +865,7 @@
       <workItem from="1488991158232" duration="4734000" />
       <workItem from="1488996828529" duration="240000" />
       <workItem from="1489006130084" duration="721000" />
-      <workItem from="1489055778977" duration="5441000" />
+      <workItem from="1489055778977" duration="8371000" />
     </task>
     <task id="LOCAL-00001" summary="Added colours to tiles, general BordView improvements.">
       <created>1488888098421</created>
@@ -865,18 +888,34 @@
       <option name="project" value="LOCAL" />
       <updated>1488995778226</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Small update: Rules , menu buttons , added favicon , deleted unneeded load button&#10;&#10;Klaar&#10;Regels toegevoegd&#10;MenuKnop gaat naar menu&#10;Load knop verwijdert&#10;Favicon toegevoegd&#10;&#10;Todo:&#10;- Menupresenter load &amp; save verder bekijken&#10;- Juiste trigger zoeken voor de eerste 2 begintegels te genereren als het daadwerkelijk een nieuw spel is en geen opgeslagen spel. Bv: methode bordOpslaan boolean laten returnen en gebruiken in een if conditie">
+      <created>1489061905537</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1489061905537</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29610000" />
+    <option name="totallyTimeSpent" value="32540000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1004" height="1047" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32825205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -884,14 +923,15 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39018953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756868" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39414415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265766" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14925373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29661018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -903,7 +943,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -944,10 +983,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Added colours to tiles, general BordView improvements." />
     <MESSAGE value="Small layout updates." />
     <MESSAGE value="Controls are now changing colours while pressed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Controls are now changing colours while pressed." />
+    <MESSAGE value="Small update: Rules , menu buttons , added favicon , deleted unneeded load button&#10;&#10;Klaar&#10;Regels toegevoegd&#10;MenuKnop gaat naar menu&#10;Load knop verwijdert&#10;Favicon toegevoegd&#10;&#10;Todo:&#10;- Menupresenter load &amp; save verder bekijken&#10;- Juiste trigger zoeken voor de eerste 2 begintegels te genereren als het daadwerkelijk een nieuw spel is en geen opgeslagen spel. Bv: methode bordOpslaan boolean laten returnen en gebruiken in een if conditie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small update: Rules , menu buttons , added favicon , deleted unneeded load button&#10;&#10;Klaar&#10;Regels toegevoegd&#10;MenuKnop gaat naar menu&#10;Load knop verwijdert&#10;Favicon toegevoegd&#10;&#10;Todo:&#10;- Menupresenter load &amp; save verder bekijken&#10;- Juiste trigger zoeken voor de eerste 2 begintegels te genereren als het daadwerkelijk een nieuw spel is en geen opgeslagen spel. Bv: methode bordOpslaan boolean laten returnen en gebruiken in een if conditie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -958,24 +999,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/spelview/BordView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1189,13 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScorePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Node.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/javafx-src.zip!/javafx/scene/layout/GridPane.java" />
     <entry file="file://$PROJECT_DIR$/src/bestanden/highscores">
@@ -1216,13 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScoreView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1246,14 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bestanden/rules.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1262,15 +1263,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Regels.java">
+    <entry file="file://$PROJECT_DIR$/src/afbeeldingen/2048icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/afbeeldingen/2048icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Bord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,34 +1297,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Bord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/spelview/BordView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="237" column="36" lean-forward="true" selection-start-line="237" selection-start-column="36" selection-end-line="237" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8000#8001#0" expanded="true" />
-            <element signature="e#8031#8032#0" expanded="true" />
-            <element signature="e#8058#8059#0" expanded="true" />
-            <element signature="e#8091#8092#0" expanded="true" />
-            <element signature="e#8120#8121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/spelview/BordPresenter.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Regels.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="59" column="30" lean-forward="true" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-          <folding />
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1318,39 +1312,90 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/afbeeldingen/2048icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/afbeeldingen/2048icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/src/views/spelview/BordPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1513">
-          <caret line="129" column="26" lean-forward="false" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
+        <state relative-caret-position="187">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/spelview/BordView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7887#7888#0" expanded="true" />
+            <element signature="e#7923#7924#0" expanded="true" />
+            <element signature="e#7954#7955#0" expanded="true" />
+            <element signature="e#7981#7982#0" expanded="true" />
+            <element signature="e#8014#8015#0" expanded="true" />
+            <element signature="e#8043#8044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScoreView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScorePresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/verlorenview/VerlorenPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#1873#1874#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        <state relative-caret-position="204">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <state relative-caret-position="255">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/verlorenview/VerlorenView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

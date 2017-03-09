@@ -89,7 +89,7 @@ public class BordView extends BorderPane {
         highScoreBox.setPadding(new Insets(20, 0, 25, 0));
         currentScoreBox.setPadding(new Insets(20, 0, 25, 0));
         controlsBox.setPadding(new Insets(10, 35, 10, 35));
-        buttonPane.setPadding(new Insets(10, 35, 10, 35));
+        buttonPane.setPadding(new Insets(40, 35, 0, 35));
         menu.setPadding(new Insets(10, 40, 10, 40));
         regels.setPadding(new Insets(10, 40, 10, 40));
         regels.setMinSize(120, 40);
@@ -119,6 +119,7 @@ public class BordView extends BorderPane {
         controlPane.setHgap(1);
         controlPane.setVgap(1);
 
+
         //CSS
         lblCurrentScore.setId("currentScore");
         lblHighScore.setId("highScore");
@@ -139,9 +140,7 @@ public class BordView extends BorderPane {
                 labels[x][y].setText(waardes[y][x]);
 
                 //CSS - id toewijzen per mogelijke labelwaarde
-                //hogere waardes zijn in dit spel niet in rekening gehouden
                 //het spel veranderd van scherm als de waarde 2048 is bereikt
-
                 switch (waardes[y][x]) {
                     case " ":
                         labels[x][y].setId("0");

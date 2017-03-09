@@ -24,7 +24,7 @@
     -fx-font-weight: bold;
 }
 
-#highScore, #currentScore {
+#highScore, #currentScore   {
     -fx-text-fill: #7c685e;
     -fx-font-size: 1.5em;
     -fx-font-weight: bold;
@@ -51,18 +51,31 @@
     -fx-font-weight: bold;
 }
 
-#enterName {
+#enterName , #yourScore  , #scoreNumber{
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
     -fx-font-size: 2.2em;
 }
 
-#newGame {
+#newGame , #youLost{
     -fx-font-size: 5em;
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
+}
+
+#txtName {
+    -fx-text-fill: #7c685e;
+    -fx-pref-height: 40px;
+    -fx-font-size: 2em;
+    -fx-background-color: whitesmoke;
+    -fx-border-color: rgba(0, 0, 0, 0.5);
+    -fx-border-radius: 8px;
+}
+
+#txtName:focused{
+    -fx-border-color: #7c685e;
 }
 
 .text-field {

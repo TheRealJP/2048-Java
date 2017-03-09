@@ -20,7 +20,6 @@ public class MenuPresenter {
     }
 
     private void addEventHandlers() {
-
         menuView.getBtnContinue().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -30,17 +29,15 @@ public class MenuPresenter {
                 bordView.getScene().getWindow().sizeToScene();
 
                 model.bordLaden();
-                model.spelerLaden();
+//                model.spelerLaden();
             }
         });
-
 
         menuView.getBtnSave().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 model.bordOpslaan();
                 model.spelerOpslaan();
-
             }
         });
 
