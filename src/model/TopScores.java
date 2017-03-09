@@ -28,6 +28,8 @@ public class TopScores {
                 spelerLijst.add(spelers[i]);
             }
 
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (EOFException e) {
@@ -91,7 +93,9 @@ public class TopScores {
 
     public int getTopscore(){
 
-        //TODO: de Topscore in bordpresenter instellen op spelerscore wanneer de topscore verbeterd wordt. (kan zijn dat dit al werkt, nog niet getest)
+        if(spelerLijst.size()==0){
+            return 0;
+        }
         return spelerLijst.get(spelerLijst.size()-1).getScore();
     }
 }

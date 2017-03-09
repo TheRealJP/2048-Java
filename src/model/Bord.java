@@ -4,7 +4,6 @@ import com.sun.javafx.scene.traversal.Direction;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -15,7 +14,6 @@ public class Bord {
     private Speler speler;
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
     private File spelbestand = new File("src" + File.separator + "bestanden" + File.separator + "spel");
-
 
     // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
@@ -253,7 +251,6 @@ public class Bord {
                 }
             }
 
-            System.out.println(Arrays.deepToString(this.tegels));
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
@@ -265,8 +262,6 @@ public class Bord {
 
             // array wegschrijven naar bestand
             outputStream.writeObject(tegels);
-            System.out.println(Arrays.deepToString(tegels));
-            System.out.println("game saved");
             return true;
 
         } catch (IOException e) {
