@@ -25,7 +25,7 @@ public class GewonnenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 BordView bordView = new BordView();
-                BordPresenter bordPresenter = new BordPresenter(model, bordView);
+                new BordPresenter(model, bordView);
                 view.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
             }
@@ -36,7 +36,7 @@ public class GewonnenPresenter {
             public void handle(ActionEvent event) {
 
                 NieuwSpelView nieuwSpelView = new NieuwSpelView();
-                NieuwSpelPresenter nieuwSpelPresenter = new NieuwSpelPresenter(model, nieuwSpelView);
+                new NieuwSpelPresenter(model, nieuwSpelView);
                 view.getScene().setRoot(nieuwSpelView);
                 nieuwSpelView.getScene().getWindow().sizeToScene();
             }

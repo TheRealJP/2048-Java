@@ -1,6 +1,9 @@
 package views.topscoreview;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import model.TopScores;
+import views.menuview.MenuView;
 
 public class TopScorePresenter {
 
@@ -16,7 +19,15 @@ public class TopScorePresenter {
 
     private void addEventHandlers() {
 
+        view.getMenuBtn().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
 
+                //TODO: nakijken!
+                MenuView menuView = new MenuView();
+                view.getScene().setRoot(menuView);
+            }
+        });
     }
 
     private void updateLayout() {

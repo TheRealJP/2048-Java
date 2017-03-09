@@ -53,6 +53,6 @@ public class VerlorenPresenter {
 
     private void updateView() {
 
-        verlorenView.getLblscoreNumber().textProperty().setValue(""+model.getSpeler().getScore());
+        verlorenView.getLblscoreNumber().setText(""+model.getSpeler().getScore());
     }
 }
