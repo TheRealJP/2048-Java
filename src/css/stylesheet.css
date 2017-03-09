@@ -131,11 +131,11 @@
     -fx-background-radius: 15px;
 }
 
-#2,#4 {
+#2, #4 {
     -fx-text-fill: #6F675E;
 }
 
-#UP{
+#UP {
     -fx-background-image: url("/afbeeldingen/up-normal.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
@@ -144,7 +144,7 @@
     -fx-background-insets: 1px;
 }
 
-#DOWN{
+#DOWN {
     -fx-background-image: url("/afbeeldingen/down-normal.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
@@ -153,7 +153,7 @@
     -fx-background-insets: 1px;
 }
 
-#LEFT{
+#LEFT {
     -fx-background-image: url("/afbeeldingen/left-normal.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
@@ -162,7 +162,7 @@
     -fx-background-insets: 1px;
 }
 
-#RIGHT{
+#RIGHT {
     -fx-background-image: url("/afbeeldingen/right-normal.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
@@ -171,7 +171,7 @@
     -fx-background-insets: 1px;
 }
 
-#UP-PRESSED{
+#UP-PRESSED {
     -fx-background-image: url("/afbeeldingen/up-pressed.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
@@ -180,7 +180,7 @@
     -fx-background-insets: 1px;
 }
 
-#DOWN-PRESSED{
+#DOWN-PRESSED {
     -fx-background-image: url("/afbeeldingen/down-pressed.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
@@ -189,7 +189,7 @@
     -fx-background-insets: 1px;
 }
 
-#LEFT-PRESSED{
+#LEFT-PRESSED {
     -fx-background-image: url("/afbeeldingen/left-pressed.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
@@ -198,11 +198,62 @@
     -fx-background-insets: 1px;
 }
 
-#RIGHT-PRESSED{
+#RIGHT-PRESSED {
     -fx-background-image: url("/afbeeldingen/right-pressed.png");
     -fx-min-width: 50;
     -fx-min-height: 50;
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+}
+
+/* Topscore View */
+
+#schermNaamLbl {
+    -fx-padding: 20px 0 0 0;
+    -fx-font-size: 4em;
+    -fx-text-alignment: center;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif arial;
+    -fx-font-weight: bold;
+}
+
+#naamEnScoreLbls {
+    -fx-font-size: 3em;
+    -fx-text-alignment: center;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif arial;
+    -fx-font-weight: bold;
+}
+
+#schermVBox {
+    -fx-alignment: center;
+}
+
+#naamEnScoreBox {
+    -fx-padding: 20px 0 0 0;
+    -fx-alignment: center;
+}
+
+#inhoudBox {
+    -fx-padding: 30px 0 0 0;
+    -fx-alignment: baseline-center;
+}
+
+#spelerNamenLbl{
+    -fx-font-size: 3em;
+    -fx-text-alignment: left;
+    -fx-text-fill: #7c685e;
+}
+
+#spelerScoresLbl{
+    -fx-alignment: center;
+    -fx-font-size: 3em;
+    -fx-text-alignment: left;
+    -fx-text-fill: #7c685e;
+}
+
+#scoresMenuBtn{
+    -fx-font-size: 2em;
+    -fx-text-alignment: center;
 }

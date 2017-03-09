@@ -25,7 +25,7 @@ public class MenuPresenter {
             @Override
             public void handle(ActionEvent event) {
                 BordView bordView = new BordView();
-                BordPresenter bordPresenter = new BordPresenter(model,bordView);
+                new BordPresenter(model,bordView);
                 menuView.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
             }
@@ -49,7 +49,7 @@ public class MenuPresenter {
             @Override
             public void handle(ActionEvent event) {
                 NieuwSpelView nieuwSpelView = new NieuwSpelView();
-                NieuwSpelPresenter nieuwSpelPresenter = new NieuwSpelPresenter(model, nieuwSpelView);
+                new NieuwSpelPresenter(model, nieuwSpelView);
                 menuView.getScene().setRoot(nieuwSpelView);
                 nieuwSpelView.getScene().getWindow().sizeToScene();
             }
@@ -62,6 +62,4 @@ public class MenuPresenter {
             }
         });
     }
-
-
 }
