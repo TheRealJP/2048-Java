@@ -7,7 +7,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import model.Speler;
-
 import java.util.ArrayList;
 
 public class TopScoreView extends BorderPane {

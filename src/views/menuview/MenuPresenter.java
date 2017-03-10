@@ -47,7 +47,7 @@ public class MenuPresenter {
                 model.setTegels(model.bordLaden());
                 bordView.getLblSpelerNaam().setText(model.spelerLaden().getNaam());
                 bordView.getLblCurrentScoreNumber().setText(model.spelerLaden().getScore() + "");
-                new BordPresenter(model, bordView, false); //start NIET (false) met nieuwe tegels
+                new BordPresenter(model, bordView,false); //start NIET (false) met nieuwe tegels
                 menuView.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
             }
@@ -57,6 +57,8 @@ public class MenuPresenter {
         menuView.getBtnExit().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
+                model.getTopScores().voegScoreToe(model.getSpeler()); // score van speler toevoegen aan topscores.
                 Platform.exit();
             }
         });
@@ -65,7 +67,7 @@ public class MenuPresenter {
             @Override
             public void handle(ActionEvent event) {
                 BordView bordViewContinue = new BordView();
-                new BordPresenter(model, bordViewContinue, false);
+                new BordPresenter(model, bordViewContinue,false);
                 menuView.getScene().setRoot(bordViewContinue);
                 bordViewContinue.getScene().getWindow().sizeToScene();
 
@@ -98,21 +100,18 @@ public class MenuPresenter {
         });
 
         // deze eventhandler handelt de actie af als er op scoreboard geklikt is.
-        menuView.getBtnscoreBord().
+        menuView.getBtnscoreBord().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                TopScoreView topScoreView = new TopScoreView();
 
-                setOnAction(new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent event) {
-                        TopScoreView topScoreView = new TopScoreView();
-
-                        if (menuView.isFirstTime()) {
-                            new TopScorePresenter(model, topScoreView, "initial");
-                        } else {
-                            new TopScorePresenter(model, topScoreView, "menu");
-                        }
-
-                        menuView.getScene().setRoot(topScoreView);
-                    }
-                });
+                if (menuView.isFirstTime()){
+                    new TopScorePresenter(model, topScoreView,"initial");
+                } else {
+                    new TopScorePresenter(model, topScoreView,"menu");
+                }
+                menuView.getScene().setRoot(topScoreView);
+            }
+        });
     }
 }

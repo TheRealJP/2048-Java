@@ -43,6 +43,7 @@ public class VerlorenPresenter {
         verlorenView.getBtnExit().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                model.getTopScores().voegScoreToe(model.getSpeler()); // score van speler toevoegen aan topscores.
                 Platform.exit();
             }
         });
