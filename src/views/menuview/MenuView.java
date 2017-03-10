@@ -13,6 +13,7 @@ public class MenuView extends VBox {
     private Button btnNew;
     private Button btnExit;
     private Button btnLoad;
+    private Button btnscoreBord;
 
     private boolean firstTime;
 
@@ -39,6 +40,7 @@ public class MenuView extends VBox {
         btnLoad.setId("menuBtns");
         btnContinue.setId("menuBtns");
         btnSave.setId("menuBtns");
+        btnscoreBord.setId("menuBtns");
     }
 
     private void initialiseNodes() {
@@ -56,11 +58,12 @@ public class MenuView extends VBox {
         btnSave = new Button("Save Game");
         btnNew = new Button("New Game");
         btnExit = new Button("Exit");
+        btnscoreBord = new Button("Scoreboard");
 
         if (firstTime) {
-            getChildren().addAll(lbl2048, lblMenu, btnNew, btnLoad, btnExit);
+            getChildren().addAll(lbl2048, lblMenu, btnNew, btnLoad, btnscoreBord, btnExit);
         } else {
-            getChildren().addAll(lbl2048, lblMenu, btnContinue, btnSave, btnNew, btnExit);
+            getChildren().addAll(lbl2048, lblMenu, btnContinue, btnSave, btnNew, btnscoreBord, btnExit);
         }
     }
 
@@ -82,5 +85,13 @@ public class MenuView extends VBox {
 
     public Button getBtnLoad() {
         return btnLoad;
+    }
+
+    public Button getBtnscoreBord() {
+        return btnscoreBord;
+    }
+
+    public boolean isFirstTime() {
+        return firstTime;
     }
 }

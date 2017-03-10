@@ -8,6 +8,8 @@ import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
 import views.spelview.BordPresenter;
 import views.spelview.BordView;
+import views.topscoreview.TopScorePresenter;
+import views.topscoreview.TopScoreView;
 
 public class MenuPresenter {
     private Bord model;
@@ -77,6 +79,21 @@ public class MenuPresenter {
             public void handle(ActionEvent event) {
                 model.bordOpslaan(); //data opgeslagen in spel.bin
                 model.spelerOpslaan(); //data opgeslagen in speler.bin
+            }
+        });
+
+        // deze eventhandler handelt de actie af als er op scoreboard geklikt is.
+        menuView.getBtnscoreBord().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                TopScoreView topScoreView = new TopScoreView();
+
+                if (menuView.isFirstTime()){
+                    new TopScorePresenter(model, topScoreView,"initial");
+                } else {
+                    new TopScorePresenter(model, topScoreView,"menu");
+                }
+                menuView.getScene().setRoot(topScoreView);
             }
         });
     }

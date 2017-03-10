@@ -50,7 +50,7 @@ public class TopScoreView extends BorderPane {
         inhoudBox = new HBox(95);
 
         //setup buttons
-        menuBtn = new Button("Menu");
+        menuBtn = new Button("Back");
     }
 
     private void layoutNodes() {
@@ -62,7 +62,7 @@ public class TopScoreView extends BorderPane {
         naamEnScoreBox.setId("naamEnScoreBox");
         schermVBox.setId("schermVBox");
         inhoudBox.setId("inhoudBox");
-        menuBtn.setId("scoresMenuBtn");
+        menuBtn.setId("menuBtns");
 
         // positionering boxen
         setTop(schermVBox);
