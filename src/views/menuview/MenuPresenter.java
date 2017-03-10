@@ -36,13 +36,14 @@ public class MenuPresenter {
         menuView.getBtnLoad().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
                 BordView bordView = new BordView();
-                new BordPresenter(model, bordView);
+                model.setTegels(model.bordLaden());
+                bordView.getLblSpelerNaam().setText(model.spelerLaden().getNaam());
+                bordView.getLblCurrentScoreNumber().setText(model.spelerLaden().getScore() + "");
+                new BordPresenter(model, bordView,false); //start NIET (false) met nieuwe tegels
                 menuView.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
-
-                model.bordLaden();
-//              model.spelerLaden(); TODO: instellen/verwijderen!
             }
         });
 
@@ -57,12 +58,16 @@ public class MenuPresenter {
         menuView.getBtnContinue().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
                 BordView bordViewContinue = new BordView();
-                new BordPresenter(model, bordViewContinue);
+                new BordPresenter(model, bordViewContinue,false);
                 menuView.getScene().setRoot(bordViewContinue);
                 bordViewContinue.getScene().getWindow().sizeToScene();
-                //TODO: teruggaan naar spel (zonder nieuwe tegel aan te maken, dus geen nieuw bord model oproepen?)
+/*
+                TODO: teruggaan naar spel (zonder nieuwe tegel aan te maken, dus geen nieuw bord model oproepen?)
+*/
+
+                bordViewContinue.getLblSpelerNaam().setText(model.spelerLaden().getNaam());
+                bordViewContinue.getLblCurrentScoreNumber().setText(model.spelerLaden().getScore() + "");
             }
         });
 
@@ -70,8 +75,8 @@ public class MenuPresenter {
         menuView.getBtnSave().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                model.bordOpslaan();
-                model.spelerOpslaan();
+                model.bordOpslaan(); //data opgeslagen in spel.bin
+                model.spelerOpslaan(); //data opgeslagen in speler.bin
             }
         });
     }

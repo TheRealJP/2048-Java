@@ -19,31 +19,51 @@ public class BordPresenter {
     private Bord model;
     private BordView view;
     private TopScores topscore;
+    private boolean firstTime;
 
-    public BordPresenter(Bord model, BordView view) {
+    public BordPresenter(Bord model, BordView view , boolean firstTime) {
         this.model = model;
         this.view = view;
         topscore = new TopScores();
+        this.firstTime = firstTime;
+
         addEventHandlers();
         updateView();
+
         // deze call doen we zodat de arrowkeys worden herkend
         view.getGrid().requestFocus();
     }
 
+
+    private void updateView() {
+        // labels instellen
+        view.setLabels(model.getTegels());
+
+        //voegt score & topscore toe aan label
+        view.getLblCurrentScoreNumber().setText("" + model.getSpeler().getScore());
+        view.getLblHighScoreNumber().setText("" + topscore.getTopscore());
+    }
+
     private void addEventHandlers() {
-        // TODO: 09/03/2017 goeie trigger zoeken: als opgeslagen spel betreft geen nieuwe tegels genereren zonder ingeduwde arrow keys
+
         //start spel met 2 tegels als het een nieuw spel is
-        for (int i = 0; i < 2; i++) {
-            model.genereerNieuweTegel();
+        if (firstTime) {
+            for (int i = 0; i < 2; i++) {
+                model.genereerNieuweTegel();
+            }
         }
 
         view.getMenu().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                //slaagt eerst het huidige spel op
+//                model.spelerOpslaan();
+
                 MenuView menuView = new MenuView(false);
                 new MenuPresenter(model, menuView);
                 view.getScene().setRoot(menuView);
                 menuView.getScene().getWindow().sizeToScene();
+
             }
         });
 
@@ -134,14 +154,5 @@ public class BordPresenter {
                 }
             }
         });
-    }
-
-    private void updateView() {
-        // labels instellen
-        view.setLabels(model.getTegels());
-
-        //voegt score & topscore toe aan label
-        view.getLblCurrentScoreNumber().setText("" + model.getSpeler().getScore());
-        view.getLblHighScoreNumber().setText("" + topscore.getTopscore());
     }
 }

@@ -12,9 +12,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Bord model = new Bord();
         MenuView view = new MenuView(true);
-        new MenuPresenter(model,view);
+        new MenuPresenter(model, view);
+
         Scene scene = new Scene(view);
         scene.getStylesheets().add("css/stylesheet.css");
+
         primaryStage.setScene(scene);
         primaryStage.setTitle("2048");
         primaryStage.setMinWidth(800);

@@ -1,6 +1,7 @@
 package model;
 
 import com.sun.javafx.scene.traversal.Direction;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,8 @@ public class Bord {
     private Speler speler;
     private TopScores topScores;
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
-    private File spelbestand = new File("src" + File.separator + "bestanden" + File.separator + "spel");
+    private File spelbestand = new File("src" + File.separator + "bestanden" + File.separator + "spel.bin");
+    private File spelerbestand = new File("src" + File.separator + "bestanden" + File.separator + "speler.bin");
 
     // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
@@ -240,7 +242,11 @@ public class Bord {
         return topScores;
     }
 
-    public void bordLaden() {
+    public void setTegels(Tegel[][] tegels) {
+        this.tegels = tegels;
+    }
+
+    public Tegel[][] bordLaden() {
         // om de bestanden te kunnen lezen, we moeten hier geen inputstream.close doen aangezien we het op deze manier doen (met haakjes)
 
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(spelbestand))) {
@@ -255,12 +261,13 @@ public class Bord {
                 }
             }
 
-        } catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("Savefile niet gevonden, zal aangemaakt worden nadat de speler het spel opslaat. ");
 
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
+        return tegels;
     }
 
     public boolean bordOpslaan() {
@@ -277,11 +284,29 @@ public class Bord {
         return false;
     }
 
-    public void spelerLaden() {
-        //TODO: lege void gebruiken of verwijderen!
+    public Speler spelerLaden() {
+
+
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(spelerbestand))) {
+
+            // bestand inlezen in array
+            speler = (Speler) inputStream.readObject();
+
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+
+        return speler;
     }
 
     public void spelerOpslaan() {
-        //TODO: lege void gebruiken of verwijderen!
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(spelerbestand))) {
+
+            // array wegschrijven naar bestand
+            outputStream.writeObject(speler);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
