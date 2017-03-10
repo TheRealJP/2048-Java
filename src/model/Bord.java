@@ -1,22 +1,23 @@
 package model;
 
 import com.sun.javafx.scene.traversal.Direction;
-import javafx.scene.control.Label;
-
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 
 public class Bord {
     // dimensies van het bord
     private static final int GROOTTE = 4;
     private Speler speler;
+    private TopScores topScores;
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
+    private File spelbestand = new File("src" + File.separator + "bestanden" + File.separator + "spel.bin");
+    private File spelerbestand = new File("src" + File.separator + "bestanden" + File.separator + "speler.bin");
 
     // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
-
+        topScores = new TopScores();
         speler = new Speler();
         for (int i = 0; i < tegels[0].length; i++) {
             for (int j = 0; j < tegels.length; j++) {
@@ -94,6 +95,7 @@ public class Bord {
                         break;
                 }
             }
+
             if (!(isLegeTegel(tegelSet))) {
                 schuif(tegelSet); // hoofdtegel groep algoritme
             }
@@ -234,16 +236,83 @@ public class Bord {
         return speler;
     }
 
-    //TODO: testcode, verwijderen
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (Tegel[] tegelRij : tegels) {
-            for (Tegel tegel : tegelRij) {
-                sb.append(tegel);
-                sb.append(" ");
+    public TopScores getTopScores() {
+        return topScores;
+    }
+
+    public void setTegels(Tegel[][] tegels) {
+        this.tegels = tegels;
+    }
+
+    public Tegel[][] bordLaden() {
+        // om de bestanden te kunnen lezen, we moeten hier geen inputstream.close doen aangezien we het op deze manier doen (met haakjes)
+
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(spelbestand))) {
+
+            // bestand inlezen in array
+            Tegel[][] tegels = (Tegel[][]) inputStream.readObject();
+
+            // opgehaalde array in spelerlijst laden
+            for (int i = 0; i < tegels.length; i++) {
+                for (int j = 0; j < tegels[i].length; j++) {
+                    this.tegels[i][j] = tegels[i][j];
+                }
             }
-            sb.append("\n");
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Savefile niet gevonden, zal aangemaakt worden nadat de speler het spel opslaat. ");
+
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
         }
-        return sb.toString();
+        return tegels;
+    }
+
+    public boolean bordOpslaan() {
+        // om weg te schrijven naar bestand, moet geen outputstream.close, aangezien we met haakjes werken (nieuw in Java 7)
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(spelbestand))) {
+
+            // array wegschrijven naar bestand
+            outputStream.writeObject(tegels);
+            return true;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public Speler spelerLaden() {
+
+
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(spelerbestand))) {
+
+            // bestand inlezen in array
+            speler = (Speler) inputStream.readObject();
+
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+
+        return speler;
+    }
+
+    public void spelerOpslaan() {
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(spelerbestand))) {
+
+            // array wegschrijven naar bestand
+            outputStream.writeObject(speler);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public File getSpelbestand() {
+        return spelbestand;
+    }
+
+    public File getSpelerbestand() {
+        return spelerbestand;
     }
 }

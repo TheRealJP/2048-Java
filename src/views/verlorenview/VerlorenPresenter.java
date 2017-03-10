@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import model.Bord;
-import model.TopScores;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
 import views.topscoreview.TopScorePresenter;
@@ -36,23 +35,21 @@ public class VerlorenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 TopScoreView topScoreView = new TopScoreView();
-                TopScores topScoresModel = new TopScores();
-                new TopScorePresenter(topScoresModel, topScoreView);
+                new TopScorePresenter(model, topScoreView,"verloren");
                 verlorenView.getScene().setRoot(topScoreView);
-                //topScoreView.getScene().getWindow().sizeToScene(); TODO: lijn verwijderen
             }
         });
 
         verlorenView.getBtnExit().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                model.getTopScores().voegScoreToe(model.getSpeler()); // score van speler toevoegen aan topscores.
                 Platform.exit();
             }
         });
     }
 
     private void updateView() {
-
-        verlorenView.getLblscoreNumber().setText(""+model.getSpeler().getScore());
+        verlorenView.getLblscoreNumber().setText("" + model.getSpeler().getScore());
     }
 }

@@ -43,6 +43,13 @@ public class VerlorenView extends BorderPane {
         scoreBox.setAlignment(Pos.CENTER);
 
         setCenter(groupBox);
+
+        lblYouLost.setId("youLost");
+        lblYourScore.setId("yourScore");
+        lblscoreNumber.setId("yourScore");
+        btnNewGame.setId("verlorenBtn");
+        btnScoreBoard.setId("verlorenBtn");
+        btnExit.setId("verlorenBtn");
     }
 
     public Label getLblscoreNumber() {

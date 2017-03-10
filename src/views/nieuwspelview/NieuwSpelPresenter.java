@@ -29,7 +29,6 @@ public class NieuwSpelPresenter {
         view.getBtnSpeel().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
                 startSpel(event);
             }
         });
@@ -51,13 +50,14 @@ public class NieuwSpelPresenter {
         if (view.getTxtName().getText().length() >= 3
                 && view.getTxtName().getText().length() <= 10) {
 
-            model.bordLeegMaken();
+            model.bordLeegMaken(); // maakt eerst huidige score leeg en verwijdert tegels van het bord
             BordView bordView = new BordView();
-            new BordPresenter(model, bordView);
+            new BordPresenter(model, bordView,true); //start WEL (true) met nieuwe tegels
             model.getSpeler().setNaam(view.getTxtName().getText().toUpperCase());
             bordView.getLblSpelerNaam().setText(model.getSpeler().getNaam());
             view.getScene().setRoot(bordView);
             bordView.getScene().getWindow().sizeToScene();
+
         } else {
 
             event.consume();
@@ -88,5 +88,4 @@ public class NieuwSpelPresenter {
             }
         });
     }
-
 }

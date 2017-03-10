@@ -16,6 +16,48 @@
     -fx-progress-color: #7c685e;
 }
 
+/* NieuwSpel View */
+#enterName ,#yourScore ,#winSubTitle ,#winHighScore  {
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 2.2em;
+}
+
+#newGame ,#youLost ,#winTitle{
+    -fx-font-size: 5em;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+}
+
+#2048Title{
+    -fx-padding: 30px 0 0 0;
+    -fx-font-size: 12em;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+}
+
+#txtName{
+    -fx-text-fill: #7c685e;
+    -fx-pref-height: 40px;
+    -fx-font-size: 2em;
+    -fx-background-color: whitesmoke;
+    -fx-border-color: rgba(0, 0, 0, 0.5);
+    -fx-border-radius: 8px;
+}
+
+#txtName:focused{
+    -fx-border-color: #7c685e;
+}
+
+.text-field {
+    -fx-alignment: center;
+}
+
+/* Bord View */
+
 #currentNumber, #highNumber {
     -fx-text-fill: #f8f7ed;
     -fx-font-size: 2em;
@@ -31,8 +73,11 @@
 }
 
 #grid {
-    -fx-background-color: #b6a99b;
-    -fx-background-radius: 7.0;
+    -fx-background-color: #BBADA1;
+    -fx-background-radius: 8;
+    -fx-border-width: 7px;
+    -fx-border-radius: 7px;
+    -fx-border-color: #BBADA1;
 }
 
 #lblControl {
@@ -42,33 +87,211 @@
     -fx-alignment: center;
 }
 
-#tegels {
-    -fx-text-fill: #7c685e;
-    -fx-font-size: 3em;
-    -fx-background-color: #b6a99b;
-}
-
 #lblSpeler {
     -fx-text-fill: #7c685e;
     -fx-font-size: 3em;
     -fx-font-weight: bold;
 }
 
-#enterName {
-    -fx-text-fill: #7c685e;
-    -fx-font-family: sans-serif;
-    -fx-font-weight: bold;
-    -fx-font-size: 2.2em;
-
+#0 {
+    -fx-background-color: #CDC1B4;
 }
 
-#newGame {
+#2 {
+    -fx-background-color: #EDE3D9;
+}
+
+#4 {
+    -fx-background-color: #EDE0C8;
+}
+
+#8 {
+    -fx-background-color: #F2B179;
+}
+
+#16 {
+    -fx-background-color: #F59563;
+}
+
+#32 {
+    -fx-background-color: #F47C63;
+}
+
+#64 {
+    -fx-background-color: #F45F43;
+}
+
+#128 {
+    -fx-background-color: #E8CB76;
+}
+
+#256 {
+    -fx-background-color: #ECCA69;
+}
+
+#512 {
+    -fx-background-color: #ECC65A;
+}
+
+#1024 {
+    -fx-background-color: #ECC34D;
+}
+
+#2048 {
+    -fx-background-color: #EBC03F;
+}
+
+#2048Plus {
+    -fx-background-color: #FC232A;
+}
+
+#0, #2, #4, #8, #16, #32, #64, #128, #256, #512, #1024, #2048, #2048, #2048Plus {
+    -fx-text-fill: #F9F6F2;
+    -fx-font-size: 3em;
+    -fx-border-color: #BBADA1;
+    -fx-border-width: 9px;
+    -fx-border-radius: 7px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15px;
+}
+
+#2, #4 {
+    -fx-text-fill: #6F675E;
+}
+
+#UP {
+    -fx-background-image: url("/afbeeldingen/up-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#DOWN {
+    -fx-background-image: url("/afbeeldingen/down-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#LEFT {
+    -fx-background-image: url("/afbeeldingen/left-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#RIGHT {
+    -fx-background-image: url("/afbeeldingen/right-normal.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#UP-PRESSED {
+    -fx-background-image: url("/afbeeldingen/up-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#DOWN-PRESSED {
+    -fx-background-image: url("/afbeeldingen/down-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#LEFT-PRESSED {
+    -fx-background-image: url("/afbeeldingen/left-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+#RIGHT-PRESSED {
+    -fx-background-image: url("/afbeeldingen/right-pressed.png");
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-background-insets: 1px;
+}
+
+/* Topscore View */
+
+#schermNaamLbl {
+    -fx-padding: 20px 0 0 0;
+    -fx-font-size: 4em;
+    -fx-text-alignment: center;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif arial;
+    -fx-font-weight: bold;
+}
+
+#naamEnScoreLbls {
+    -fx-font-size: 3em;
+    -fx-text-alignment: center;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif arial;
+    -fx-font-weight: bold;
+}
+
+#schermVBox {
+    -fx-alignment: center;
+}
+
+#naamEnScoreBox {
+    -fx-padding: 20px 0 0 0;
+    -fx-alignment: center;
+}
+
+#inhoudBox {
+    -fx-padding: 30px 0 0 0;
+    -fx-alignment: baseline-center;
+}
+
+#spelerNamenLbl{
+    -fx-font-size: 3em;
+    -fx-text-alignment: left;
+    -fx-text-fill: #7c685e;
+}
+
+#spelerScoresLbl{
+    -fx-alignment: center;
+    -fx-font-size: 3em;
+    -fx-text-alignment: left;
+    -fx-text-fill: #7c685e;
+}
+
+/* Menu View */
+#lblMenu{
+    -fx-padding: 30px;
     -fx-font-size: 5em;
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
 }
 
-.text-field {
-    -fx-alignment: center
+#menuBtns,#verlorenBtn,#winBtns {
+    -fx-min-width: 250px;
+    -fx-min-height: 50px;
+}
+
+#winLbls{
+    -fx-spacing: 10px;
+    -fx-padding: 15px;
 }

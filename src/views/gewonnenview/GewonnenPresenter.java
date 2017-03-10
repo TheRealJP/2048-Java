@@ -17,7 +17,7 @@ public class GewonnenPresenter {
         this.view = view;
         this.model = model;
         addEventHandlers();
-        updateLayout();
+        updateView();
     }
 
     private void addEventHandlers() {
@@ -25,7 +25,7 @@ public class GewonnenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 BordView bordView = new BordView();
-                new BordPresenter(model, bordView);
+                new BordPresenter(model, bordView,false); //start NIET (false) met nieuwe tegels
                 view.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
             }
@@ -50,8 +50,7 @@ public class GewonnenPresenter {
         });
     }
 
-    private void updateLayout() {
-
-
+    private void updateView() {
+        view.getLblHighScoreNumber().setText( model.getTopScores().getTopscore() +"");
     }
 }

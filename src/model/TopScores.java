@@ -28,8 +28,8 @@ public class TopScores {
                 spelerLijst.add(spelers[i]);
             }
 
-            System.out.println("INITIAL SCOREBOARD: \n" + this.toString()); //TODO: testcode verwijderen
-
+        } catch (FileNotFoundException e) {
+            System.out.println("Topscores bestand niet gevonden, zal aangemaakt worden nadat de speler het spel verliest/wint. ");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (EOFException e) {
@@ -55,8 +55,6 @@ public class TopScores {
             // array wegschrijven naar bestand
             outputStream.writeObject(spelers);
 
-            System.out.println("AFTER GAME SCOREBOARD: \n" + this.toString()); //TODO: testcode verwijderen
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -67,47 +65,44 @@ public class TopScores {
     // krijgen we binnen vanuit bordpresenter (ctrl+click op de naam om te zien van waar)
     public void voegScoreToe(Speler speler) {
 
+        sorteerEnReverse();
         // als de lijst kleiner is dan 10, en er dus sowieso nog vrije plaats is, laden we de speler gewoon in.
         if (spelerLijst.size() < 10) {
 
             spelerLijst.add(speler);
 
             // als de score hoger is dan de laatste speler in de lijst, voegen we deze toe en sorteren we de lijst
-        } else if (speler.getScore() > spelerLijst.get(0).getScore()) {
+        } else if (speler.getScore() > spelerLijst.get(9).getScore()) {
 
-            // speler met de laatste score wegdoen (in dit geval index 0 because sorting)
-            spelerLijst.remove(0);
+            // speler met de laatste score wegdoen (in dit geval index 9 because indexes, you know)
+            spelerLijst.remove(9);
             spelerLijst.add(speler);
         }
 
         /**
          * sorteren van de lijst (omdat we de speler gewoon achteraan toevoegen MOETEN we hier nog sorteren
-         * de manier van rangschikken (bv. klein -> groot) maakt hier niet uit, aangezien we dit toch nog moeten uilezen in view.
+         * de manier van rangschikken (bv. klein -> groot) maakt hier niet uit, aangezien we dit toch nog moeten uitlezen in view.
          */
         Collections.sort(spelerLijst);
         schrijfTopSpelers();
     }
 
-    public ArrayList<Speler> getSpelerLijst() {
+    private void sorteerEnReverse(){
+        // hier sorteren we en reversen we de lijst zodat deze correct kan worden weergegeven
+        Collections.sort(spelerLijst);
         Collections.reverse(spelerLijst);
-        return spelerLijst;
     }
 
-    //TODO: testmethode, wegdoen!
-    @Override
-    public String toString() {
-
-        String output = "";
-
-        for (int i = 0; i < spelerLijst.size(); i++) {
-            output += spelerLijst.get(i).toString() + "\n";
-        }
-        return output;
+    public ArrayList<Speler> getSpelerLijst() {
+        sorteerEnReverse();
+        return spelerLijst;
     }
 
     public int getTopscore(){
 
-        //TODO: de Topscore in bordpresenter instellen op spelerscore wanneer de topscore verbeterd wordt. (kan zijn dat dit al werkt, nog niet getest)
-        return spelerLijst.get(spelerLijst.size()-1).getScore();
+        if(spelerLijst.size()==0){
+            return 0;
+        }
+        return spelerLijst.get(0).getScore();
     }
 }

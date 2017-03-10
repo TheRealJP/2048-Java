@@ -16,7 +16,6 @@ public class NieuwSpelView extends BorderPane {
         layoutNodes();
     }
 
-
     private void initialiseNodes() {
         lblEnterName = new Label("What is your name?");
         lblNewGame = new Label("New Game");
@@ -41,6 +40,7 @@ public class NieuwSpelView extends BorderPane {
         txtName.setCenterShape(true);
 
         //CSS
+        txtName.setId("txtName");
         lblEnterName.setId("enterName");
         lblNewGame.setId("newGame");
     }
