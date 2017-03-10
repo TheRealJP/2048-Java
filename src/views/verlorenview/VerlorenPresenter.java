@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import model.Bord;
-import model.TopScores;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
 import views.topscoreview.TopScorePresenter;
@@ -36,10 +35,8 @@ public class VerlorenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 TopScoreView topScoreView = new TopScoreView();
-//                TopScores topScoresModel = new TopScores();
                 new TopScorePresenter(model, topScoreView);
                 verlorenView.getScene().setRoot(topScoreView);
-//                topScoreView.getScene().getWindow().sizeToScene();
             }
         });
 

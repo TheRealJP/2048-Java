@@ -20,27 +20,8 @@ public class MenuPresenter {
     }
 
     private void addEventHandlers() {
-        menuView.getBtnContinue().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                BordView bordView = new BordView();
-                new BordPresenter(model, bordView);
-                menuView.getScene().setRoot(bordView);
-                bordView.getScene().getWindow().sizeToScene();
 
-                model.bordLaden();
-//                model.spelerLaden();
-            }
-        });
-
-        menuView.getBtnSave().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                model.bordOpslaan();
-                model.spelerOpslaan();
-            }
-        });
-
+        // deze eventhandler roept niew spel op.
         menuView.getBtnNew().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -51,10 +32,46 @@ public class MenuPresenter {
             }
         });
 
+        // deze eventhandler handelt de actie af als er op load game geklikt is.
+        menuView.getBtnLoad().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                BordView bordView = new BordView();
+                new BordPresenter(model, bordView);
+                menuView.getScene().setRoot(bordView);
+                bordView.getScene().getWindow().sizeToScene();
+
+                model.bordLaden();
+//              model.spelerLaden(); TODO: instellen/verwijderen!
+            }
+        });
+
+        // exit, spreekt voor zich :)
         menuView.getBtnExit().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 Platform.exit();
+            }
+        });
+
+        menuView.getBtnContinue().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+                BordView bordViewContinue = new BordView();
+                new BordPresenter(model, bordViewContinue);
+                menuView.getScene().setRoot(bordViewContinue);
+                bordViewContinue.getScene().getWindow().sizeToScene();
+                //TODO: teruggaan naar spel (zonder nieuwe tegel aan te maken, dus geen nieuw bord model oproepen?)
+            }
+        });
+
+        // deze eventhandler handelt de actie af als er op save game geklikt is.
+        menuView.getBtnSave().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                model.bordOpslaan();
+                model.spelerOpslaan();
             }
         });
     }

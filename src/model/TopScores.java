@@ -29,7 +29,7 @@ public class TopScores {
             }
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Topscores bestand niet gevonden, zal aangemaakt worden nadat de speler het spel verliest/wint. ");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (EOFException e) {

@@ -3,7 +3,6 @@ package views.topscoreview;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import model.Bord;
-import model.TopScores;
 import views.menuview.MenuPresenter;
 import views.menuview.MenuView;
 
@@ -25,9 +24,9 @@ public class TopScorePresenter {
             @Override
             public void handle(ActionEvent event) {
 
-                //TODO: nakijken!
+                //TODO: nakijken welke menu we hier moeten gebruiken!!!
                 MenuView menuView = new MenuView();
-                MenuPresenter menuPresenter = new MenuPresenter(model,menuView);
+                new MenuPresenter(model,menuView);
                 view.getScene().setRoot(menuView);
             }
         });

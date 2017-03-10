@@ -29,8 +29,6 @@ public class VerlorenView extends BorderPane {
         btnNewGame = new Button("New Game");
         btnScoreBoard = new Button("Scoreboard");
         btnExit = new Button("Exit");
-
-
     }
 
     private void layoutNodes() {
@@ -39,14 +37,12 @@ public class VerlorenView extends BorderPane {
         VBox buttonBox = new VBox(10, btnNewGame, btnScoreBoard, btnExit);
         VBox groupBox = new VBox(30, tekstBox, buttonBox);
 
-
         buttonBox.setAlignment(Pos.CENTER);
         groupBox.setAlignment(Pos.CENTER);
         tekstBox.setAlignment(Pos.CENTER);
         scoreBox.setAlignment(Pos.CENTER);
 
         setCenter(groupBox);
-
 
         lblYouLost.setId("youLost");
         lblYourScore.setId("yourScore");

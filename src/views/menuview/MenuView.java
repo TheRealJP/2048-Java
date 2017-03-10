@@ -12,6 +12,15 @@ public class MenuView extends VBox {
     private Button btnSave;
     private Button btnNew;
     private Button btnExit;
+    private Button btnLoad;
+
+    private boolean firstTime;
+
+    public MenuView(boolean firstTime) {
+        this.firstTime = firstTime;
+        initialiseNodes();
+        layoutNodes();
+    }
 
     public MenuView() {
         initialiseNodes();
@@ -19,26 +28,40 @@ public class MenuView extends VBox {
     }
 
     private void layoutNodes() {
-        setAlignment(Pos.CENTER);
+        setAlignment(Pos.TOP_CENTER);
         setSpacing(10);
 
         //CSS
         lbl2048.setId("2048Title");
         lblMenu.setId("lblMenu");
-        btnContinue.setId("menuBtns");
-        btnSave.setId("menuBtns");
         btnNew.setId("menuBtns");
         btnExit.setId("menuBtns");
+        btnLoad.setId("menuBtns");
+        btnContinue.setId("menuBtns");
+        btnSave.setId("menuBtns");
     }
 
     private void initialiseNodes() {
-        lbl2048 = new Label("2 0 4 8");
+
+        /*
+            we controleren of de gebruiker naar de menu is gegaan vanuit een spel
+            of dat de gebruiker het spel net geopend heeft, we passen de menu hierop aan.
+        */
+
+        // initialisatie
+        lbl2048 = new Label("2048");
         lblMenu = new Label("Menu");
+        btnLoad = new Button("Load game");
         btnContinue = new Button("Continue Playing");
         btnSave = new Button("Save Game");
         btnNew = new Button("New Game");
         btnExit = new Button("Exit");
-        getChildren().addAll(lbl2048,lblMenu, btnContinue, btnSave, btnNew, btnExit);
+
+        if (firstTime) {
+            getChildren().addAll(lbl2048, lblMenu, btnNew, btnLoad, btnExit);
+        } else {
+            getChildren().addAll(lbl2048, lblMenu, btnContinue, btnSave, btnNew, btnExit);
+        }
     }
 
     public Button getBtnSave() {
@@ -55,5 +78,9 @@ public class MenuView extends VBox {
 
     public Button getBtnContinue() {
         return btnContinue;
+    }
+
+    public Button getBtnLoad() {
+        return btnLoad;
     }
 }

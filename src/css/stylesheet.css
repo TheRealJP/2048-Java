@@ -32,11 +32,11 @@
 }
 
 #2048Title{
-    -fx-font-size: 16em;
+    -fx-padding: 30px 0 0 0;
+    -fx-font-size: 12em;
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
-
 }
 
 #txtName{

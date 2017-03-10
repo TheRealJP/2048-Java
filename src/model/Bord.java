@@ -1,7 +1,6 @@
 package model;
 
 import com.sun.javafx.scene.traversal.Direction;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +41,7 @@ public class Bord {
             int y = random.nextInt(GROOTTE);
 
             if (tegels[x][y].getWaarde() == 0) {
-                tegels[x][y].setWaarde(/*getNieuweTegelWaarde()*/1024);
+                tegels[x][y].setWaarde(getNieuweTegelWaarde());
                 return true;
             }
         }
@@ -256,6 +255,9 @@ public class Bord {
                 }
             }
 
+        } catch (FileNotFoundException e){
+            System.out.println("Savefile niet gevonden, zal aangemaakt worden nadat de speler het spel opslaat. ");
+
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
@@ -276,9 +278,10 @@ public class Bord {
     }
 
     public void spelerLaden() {
+        //TODO: lege void gebruiken of verwijderen!
     }
 
     public void spelerOpslaan() {
-
+        //TODO: lege void gebruiken of verwijderen!
     }
 }

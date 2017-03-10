@@ -40,7 +40,7 @@ public class BordPresenter {
         view.getMenu().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                MenuView menuView = new MenuView();
+                MenuView menuView = new MenuView(false);
                 new MenuPresenter(model, menuView);
                 view.getScene().setRoot(menuView);
                 menuView.getScene().getWindow().sizeToScene();
