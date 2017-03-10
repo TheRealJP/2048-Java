@@ -309,4 +309,12 @@ public class Bord {
             e.printStackTrace();
         }
     }
+
+    public File getSpelbestand() {
+        return spelbestand;
+    }
+
+    public File getSpelerbestand() {
+        return spelerbestand;
+    }
 }

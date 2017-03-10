@@ -2,39 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71667ac3-1b60-4caa-887a-5cc372cde6c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bestanden/spel.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bestanden/speler.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/Bord.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/model/TopScores.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/model/TopScores.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$3.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/gewonnenview/GewonnenPresenter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuPresenter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/menuview/MenuView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordPresenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/spelview/BordView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$3.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/nieuwspelview/NieuwSpelPresenter$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScorePresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScorePresenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$1.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScoreView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/topscoreview/TopScoreView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$2.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$3.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenPresenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenView.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/views/verlorenview/VerlorenView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/bestanden/rules.txt" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/bestanden/rules.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/css/stylesheet.css" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/css/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bestanden/rules.txt" afterPath="$PROJECT_DIR$/src/bestanden/rules.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bestanden/highscores" afterPath="$PROJECT_DIR$/src/bestanden/highscores" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bestanden/spel.bin" afterPath="$PROJECT_DIR$/src/bestanden/spel.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bestanden/speler.bin" afterPath="$PROJECT_DIR$/src/bestanden/speler.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Bord.java" afterPath="$PROJECT_DIR$/src/model/Bord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/gewonnenview/GewonnenPresenter.java" afterPath="$PROJECT_DIR$/src/views/gewonnenview/GewonnenPresenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" afterPath="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelPresenter.java" afterPath="$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/spelview/BordPresenter.java" afterPath="$PROJECT_DIR$/src/views/spelview/BordPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/menuview/MenuView.java" afterPath="$PROJECT_DIR$/src/views/menuview/MenuView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,39 +33,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Bord.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Bord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="245" column="8" lean-forward="false" selection-start-line="245" selection-start-column="8" selection-end-line="245" selection-end-column="8" />
+            <state relative-caret-position="850">
+              <caret line="210" column="5" lean-forward="true" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
               <folding>
-                <element signature="e#8011#8012#0" expanded="true" />
-                <element signature="e#8047#8048#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tegel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Tegel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
+                <element signature="method#Bord#0;class#Bord#0" expanded="false" />
+                <element signature="method#genereerNieuweTegel#0;class#Bord#0" expanded="false" />
+                <element signature="method#getNieuweTegelWaarde#0;class#Bord#0" expanded="false" />
+                <element signature="method#bordLeegMaken#0;class#Bord#0" expanded="false" />
+                <element signature="docComment;method#verplaats#0;class#Bord#0" expanded="false" />
+                <element signature="method#verplaats#0;class#Bord#0" expanded="false" />
+                <element signature="method#isLegeTegel#0;class#Bord#0" expanded="false" />
+                <element signature="method#schuif#0;class#Bord#0" expanded="false" />
+                <element signature="method#schuifNaarKant#0;class#Bord#0" expanded="false" />
+                <element signature="method#overblijvendeTegelIsNul#0;class#Bord#0" expanded="false" />
+                <element signature="method#schuifNaar#0;class#Bord#0" expanded="false" />
+                <element signature="method#tegelsSamenvoegen#0;class#Bord#0" expanded="false" />
+                <element signature="e#5231#5300#0" expanded="false" />
+                <element signature="method#isVol#0;class#Bord#0" expanded="false" />
+                <element signature="method#heeftLegeTegel#0;class#Bord#0" expanded="false" />
+                <element signature="method#heeftGelijkeBuur#0;class#Bord#0" expanded="false" />
+                <element signature="method#heeft2048#0;class#Bord#0" expanded="false" />
+                <element signature="method#getTegels#0;class#Bord#0" expanded="false" />
+                <element signature="method#bordLaden#0;class#Bord#0" expanded="false" />
+                <element signature="method#bordOpslaan#0;class#Bord#0" expanded="false" />
+                <element signature="method#spelerLaden#0;class#Bord#0" expanded="false" />
+                <element signature="method#spelerOpslaan#0;class#Bord#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -91,8 +69,8 @@
       <file leaf-file-name="BordPresenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/spelview/BordPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="156" column="5" lean-forward="true" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+            <state relative-caret-position="476">
+              <caret line="107" column="17" lean-forward="true" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
               <folding>
                 <element signature="e#4413#4467#0" expanded="false" />
               </folding>
@@ -100,42 +78,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuPresenter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuPresenter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GewonnenPresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/gewonnenview/GewonnenPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" column="62" lean-forward="true" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Regels.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Regels.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopScores.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/TopScores.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="181">
+              <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2194#2195#0" expanded="true" />
+                <element signature="e#2241#2242#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,14 +142,14 @@
         <option value="$PROJECT_DIR$/src/views/topscoreview/TopScoreView.java" />
         <option value="$PROJECT_DIR$/src/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/src/bestanden/rules.txt" />
-        <option value="$PROJECT_DIR$/src/views/menuview/MenuView.java" />
         <option value="$PROJECT_DIR$/src/views/spelview/BordView.java" />
-        <option value="$PROJECT_DIR$/src/model/Bord.java" />
         <option value="$PROJECT_DIR$/src/views/gewonnenview/GewonnenPresenter.java" />
         <option value="$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelPresenter.java" />
-        <option value="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" />
         <option value="$PROJECT_DIR$/src/views/spelview/BordPresenter.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/views/menuview/MenuView.java" />
+        <option value="$PROJECT_DIR$/src/model/Bord.java" />
+        <option value="$PROJECT_DIR$/src/views/menuview/MenuPresenter.java" />
       </list>
     </option>
   </component>
@@ -272,28 +224,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="verlorenview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaGameKdg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaGameKdg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -313,51 +243,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spelview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaGameKdg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaGameKdg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menuview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaGameKdg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaGameKdg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gewonnenview" />
+              <option name="myItemId" value="topscoreview" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,18 +322,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Main.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/bestanden/highscores</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/css/stylesheet.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/model/Bord.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/model/TopScores.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/gewonnenview/GewonnenPresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/menuview/MenuPresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/menuview/MenuView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/spelview/BordPresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/topscoreview/TopScorePresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/verlorenview/VerlorenPresenter.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/views/verlorenview/VerlorenView.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -462,8 +337,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/bestanden/spel</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/fonts/bitFont.TTF</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -980,7 +853,7 @@
       <workItem from="1489055778977" duration="10424000" />
       <workItem from="1489080396464" duration="4872000" />
       <workItem from="1489133661726" duration="604000" />
-      <workItem from="1489132883554" duration="16327000" />
+      <workItem from="1489132883554" duration="23218000" />
     </task>
     <task id="LOCAL-00001" summary="Added colours to tiles, general BordView improvements.">
       <created>1488888098421</created>
@@ -1017,11 +890,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489145112180</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Load , Save &amp; Continue done AND No extra tiles when continueing with game or loading game">
+      <created>1489159761146</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1489159761146</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56396000" />
+    <option name="totallyTimeSpent" value="63287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1051,7 +931,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8796499" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1111,7 +991,8 @@
     <MESSAGE value="Controls are now changing colours while pressed." />
     <MESSAGE value="Small update: Rules , menu buttons , added favicon , deleted unneeded load button&#10;&#10;Klaar&#10;Regels toegevoegd&#10;MenuKnop gaat naar menu&#10;Load knop verwijdert&#10;Favicon toegevoegd&#10;&#10;Todo:&#10;- Menupresenter load &amp; save verder bekijken&#10;- Juiste trigger zoeken voor de eerste 2 begintegels te genereren als het daadwerkelijk een nieuw spel is en geen opgeslagen spel. Bv: methode bordOpslaan boolean laten returnen en gebruiken in een if conditie" />
     <MESSAGE value="Updated layout lostview, menuview &amp; wonview also topscorepresenter menubutton now gets the presenter with the view&#10;&#10;Todo:&#10;- Menupresenter load &amp; save verder bekijken&#10;- Juiste trigger zoeken voor de eerste 2 begintegels te genereren als het daadwerkelijk een nieuw spel is en geen opgeslagen spel. Bv: methode bordOpslaan boolean laten returnen en gebruiken in een if conditie&#10;- Continue playing bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated layout lostview, menuview &amp; wonview also topscorepresenter menubutton now gets the presenter with the view&#10;&#10;Todo:&#10;- Menupresenter load &amp; save verder bekijken&#10;- Juiste trigger zoeken voor de eerste 2 begintegels te genereren als het daadwerkelijk een nieuw spel is en geen opgeslagen spel. Bv: methode bordOpslaan boolean laten returnen en gebruiken in een if conditie&#10;- Continue playing bug" />
+    <MESSAGE value="Load , Save &amp; Continue done AND No extra tiles when continueing with game or loading game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load , Save &amp; Continue done AND No extra tiles when continueing with game or loading game" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1124,43 +1005,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#894#895#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/nieuwspelview/NieuwSpelView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/spelview/BordPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/spelview/BordView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1489155509487" expanded="true" signature="4993:6548" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1905">
@@ -1378,25 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScorePresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="64" lean-forward="false" selection-start-line="29" selection-start-column="64" selection-end-line="30" selection-end-column="50" />
-          <folding>
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#997#998#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScoreView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="917">
-          <caret line="71" column="46" lean-forward="true" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1432,26 +1257,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bestanden/rules.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1472,32 +1281,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Regels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Bord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="245" column="8" lean-forward="false" selection-start-line="245" selection-start-column="8" selection-end-line="245" selection-end-column="8" />
-          <folding>
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8047#8048#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Tegel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="false" />
+            <element signature="e#1164#1165#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1505,27 +1295,146 @@
     <entry file="file://$PROJECT_DIR$/src/model/TopScores.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-561">
-          <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/ButtonType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/spelview/BordPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="156" column="5" lean-forward="true" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+        <state relative-caret-position="476">
+          <caret line="107" column="17" lean-forward="true" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
           <folding>
             <element signature="e#4413#4467#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Bord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="850">
+          <caret line="210" column="5" lean-forward="true" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
+          <folding>
+            <element signature="method#Bord#0;class#Bord#0" expanded="false" />
+            <element signature="method#genereerNieuweTegel#0;class#Bord#0" expanded="false" />
+            <element signature="method#getNieuweTegelWaarde#0;class#Bord#0" expanded="false" />
+            <element signature="method#bordLeegMaken#0;class#Bord#0" expanded="false" />
+            <element signature="docComment;method#verplaats#0;class#Bord#0" expanded="false" />
+            <element signature="method#verplaats#0;class#Bord#0" expanded="false" />
+            <element signature="method#isLegeTegel#0;class#Bord#0" expanded="false" />
+            <element signature="method#schuif#0;class#Bord#0" expanded="false" />
+            <element signature="method#schuifNaarKant#0;class#Bord#0" expanded="false" />
+            <element signature="method#overblijvendeTegelIsNul#0;class#Bord#0" expanded="false" />
+            <element signature="method#schuifNaar#0;class#Bord#0" expanded="false" />
+            <element signature="method#tegelsSamenvoegen#0;class#Bord#0" expanded="false" />
+            <element signature="e#5231#5300#0" expanded="false" />
+            <element signature="method#isVol#0;class#Bord#0" expanded="false" />
+            <element signature="method#heeftLegeTegel#0;class#Bord#0" expanded="false" />
+            <element signature="method#heeftGelijkeBuur#0;class#Bord#0" expanded="false" />
+            <element signature="method#heeft2048#0;class#Bord#0" expanded="false" />
+            <element signature="method#getTegels#0;class#Bord#0" expanded="false" />
+            <element signature="method#bordLaden#0;class#Bord#0" expanded="false" />
+            <element signature="method#bordOpslaan#0;class#Bord#0" expanded="false" />
+            <element signature="method#spelerLaden#0;class#Bord#0" expanded="false" />
+            <element signature="method#spelerOpslaan#0;class#Bord#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Regels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScoreView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#2367#2368#0" expanded="true" />
+            <element signature="e#2399#2400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/topscoreview/TopScorePresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/ButtonBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="347" column="10" lean-forward="true" selection-start-line="347" selection-start-column="10" selection-end-line="347" selection-end-column="10" />
+          <folding>
+            <element signature="e#11834#11835#0" expanded="true" />
+            <element signature="e#11878#11879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/Alert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="363" column="52" lean-forward="false" selection-start-line="363" selection-start-column="52" selection-end-line="363" selection-end-column="52" />
+          <folding>
+            <element signature="e#15057#15058#0" expanded="true" />
+            <element signature="e#15112#15113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="144" column="19" lean-forward="false" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+          <folding>
+            <element signature="e#4242#4243#0" expanded="true" />
+            <element signature="e#4278#4279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/menuview/MenuPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2194#2195#0" expanded="true" />
+            <element signature="e#2241#2242#0" expanded="true" />
           </folding>
         </state>
       </provider>

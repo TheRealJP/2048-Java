@@ -44,12 +44,6 @@ public class MenuView extends VBox {
     }
 
     private void initialiseNodes() {
-
-        /*
-            we controleren of de gebruiker naar de menu is gegaan vanuit een spel
-            of dat de gebruiker het spel net geopend heeft, we passen de menu hierop aan.
-        */
-
         // initialisatie
         lbl2048 = new Label("2048");
         lblMenu = new Label("Menu");
@@ -60,6 +54,10 @@ public class MenuView extends VBox {
         btnExit = new Button("Exit");
         btnscoreBord = new Button("Scoreboard");
 
+        /**
+            we controleren of de gebruiker naar de menu is gegaan vanuit een spel
+            of dat de gebruiker het spel net geopend heeft, we passen de menu hierop aan.
+        */
         if (firstTime) {
             getChildren().addAll(lbl2048, lblMenu, btnNew, btnLoad, btnscoreBord, btnExit);
         } else {

@@ -277,11 +277,6 @@
     -fx-text-fill: #7c685e;
 }
 
-#scoresMenuBtn{
-    -fx-font-size: 2em;
-    -fx-text-alignment: center;
-}
-
 /* Menu View */
 #lblMenu{
     -fx-padding: 30px;

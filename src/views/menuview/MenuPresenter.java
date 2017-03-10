@@ -3,6 +3,8 @@ package views.menuview;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import model.Bord;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
@@ -10,6 +12,8 @@ import views.spelview.BordPresenter;
 import views.spelview.BordView;
 import views.topscoreview.TopScorePresenter;
 import views.topscoreview.TopScoreView;
+
+import java.util.Optional;
 
 public class MenuPresenter {
     private Bord model;
@@ -43,7 +47,7 @@ public class MenuPresenter {
                 model.setTegels(model.bordLaden());
                 bordView.getLblSpelerNaam().setText(model.spelerLaden().getNaam());
                 bordView.getLblCurrentScoreNumber().setText(model.spelerLaden().getScore() + "");
-                new BordPresenter(model, bordView,false); //start NIET (false) met nieuwe tegels
+                new BordPresenter(model, bordView, false); //start NIET (false) met nieuwe tegels
                 menuView.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
             }
@@ -61,15 +65,12 @@ public class MenuPresenter {
             @Override
             public void handle(ActionEvent event) {
                 BordView bordViewContinue = new BordView();
-                new BordPresenter(model, bordViewContinue,false);
+                new BordPresenter(model, bordViewContinue, false);
                 menuView.getScene().setRoot(bordViewContinue);
                 bordViewContinue.getScene().getWindow().sizeToScene();
-/*
-                TODO: teruggaan naar spel (zonder nieuwe tegel aan te maken, dus geen nieuw bord model oproepen?)
-*/
 
-                bordViewContinue.getLblSpelerNaam().setText(model.spelerLaden().getNaam());
-                bordViewContinue.getLblCurrentScoreNumber().setText(model.spelerLaden().getScore() + "");
+                bordViewContinue.getLblSpelerNaam().setText(model.getSpeler().getNaam());
+                bordViewContinue.getLblCurrentScoreNumber().setText(model.getSpeler().getScore() + "");
             }
         });
 
@@ -77,24 +78,41 @@ public class MenuPresenter {
         menuView.getBtnSave().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
+                if (!(model.getSpelbestand().length() == 0 && model.getSpelerbestand().length() == 0)) {
+                    Alert overschrijfmelding = new Alert(Alert.AlertType.CONFIRMATION);
+                    overschrijfmelding.setHeaderText("Are you sure you want to overwrite your previous save file?");
+                    overschrijfmelding.setTitle("Overwrite warning!");
+
+                    Optional<ButtonType> result = overschrijfmelding.showAndWait();
+                    //checken of het resultaat van de alertbox gelijk is aan buttontype "ok"
+                    if (result.isPresent() && result.get() == ButtonType.OK) {
+                        model.bordOpslaan(); //data opgeslagen in spel.bin
+                        model.spelerOpslaan(); //data opgeslagen in speler.bin
+                    }
+                }
+
                 model.bordOpslaan(); //data opgeslagen in spel.bin
                 model.spelerOpslaan(); //data opgeslagen in speler.bin
             }
         });
 
         // deze eventhandler handelt de actie af als er op scoreboard geklikt is.
-        menuView.getBtnscoreBord().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                TopScoreView topScoreView = new TopScoreView();
+        menuView.getBtnscoreBord().
 
-                if (menuView.isFirstTime()){
-                    new TopScorePresenter(model, topScoreView,"initial");
-                } else {
-                    new TopScorePresenter(model, topScoreView,"menu");
-                }
-                menuView.getScene().setRoot(topScoreView);
-            }
-        });
+                setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        TopScoreView topScoreView = new TopScoreView();
+
+                        if (menuView.isFirstTime()) {
+                            new TopScorePresenter(model, topScoreView, "initial");
+                        } else {
+                            new TopScorePresenter(model, topScoreView, "menu");
+                        }
+
+                        menuView.getScene().setRoot(topScoreView);
+                    }
+                });
     }
 }
