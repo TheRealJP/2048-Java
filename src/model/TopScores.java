@@ -28,9 +28,6 @@ public class TopScores {
                 spelerLijst.add(spelers[i]);
             }
 
-            // spelerlijst reversen om de juiste volgorde te bekomen.
-            Collections.reverse(spelerLijst);
-
         } catch (FileNotFoundException e) {
             System.out.println("Topscores bestand niet gevonden, zal aangemaakt worden nadat de speler het spel verliest/wint. ");
         } catch (ClassNotFoundException e) {
@@ -68,28 +65,36 @@ public class TopScores {
     // krijgen we binnen vanuit bordpresenter (ctrl+click op de naam om te zien van waar)
     public void voegScoreToe(Speler speler) {
 
+        sorteerEnReverse();
         // als de lijst kleiner is dan 10, en er dus sowieso nog vrije plaats is, laden we de speler gewoon in.
         if (spelerLijst.size() < 10) {
 
             spelerLijst.add(speler);
 
             // als de score hoger is dan de laatste speler in de lijst, voegen we deze toe en sorteren we de lijst
-        } else if (speler.getScore() > spelerLijst.get(0).getScore()) {
+        } else if (speler.getScore() > spelerLijst.get(9).getScore()) {
 
-            // speler met de laatste score wegdoen (in dit geval index 0 because sorting)
-            spelerLijst.remove(0);
+            // speler met de laatste score wegdoen (in dit geval index 9 because indexes, you know)
+            spelerLijst.remove(9);
             spelerLijst.add(speler);
         }
 
         /**
          * sorteren van de lijst (omdat we de speler gewoon achteraan toevoegen MOETEN we hier nog sorteren
-         * de manier van rangschikken (bv. klein -> groot) maakt hier niet uit, aangezien we dit toch nog moeten uilezen in view.
+         * de manier van rangschikken (bv. klein -> groot) maakt hier niet uit, aangezien we dit toch nog moeten uitlezen in view.
          */
         Collections.sort(spelerLijst);
         schrijfTopSpelers();
     }
 
+    private void sorteerEnReverse(){
+        // hier sorteren we en reversen we de lijst zodat deze correct kan worden weergegeven
+        Collections.sort(spelerLijst);
+        Collections.reverse(spelerLijst);
+    }
+
     public ArrayList<Speler> getSpelerLijst() {
+        sorteerEnReverse();
         return spelerLijst;
     }
 
@@ -98,6 +103,6 @@ public class TopScores {
         if(spelerLijst.size()==0){
             return 0;
         }
-        return spelerLijst.get(spelerLijst.size()-1).getScore();
+        return spelerLijst.get(0).getScore();
     }
 }

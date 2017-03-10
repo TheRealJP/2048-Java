@@ -53,6 +53,8 @@ public class MenuPresenter {
         menuView.getBtnExit().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
+                model.getTopScores().voegScoreToe(model.getSpeler()); // score van speler toevoegen aan topscores.
                 Platform.exit();
             }
         });
@@ -64,9 +66,8 @@ public class MenuPresenter {
                 new BordPresenter(model, bordViewContinue,false);
                 menuView.getScene().setRoot(bordViewContinue);
                 bordViewContinue.getScene().getWindow().sizeToScene();
-/*
-                TODO: teruggaan naar spel (zonder nieuwe tegel aan te maken, dus geen nieuw bord model oproepen?)
-*/
+
+                //TODO: teruggaan naar spel (zonder nieuwe tegel aan te maken, dus geen nieuw bord model oproepen?)
 
                 bordViewContinue.getLblSpelerNaam().setText(model.spelerLaden().getNaam());
                 bordViewContinue.getLblCurrentScoreNumber().setText(model.spelerLaden().getScore() + "");
