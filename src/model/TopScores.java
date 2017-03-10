@@ -28,6 +28,9 @@ public class TopScores {
                 spelerLijst.add(spelers[i]);
             }
 
+            // spelerlijst reversen om de juiste volgorde te bekomen.
+            Collections.reverse(spelerLijst);
+
         } catch (FileNotFoundException e) {
             System.out.println("Topscores bestand niet gevonden, zal aangemaakt worden nadat de speler het spel verliest/wint. ");
         } catch (ClassNotFoundException e) {
@@ -87,7 +90,6 @@ public class TopScores {
     }
 
     public ArrayList<Speler> getSpelerLijst() {
-        Collections.reverse(spelerLijst);
         return spelerLijst;
     }
 
