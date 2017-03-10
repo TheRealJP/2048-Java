@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import model.Bord;
+import model.TopScores;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
 import views.spelview.BordPresenter;
@@ -17,7 +18,7 @@ public class GewonnenPresenter {
         this.view = view;
         this.model = model;
         addEventHandlers();
-        updateLayout();
+        updateView();
     }
 
     private void addEventHandlers() {
@@ -50,8 +51,7 @@ public class GewonnenPresenter {
         });
     }
 
-    private void updateLayout() {
-
-
+    private void updateView() {
+        view.getLblHighScoreNumber().setText( model.getTopScores().getTopscore() +"");
     }
 }

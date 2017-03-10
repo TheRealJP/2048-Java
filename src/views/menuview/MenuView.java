@@ -7,6 +7,7 @@ import javafx.scene.layout.VBox;
 
 public class MenuView extends VBox {
     private Label lblMenu;
+    private Label lbl2048;
     private Button btnContinue;
     private Button btnSave;
     private Button btnNew;
@@ -22,6 +23,7 @@ public class MenuView extends VBox {
         setSpacing(10);
 
         //CSS
+        lbl2048.setId("2048Title");
         lblMenu.setId("lblMenu");
         btnContinue.setId("menuBtns");
         btnSave.setId("menuBtns");
@@ -30,12 +32,13 @@ public class MenuView extends VBox {
     }
 
     private void initialiseNodes() {
+        lbl2048 = new Label("2 0 4 8");
         lblMenu = new Label("Menu");
         btnContinue = new Button("Continue Playing");
         btnSave = new Button("Save Game");
         btnNew = new Button("New Game");
         btnExit = new Button("Exit");
-        getChildren().addAll(lblMenu, btnContinue, btnSave, btnNew, btnExit);
+        getChildren().addAll(lbl2048,lblMenu, btnContinue, btnSave, btnNew, btnExit);
     }
 
     public Button getBtnSave() {

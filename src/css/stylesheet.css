@@ -17,19 +17,26 @@
 }
 
 /* NieuwSpel View */
-
-#enterName {
+#enterName ,#yourScore ,#winSubTitle ,#winHighScore  {
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
     -fx-font-size: 2.2em;
 }
 
-#newGame {
+#newGame ,#youLost ,#winTitle{
     -fx-font-size: 5em;
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
+}
+
+#2048Title{
+    -fx-font-size: 16em;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+
 }
 
 #txtName{
@@ -284,7 +291,12 @@
     -fx-font-weight: bold;
 }
 
-#menuBtns{
+#menuBtns,#verlorenBtn,#winBtns {
     -fx-min-width: 250px;
     -fx-min-height: 50px;
+}
+
+#winLbls{
+    -fx-spacing: 10px;
+    -fx-padding: 15px;
 }

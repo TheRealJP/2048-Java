@@ -33,8 +33,8 @@ public class BordPresenter {
     private void addEventHandlers() {
         // TODO: 09/03/2017 goeie trigger zoeken: als opgeslagen spel betreft geen nieuwe tegels genereren zonder ingeduwde arrow keys
         //start spel met 2 tegels als het een nieuw spel is
-            for (int i = 0; i < 2; i++) {
-                model.genereerNieuweTegel();
+        for (int i = 0; i < 2; i++) {
+            model.genereerNieuweTegel();
         }
 
         view.getMenu().setOnAction(new EventHandler<ActionEvent>() {
@@ -64,7 +64,7 @@ public class BordPresenter {
             @Override
             public void handle(KeyEvent event) {
 
-                    switch (event.getCode()) {
+                switch (event.getCode()) {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
                     case UP:
                         model.verplaats(Direction.UP);
@@ -99,10 +99,9 @@ public class BordPresenter {
 
                 // roep verlorenView op
                 if (model.isVol()) {
-
                     topscore.voegScoreToe(model.getSpeler());
                     VerlorenView verlorenView = new VerlorenView();
-                    new VerlorenPresenter(model,verlorenView);
+                    new VerlorenPresenter(model, verlorenView);
                     view.getScene().setRoot(verlorenView);
                     verlorenView.getScene().getWindow().sizeToScene();
                 }
@@ -122,7 +121,6 @@ public class BordPresenter {
         view.setOnKeyReleased(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-
                 switch (event.getCode()) {
                     case UP:
                     case DOWN:
@@ -144,6 +142,6 @@ public class BordPresenter {
 
         //voegt score & topscore toe aan label
         view.getLblCurrentScoreNumber().setText("" + model.getSpeler().getScore());
-        view.getLblHighScoreNumber().setText("" +topscore.getTopscore());
+        view.getLblHighScoreNumber().setText("" + topscore.getTopscore());
     }
 }

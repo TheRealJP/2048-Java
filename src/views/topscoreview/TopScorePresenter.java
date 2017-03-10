@@ -2,15 +2,17 @@ package views.topscoreview;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import model.Bord;
 import model.TopScores;
+import views.menuview.MenuPresenter;
 import views.menuview.MenuView;
 
 public class TopScorePresenter {
 
-    private TopScores model;
+    private Bord model;
     private TopScoreView view;
 
-    public TopScorePresenter(TopScores model, TopScoreView view) {
+    public TopScorePresenter(Bord model, TopScoreView view) {
         this.model = model;
         this.view = view;
         addEventHandlers();
@@ -25,13 +27,13 @@ public class TopScorePresenter {
 
                 //TODO: nakijken!
                 MenuView menuView = new MenuView();
+                MenuPresenter menuPresenter = new MenuPresenter(model,menuView);
                 view.getScene().setRoot(menuView);
             }
         });
     }
 
     private void updateLayout() {
-
-        view.setSpelers(model.getSpelerLijst());
+        view.setSpelers(model.getTopScores().getSpelerLijst());
     }
 }

@@ -1,9 +1,11 @@
 .root {
     -fx-background-color: #fdf7ed;
+    -fx-font-family: "04B_30__.TTF";
 }
 
 .label {
-    -fx-font-family: sans-serif arial;
+    -fx-font-family: "04B_30__.TTF";
+
 }
 
 .button {
@@ -16,6 +18,48 @@
     -fx-progress-color: #7c685e;
 }
 
+/* NieuwSpel View */
+#enterName ,#yourScore ,#winSubTitle ,#winHighScore  {
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 2.2em;
+}
+
+#newGame ,#youLost ,#winTitle{
+    -fx-font-size: 5em;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+}
+
+#2048Title{
+    -fx-font-size: 16em;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+
+}
+
+#txtName{
+    -fx-text-fill: #7c685e;
+    -fx-pref-height: 40px;
+    -fx-font-size: 2em;
+    -fx-background-color: whitesmoke;
+    -fx-border-color: rgba(0, 0, 0, 0.5);
+    -fx-border-radius: 8px;
+}
+
+#txtName:focused{
+    -fx-border-color: #7c685e;
+}
+
+.text-field {
+    -fx-alignment: center;
+}
+
+/* Bord View */
+
 #currentNumber, #highNumber {
     -fx-text-fill: #f8f7ed;
     -fx-font-size: 2em;
@@ -24,7 +68,7 @@
     -fx-font-weight: bold;
 }
 
-#highScore, #currentScore   {
+#highScore, #currentScore {
     -fx-text-fill: #7c685e;
     -fx-font-size: 1.5em;
     -fx-font-weight: bold;
@@ -49,37 +93,6 @@
     -fx-text-fill: #7c685e;
     -fx-font-size: 3em;
     -fx-font-weight: bold;
-}
-
-#enterName , #yourScore  , #scoreNumber{
-    -fx-text-fill: #7c685e;
-    -fx-font-family: sans-serif;
-    -fx-font-weight: bold;
-    -fx-font-size: 2.2em;
-}
-
-#newGame , #youLost{
-    -fx-font-size: 5em;
-    -fx-text-fill: #7c685e;
-    -fx-font-family: sans-serif;
-    -fx-font-weight: bold;
-}
-
-#txtName {
-    -fx-text-fill: #7c685e;
-    -fx-pref-height: 40px;
-    -fx-font-size: 2em;
-    -fx-background-color: whitesmoke;
-    -fx-border-color: rgba(0, 0, 0, 0.5);
-    -fx-border-radius: 8px;
-}
-
-#txtName:focused{
-    -fx-border-color: #7c685e;
-}
-
-.text-field {
-    -fx-alignment: center;
 }
 
 #0 {
@@ -269,4 +282,28 @@
 #scoresMenuBtn{
     -fx-font-size: 2em;
     -fx-text-alignment: center;
+}
+
+/* Menu View */
+#lblMenu{
+    -fx-padding: 30px;
+    -fx-font-size: 5em;
+    -fx-text-fill: #7c685e;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+}
+
+#menuBtns,#verlorenBtn,#winBtns {
+    -fx-min-width: 250px;
+    -fx-min-height: 50px;
+}
+
+#winLbls{
+    -fx-spacing: 10px;
+    -fx-padding: 15px;
+}
+
+.label {
+    -fx-font-family: "bitFont.TTF";
+
 }

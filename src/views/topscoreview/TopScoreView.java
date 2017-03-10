@@ -44,7 +44,7 @@ public class TopScoreView extends BorderPane {
 
         // setup boxen
         naamEnScoreBox = new HBox(320, naamLbl, scoreLbl);
-        schermVBox = new VBox(20,schermNaamLbl,naamEnScoreBox);
+        schermVBox = new VBox(20, schermNaamLbl, naamEnScoreBox);
         spelerNaamInhoudVBox = new VBox();
         scoreInhoudVBox = new VBox();
         inhoudBox = new HBox(95);
@@ -87,10 +87,10 @@ public class TopScoreView extends BorderPane {
         // Labels opvullen voor elke speler
         for (int i = 0; i < aantal; i++) {
 
-            nummer = (i+1+".").length()==3?(i+1+".")+"  ":(i+1+".")+"    "; //hiermee zorgen we ervoor dat de text na de positienr in het scorebord goed gepositioneerd is.
-            lblSpelernamen[i] = new Label(nummer+spelerLijst.get(i).getNaam());
+            nummer = (i + 1 + ".").length() == 3 ? (i + 1 + ".") + "  " : (i + 1 + ".") + "    "; //hiermee zorgen we ervoor dat de text na de positienr in het scorebord goed gepositioneerd is.
+            lblSpelernamen[i] = new Label(nummer + spelerLijst.get(i).getNaam());
             lblSpelernamen[i].setId("spelerNamenLbl");
-            lblSpelerScores[i] = new Label(""+spelerLijst.get(i).getScore());
+            lblSpelerScores[i] = new Label("" + spelerLijst.get(i).getScore());
             lblSpelerScores[i].setId("spelerScoresLbl");
 
             // labels toevoegen aan de correcte boxen
@@ -98,7 +98,7 @@ public class TopScoreView extends BorderPane {
             scoreInhoudVBox.getChildren().add(lblSpelerScores[i]);
         }
         // de boxen toevoegen aan de inhoudbox
-        inhoudBox.getChildren().addAll(spelerNaamInhoudVBox,scoreInhoudVBox);
+        inhoudBox.getChildren().addAll(spelerNaamInhoudVBox, scoreInhoudVBox);
     }
 
     public Button getMenuBtn() {

@@ -12,12 +12,13 @@ public class Bord {
     // dimensies van het bord
     private static final int GROOTTE = 4;
     private Speler speler;
+    private TopScores topScores;
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
     private File spelbestand = new File("src" + File.separator + "bestanden" + File.separator + "spel");
 
     // initialieer n x n bord met null waardes (leeg bord)
     public Bord() {
-
+        topScores = new TopScores();
         speler = new Speler();
         for (int i = 0; i < tegels[0].length; i++) {
             for (int j = 0; j < tegels.length; j++) {
@@ -41,7 +42,7 @@ public class Bord {
             int y = random.nextInt(GROOTTE);
 
             if (tegels[x][y].getWaarde() == 0) {
-                tegels[x][y].setWaarde(getNieuweTegelWaarde());
+                tegels[x][y].setWaarde(/*getNieuweTegelWaarde()*/1024);
                 return true;
             }
         }
@@ -234,6 +235,10 @@ public class Bord {
 
     public Speler getSpeler() {
         return speler;
+    }
+
+    public TopScores getTopScores() {
+        return topScores;
     }
 
     public void bordLaden() {

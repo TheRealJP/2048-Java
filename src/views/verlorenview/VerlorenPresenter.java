@@ -36,8 +36,8 @@ public class VerlorenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 TopScoreView topScoreView = new TopScoreView();
-                TopScores topScoresModel = new TopScores();
-                new TopScorePresenter(topScoresModel, topScoreView);
+//                TopScores topScoresModel = new TopScores();
+                new TopScorePresenter(model, topScoreView);
                 verlorenView.getScene().setRoot(topScoreView);
 //                topScoreView.getScene().getWindow().sizeToScene();
             }
@@ -52,6 +52,6 @@ public class VerlorenPresenter {
     }
 
     private void updateView() {
-        verlorenView.getLblscoreNumber().setText(""+model.getSpeler().getScore());
+        verlorenView.getLblscoreNumber().setText("" + model.getSpeler().getScore());
     }
 }
