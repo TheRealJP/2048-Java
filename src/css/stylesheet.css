@@ -16,6 +16,12 @@
     -fx-progress-color: #7c685e;
 }
 
+.button:hover{
+    -fx-background-color: #846F5B;
+    -fx-text-fill: whitesmoke;
+    -fx-cursor: hand;
+}
+
 /* NieuwSpel View */
 #enterName ,#yourScore ,#winSubTitle ,#winHighScore  {
     -fx-text-fill: #7c685e;
@@ -286,7 +292,7 @@
     -fx-font-weight: bold;
 }
 
-#menuBtns,#verlorenBtn,#winBtns {
+#menuBtns {
     -fx-min-width: 250px;
     -fx-min-height: 50px;
 }

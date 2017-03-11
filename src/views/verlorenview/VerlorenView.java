@@ -47,9 +47,9 @@ public class VerlorenView extends BorderPane {
         lblYouLost.setId("youLost");
         lblYourScore.setId("yourScore");
         lblscoreNumber.setId("yourScore");
-        btnNewGame.setId("verlorenBtn");
-        btnScoreBoard.setId("verlorenBtn");
-        btnExit.setId("verlorenBtn");
+        btnNewGame.setId("menuBtns");
+        btnScoreBoard.setId("menuBtns");
+        btnExit.setId("menuBtns");
     }
 
     public Label getLblscoreNumber() {

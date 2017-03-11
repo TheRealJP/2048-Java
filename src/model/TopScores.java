@@ -11,22 +11,19 @@ public class TopScores {
 
     public TopScores() {
         spelerLijst = new ArrayList<Speler>();
-        file = new File("src"+File.separator+"bestanden"+File.separator+"highscores");
+        file = new File("src" + File.separator + "bestanden" + File.separator + "highscores");
         leesTopSpelers();
     }
 
     private void leesTopSpelers() {
 
-        // om de bestanden te kunnen lezen, we moeten hier geen inputstream.close doen aangezien we het op deze manier doen (met haakjes)
+        // inlezen van bestand in spelerLijst (op deze manier moeten we geen close gebruiken voor de stream)
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
 
-            // bestand inlezen in array
-            Speler[] spelers = (Speler[]) inputStream.readObject();
+            spelerLijst = (ArrayList<Speler>) inputStream.readObject();
 
-            // opgehaalde array in spelerlijst laden
-            for (int i = 0; i < spelers.length; i++) {
-                spelerLijst.add(spelers[i]);
-            }
+            // sorteren na het lezen (kan zijn dat dit overbodig is, but meh, better to be sure)
+            Collections.sort(spelerLijst);
 
         } catch (FileNotFoundException e) {
             System.out.println("Topscores bestand niet gevonden, zal aangemaakt worden nadat de speler het spel verliest/wint. ");
@@ -44,63 +41,59 @@ public class TopScores {
         }
     }
 
+    // speler toevoegen aan lijst
+    public void voegScoreToe(Speler speler) {
+
+        // lijst sorteren
+        Collections.sort(spelerLijst);
+
+        // als de lijst geen 10 topscores bevat, gewoon toevoegen (en achteraf sorteren bij schrijfTopSpelers)
+        if (spelerLijst.size() < 10) {
+
+            spelerLijst.add(speler);
+
+            // in het andere geval kijken we of de score hoger is als de laagste waarde, als dit het geval is deze waarde verwijderen en nieuwe toevoegen
+        } else if (speler.getScore() > spelerLijst.get(0).getScore()) {
+
+            spelerLijst.remove(0);
+            spelerLijst.add(speler);
+        }
+
+        // wegschrijven
+        schrijfTopSpelers();
+    }
+
     private void schrijfTopSpelers() {
 
-        // om weg te schrijven naar bestand, moet geen outputstream.close, aangezien we met haakjes werken (nieuw in Java 7)
+        // sorteren voor we wegschrijven zodat we correct kunnen wegschrijven
+        Collections.sort(spelerLijst);
+
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
 
-            // spelerlijst inladen in een array
-            Speler[] spelers = spelerLijst.toArray(new Speler[spelerLijst.size()]);
-
-            // array wegschrijven naar bestand
-            outputStream.writeObject(spelers);
+            // wegschrijven (geen close nodig voor de stream aangezien we het op deze manier doen)
+            outputStream.writeObject(spelerLijst);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        // inlezen van bestand in spelerLijst
+        leesTopSpelers();
     }
 
-    // krijgen we binnen vanuit bordpresenter (ctrl+click op de naam om te zien van waar)
-    public void voegScoreToe(Speler speler) {
-
-        sorteerEnReverse();
-        // als de lijst kleiner is dan 10, en er dus sowieso nog vrije plaats is, laden we de speler gewoon in.
-        if (spelerLijst.size() < 10) {
-
-            spelerLijst.add(speler);
-
-            // als de score hoger is dan de laatste speler in de lijst, voegen we deze toe en sorteren we de lijst
-        } else if (speler.getScore() > spelerLijst.get(9).getScore()) {
-
-            // speler met de laatste score wegdoen (in dit geval index 9 because indexes, you know)
-            spelerLijst.remove(9);
-            spelerLijst.add(speler);
-        }
-
-        /**
-         * sorteren van de lijst (omdat we de speler gewoon achteraan toevoegen MOETEN we hier nog sorteren
-         * de manier van rangschikken (bv. klein -> groot) maakt hier niet uit, aangezien we dit toch nog moeten uitlezen in view.
-         */
-        Collections.sort(spelerLijst);
-        schrijfTopSpelers();
-    }
-
-    private void sorteerEnReverse(){
-        // hier sorteren we en reversen we de lijst zodat deze correct kan worden weergegeven
-        Collections.sort(spelerLijst);
-        Collections.reverse(spelerLijst);
-    }
-
+    // lijst ophalen (eerst reversen)
     public ArrayList<Speler> getSpelerLijst() {
-        sorteerEnReverse();
+        leesTopSpelers();
+        Collections.reverse(spelerLijst);
         return spelerLijst;
     }
 
-    public int getTopscore(){
+    // topscore ophalen
+    public int getTopscore() {
 
-        if(spelerLijst.size()==0){
+        if (spelerLijst.size() == 0) {
             return 0;
         }
         return spelerLijst.get(0).getScore();

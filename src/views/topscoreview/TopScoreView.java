@@ -82,6 +82,7 @@ public class TopScoreView extends BorderPane {
         lblSpelerScores = new Label[aantal];
 
         String nummer;
+        //Collections.reverse(spelerLijst); TODO: verwijderen
 
         // Labels opvullen voor elke speler
         for (int i = 0; i < aantal; i++) {
