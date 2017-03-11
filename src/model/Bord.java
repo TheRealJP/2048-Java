@@ -12,7 +12,6 @@ public class Bord {
     private static final int GROOTTE = 4;
     private Speler speler;
     private TopScores topScores;
-    private Tegel nieuweTegel;
 
     //verzameling van tegels op het bord
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
@@ -39,7 +38,6 @@ public class Bord {
             return false;
         }
 
-        Tegel nieuweTegel = new Tegel();
         Random random = new Random();
 
         // herhalen tot een lege tegel gevonden is
@@ -50,7 +48,6 @@ public class Bord {
 
             if (tegels[x][y].getWaarde() == 0) {
                 tegels[x][y].setWaarde(getNieuweTegelWaarde());
-                nieuweTegel = tegels[x][y];
                 return true;
             }
         }
@@ -330,7 +327,4 @@ public class Bord {
         return spelerbestand;
     }
 
-    public Tegel getNieuweTegel() {
-        return nieuweTegel;
-    }
 }

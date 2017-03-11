@@ -20,7 +20,6 @@ public class BordPresenter {
     private Bord model;
     private BordView view;
     private boolean firstTime;
-    private Animaties animaties;
 
     public BordPresenter(Bord model, BordView view, boolean firstTime) {
         this.model = model;
@@ -63,7 +62,6 @@ public class BordPresenter {
                 new MenuPresenter(model, menuView);
                 view.getScene().setRoot(menuView);
                 menuView.getScene().getWindow().sizeToScene();
-
             }
         });
 
