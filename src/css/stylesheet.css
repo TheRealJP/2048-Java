@@ -23,7 +23,7 @@
 }
 
 /* NieuwSpel View */
-#enterName ,#yourScore ,#winSubTitle ,#winHighScore  {
+#enterName ,#yourScore ,#winSubTitle ,#winHighScore ,#lblSaved  {
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;

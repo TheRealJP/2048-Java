@@ -1,6 +1,7 @@
 package model;
 
 import com.sun.javafx.scene.traversal.Direction;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,12 @@ public class Bord {
     private static final int GROOTTE = 4;
     private Speler speler;
     private TopScores topScores;
+    private Tegel nieuweTegel;
+
+    //verzameling van tegels op het bord
     private Tegel[][] tegels = new Tegel[GROOTTE][GROOTTE];
+
+    //files voor opslaan en laden
     private File spelbestand = new File("src" + File.separator + "bestanden" + File.separator + "spel.bin");
     private File spelerbestand = new File("src" + File.separator + "bestanden" + File.separator + "speler.bin");
 
@@ -33,7 +39,9 @@ public class Bord {
             return false;
         }
 
+        Tegel nieuweTegel = new Tegel();
         Random random = new Random();
+
         // herhalen tot een lege tegel gevonden is
         while (true) {
 
@@ -42,6 +50,7 @@ public class Bord {
 
             if (tegels[x][y].getWaarde() == 0) {
                 tegels[x][y].setWaarde(getNieuweTegelWaarde());
+                nieuweTegel = tegels[x][y];
                 return true;
             }
         }
@@ -65,12 +74,13 @@ public class Bord {
     }
 
     /**
-     * Dit is het hoofdalgoritme van het spel, we maken een groep/set aan adhv de richting waar de gebruiker naar schuift,
-     * bv, wanneer een gebruiker op de toets voor naar links te schuiven drukt, dan zal de groep bestaan uit alle rijen tegels (horizontaal).
+     * Dit is het hoofdalgoritme van het spel, waar al de andere methodes zitten in vervat.
+     * We maken eigenlijk een list die de tegels  aan adhv de richting waar de gebruiker naar schuift,
+     * wanneer de speler op een pijltje duwt , dan zal elke tegel in  de groep bestaan uit alle rijen tegels (horizontaal).
      * Hierdoor kunnen we alle tegels op de horizontale rijen in dezelfde richting doen bewegen.
-     * de parameter richting geeft aan in welke richting de gebruiker schuift.
+     * <p>
+     * De parameter "richting" geeft aan in welke richting de gebruiker schuift. Deze methode wordt gebruikt in de bordPresenter klasse.
      */
-
     public void verplaats(Direction richting) {
         for (int i = 0; i < GROOTTE; i++) {
 
@@ -99,6 +109,8 @@ public class Bord {
             if (!(isLegeTegel(tegelSet))) {
                 schuif(tegelSet); // hoofdtegel groep algoritme
             }
+
+            //begint aan de volgende rij
         }
     }
 
@@ -244,9 +256,11 @@ public class Bord {
         this.tegels = tegels;
     }
 
+    /**
+     * Opslagen en laden van speler en bord in een .bin file als object
+     */
     public Tegel[][] bordLaden() {
         // om de bestanden te kunnen lezen, we moeten hier geen inputstream.close doen aangezien we het op deze manier doen (met haakjes)
-
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(spelbestand))) {
 
             // bestand inlezen in array
@@ -314,5 +328,9 @@ public class Bord {
 
     public File getSpelerbestand() {
         return spelerbestand;
+    }
+
+    public Tegel getNieuweTegel() {
+        return nieuweTegel;
     }
 }

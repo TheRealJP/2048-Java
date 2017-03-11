@@ -1,10 +1,14 @@
 package views.menuview;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.util.Duration;
+import model.Animaties;
 import model.Bord;
 import views.nieuwspelview.NieuwSpelPresenter;
 import views.nieuwspelview.NieuwSpelView;
@@ -18,6 +22,8 @@ import java.util.Optional;
 public class MenuPresenter {
     private Bord model;
     private MenuView menuView;
+    private Animaties animaties = new Animaties();
+
 
     public MenuPresenter(Bord model, MenuView view) {
         this.model = model;
@@ -42,12 +48,11 @@ public class MenuPresenter {
         menuView.getBtnLoad().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
                 BordView bordView = new BordView();
                 model.setTegels(model.bordLaden());
                 bordView.getLblSpelerNaam().setText(model.spelerLaden().getNaam());
                 bordView.getLblCurrentScoreNumber().setText(model.spelerLaden().getScore() + "");
-                new BordPresenter(model, bordView,false); //start NIET (false) met nieuwe tegels
+                new BordPresenter(model, bordView, false); //start NIET (false) met nieuwe tegels
                 menuView.getScene().setRoot(bordView);
                 bordView.getScene().getWindow().sizeToScene();
             }
@@ -67,7 +72,7 @@ public class MenuPresenter {
             @Override
             public void handle(ActionEvent event) {
                 BordView bordViewContinue = new BordView();
-                new BordPresenter(model, bordViewContinue,false);
+                new BordPresenter(model, bordViewContinue, false);
                 menuView.getScene().setRoot(bordViewContinue);
                 bordViewContinue.getScene().getWindow().sizeToScene();
 
@@ -81,21 +86,28 @@ public class MenuPresenter {
             @Override
             public void handle(ActionEvent event) {
 
+                //als de lengte van die files niet gelijk is aan 0 (er zit dus iets in) toon alert box
                 if (!(model.getSpelbestand().length() == 0 && model.getSpelerbestand().length() == 0)) {
-                    Alert overschrijfmelding = new Alert(Alert.AlertType.CONFIRMATION);
-                    overschrijfmelding.setHeaderText("Are you sure you want to overwrite your previous save file?");
-                    overschrijfmelding.setTitle("Overwrite warning!");
 
-                    Optional<ButtonType> result = overschrijfmelding.showAndWait();
+                    //alert box
+                    Alert overschrijfMelding = new Alert(Alert.AlertType.CONFIRMATION);
+                    overschrijfMelding.setHeaderText("Are you sure you want to overwrite your previous save file?");
+                    overschrijfMelding.setTitle("Overwrite save warning!");
+
+                    Optional<ButtonType> result = overschrijfMelding.showAndWait();
                     //checken of het resultaat van de alertbox gelijk is aan buttontype "ok"
                     if (result.isPresent() && result.get() == ButtonType.OK) {
                         model.bordOpslaan(); //data opgeslagen in spel.bin
                         model.spelerOpslaan(); //data opgeslagen in speler.bin
-                    }
-                }
 
-                model.bordOpslaan(); //data opgeslagen in spel.bin
-                model.spelerOpslaan(); //data opgeslagen in speler.bin
+                        animaties.fadeTransition(menuView.getLblSaved(), true, Duration.millis(1000));
+                    }
+
+                } else {
+                    //opslaan als er WEL een lege savefile is
+                    model.bordOpslaan(); //data opgeslagen in spel.bin
+                    model.spelerOpslaan(); //data opgeslagen in speler.bin
+                }
             }
         });
 
@@ -105,10 +117,10 @@ public class MenuPresenter {
             public void handle(ActionEvent event) {
                 TopScoreView topScoreView = new TopScoreView();
 
-                if (menuView.isFirstTime()){
-                    new TopScorePresenter(model, topScoreView,"initial");
+                if (menuView.isFirstTime()) {
+                    new TopScorePresenter(model, topScoreView, "initial");
                 } else {
-                    new TopScorePresenter(model, topScoreView,"menu");
+                    new TopScorePresenter(model, topScoreView, "menu");
                 }
                 menuView.getScene().setRoot(topScoreView);
             }
