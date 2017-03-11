@@ -23,11 +23,6 @@ public class MenuView extends VBox {
         layoutNodes();
     }
 
-    public MenuView() {
-        initialiseNodes();
-        layoutNodes();
-    }
-
     private void layoutNodes() {
         setAlignment(Pos.TOP_CENTER);
         setSpacing(10);
@@ -41,6 +36,7 @@ public class MenuView extends VBox {
         btnContinue.setId("menuBtns");
         btnSave.setId("menuBtns");
         btnscoreBord.setId("menuBtns");
+        setId("menuView");
     }
 
     private void initialiseNodes() {

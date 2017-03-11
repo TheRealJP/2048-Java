@@ -30,7 +30,6 @@ public class NieuwSpelView extends BorderPane {
         setMinSize(800, 800);
         txtName.setMaxSize(250, 100);
         txtName.setFocusTraversable(true);
-        btnSpeel.setMinSize(100,40);
 
         //orientering van elementen op de borderpane
         setCenter(newGameBox);
@@ -43,6 +42,7 @@ public class NieuwSpelView extends BorderPane {
         txtName.setId("txtName");
         lblEnterName.setId("enterName");
         lblNewGame.setId("newGame");
+        btnSpeel.setId("menuBtns");
     }
 
     public TextField getTxtName() {

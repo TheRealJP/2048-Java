@@ -52,9 +52,9 @@ public class GewonnenView extends BorderPane {
         lblHighScoreNumber.setId("winHighScore");
         highscore.setId("winHighScore");
         tekstBox.setId("winLbls");
-        btnNewGame.setId("winBtns");
-        btnContinue.setId("winBtns");
-        btnExit.setId("winBtns");
+        btnNewGame.setId("menuBtns");
+        btnContinue.setId("menuBtns");
+        btnExit.setId("menuBtns");
     }
 
     public Button getBtnContinue() {
