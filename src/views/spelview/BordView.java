@@ -78,7 +78,6 @@ public class BordView extends BorderPane {
         controlsBox.getChildren().addAll(lblControls, controlPane);
 
         //tussenruimte
-        // TODO: 15/02/2017 score labels checken op invloed view
         lblSpelerNaam.setPadding(new Insets(20));
         lblCurrentScore.setPadding(new Insets(0, 20, 5, 20));
         lblHighScore.setPadding(new Insets(0, 20, 5, 20));
