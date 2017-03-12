@@ -5,6 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.input.KeyEvent;
+import javafx.util.Duration;
+import model.Animaties;
 import model.Bord;
 import model.Regels;
 import views.gewonnenview.GewonnenPresenter;
@@ -19,7 +21,7 @@ public class BordPresenter {
     private BordView view;
     private boolean firstTime;
 
-    public BordPresenter(Bord model, BordView view , boolean firstTime) {
+    public BordPresenter(Bord model, BordView view, boolean firstTime) {
         this.model = model;
         this.view = view;
         this.firstTime = firstTime;
@@ -60,7 +62,6 @@ public class BordPresenter {
                 new MenuPresenter(model, menuView);
                 view.getScene().setRoot(menuView);
                 menuView.getScene().getWindow().sizeToScene();
-
             }
         });
 
@@ -80,6 +81,9 @@ public class BordPresenter {
         view.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
+
+                /*view.gettegels.get*/
+
 
                 switch (event.getCode()) {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
@@ -109,7 +113,6 @@ public class BordPresenter {
 
                     // als het bord niet vol is, nieuwe tegel genereren
                     model.genereerNieuweTegel();
-
                     // view refreshen
                     updateView();
                 }

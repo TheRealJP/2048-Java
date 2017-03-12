@@ -23,7 +23,7 @@
 }
 
 /* NieuwSpel View */
-#enterName ,#yourScore ,#winSubTitle ,#winHighScore  {
+#enterName ,#yourScore ,#winSubTitle ,#winHighScore ,#lblSaved  {
     -fx-text-fill: #7c685e;
     -fx-font-family: sans-serif;
     -fx-font-weight: bold;
@@ -172,6 +172,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 #DOWN {
@@ -181,6 +182,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 #LEFT {
@@ -190,6 +192,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 #RIGHT {
@@ -199,6 +202,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 #UP-PRESSED {
@@ -208,6 +212,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 #DOWN-PRESSED {
@@ -217,6 +222,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 #LEFT-PRESSED {
@@ -226,6 +232,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 #RIGHT-PRESSED {
@@ -235,6 +242,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
     -fx-background-insets: 1px;
+    -fx-cursor: default;
 }
 
 /* Topscore View */

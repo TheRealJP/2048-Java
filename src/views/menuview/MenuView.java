@@ -8,6 +8,8 @@ import javafx.scene.layout.VBox;
 public class MenuView extends VBox {
     private Label lblMenu;
     private Label lbl2048;
+    private Label lblSaved;
+
     private Button btnContinue;
     private Button btnSave;
     private Button btnNew;
@@ -27,7 +29,10 @@ public class MenuView extends VBox {
         setAlignment(Pos.TOP_CENTER);
         setSpacing(10);
 
+        lblSaved.setVisible(false);
+
         //CSS
+        lblSaved.setId("lblSaved");
         lbl2048.setId("2048Title");
         lblMenu.setId("lblMenu");
         btnNew.setId("menuBtns");
@@ -49,6 +54,7 @@ public class MenuView extends VBox {
         btnNew = new Button("New Game");
         btnExit = new Button("Exit");
         btnscoreBord = new Button("Scoreboard");
+        lblSaved = new Label("Game saved");
 
         /**
             we controleren of de gebruiker naar de menu is gegaan vanuit een spel
@@ -57,7 +63,7 @@ public class MenuView extends VBox {
         if (firstTime) {
             getChildren().addAll(lbl2048, lblMenu, btnNew, btnLoad, btnscoreBord, btnExit);
         } else {
-            getChildren().addAll(lbl2048, lblMenu, btnContinue, btnSave, btnNew, btnscoreBord, btnExit);
+            getChildren().addAll(lbl2048, lblMenu, btnContinue, btnSave, btnNew, btnscoreBord, btnExit , lblSaved);
         }
     }
 
@@ -83,6 +89,10 @@ public class MenuView extends VBox {
 
     public Button getBtnscoreBord() {
         return btnscoreBord;
+    }
+
+    public Label getLblSaved() {
+        return lblSaved;
     }
 
     public boolean isFirstTime() {
