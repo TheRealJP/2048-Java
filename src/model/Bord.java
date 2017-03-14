@@ -31,8 +31,11 @@ public class Bord {
         }
     }
 
-    // genereer een tegel met een random waarde van 2 of 4 in een random positie
-    // return true als een nieuwe tegel geplaatst is, false als er geen lege tegel meer is
+    /**
+     * genereer een tegel met een random waarde van 2 of 4 in een random positie.
+     *
+     * @return true als een nieuwe tegel geplaatst is, false als er geen lege tegel meer is
+     */
     public boolean genereerNieuweTegel() {
         if (!(heeftLegeTegel())) {
             return false;
@@ -75,8 +78,9 @@ public class Bord {
      * We maken eigenlijk een list die de tegels  aan adhv de richting waar de gebruiker naar schuift,
      * wanneer de speler op een pijltje duwt , dan zal elke tegel in  de groep bestaan uit alle rijen tegels (horizontaal).
      * Hierdoor kunnen we alle tegels op de horizontale rijen in dezelfde richting doen bewegen.
+     * Deze methode wordt gebruikt in de bordPresenter klasse.
      *
-     * @param richting De parameter "richting" geeft aan in welke richting de gebruiker schuift. Deze methode wordt gebruikt in de bordPresenter klasse.
+     * @param richting geeft aan in welke richting de gebruiker schuift.
      */
     public void verplaats(Direction richting) {
         for (int i = 0; i < GROOTTE; i++) {
@@ -161,8 +165,10 @@ public class Bord {
             if (tegelSet.get(i).equals(tegelSet.get(i + 1))) {
                 tegelSet.get(i).merge(tegelSet.get(i + 1));
 
-                //score van speler verhogen met de waarde van de samengevoegde tegels
-                // aangezien de setScore methode de score automatisch optelt geven we enkel de waarde door
+                /*
+                score van speler verhogen met de waarde van de samengevoegde tegels
+                aangezien de setScore methode de score automatisch optelt geven we enkel de waarde door
+                */
                 speler.setScore(tegelSet.get(i).getWaarde());
                 //de waarde van de tegel op positie i+1 verwijderen
                 tegelSet.get(i + 1).clear();

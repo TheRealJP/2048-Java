@@ -31,7 +31,7 @@ public class TopScores {
             e.printStackTrace();
         } catch (EOFException e) {
 
-            /**
+            /*
              *  EOFException - if this input stream reaches the end before reading eight bytes. (dus als de file leeg is bv)
              *  in het geval deze exception voorkomt (en de file dus minder dan 8 bytes bevat en dus leeg is, doen we gewoon niets
              */
@@ -93,9 +93,11 @@ public class TopScores {
     // topscore ophalen
     public int getTopscore() {
 
+        Collections.sort(spelerLijst);
+
         if (spelerLijst.size() == 0) {
             return 0;
         }
-        return spelerLijst.get(0).getScore();
+        return ((spelerLijst.get(spelerLijst.size()-1).getScore()));
     }
 }
