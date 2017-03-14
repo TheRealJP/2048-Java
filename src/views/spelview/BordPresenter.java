@@ -38,7 +38,16 @@ public class BordPresenter {
 
         //voegt score & topscore toe aan label
         view.getLblCurrentScoreNumber().setText("" + model.getSpeler().getScore());
-        view.getLblHighScoreNumber().setText("" + model.getTopScores().getTopscore());
+
+        /*
+            als de topscore overschreden is door de huidige speler stellen we het topscore label hierop in
+            zodat we niet telkens de topscore moeten gaan ophalen (optimization)
+        */
+        if (model.getSpeler().getScore() > model.getTopScores().getTopscore()) {
+            view.getLblHighScoreNumber().setText("" + model.getSpeler().getScore());
+        } else {
+            view.getLblHighScoreNumber().setText("" + model.getTopScores().getTopscore());
+        }
     }
 
     private void addEventHandlers() {
@@ -72,7 +81,6 @@ public class BordPresenter {
                 regels.show();
             }
         });
-
 
         view.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override

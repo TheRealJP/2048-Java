@@ -77,12 +77,11 @@ public class TopScoreView extends BorderPane {
         // de reden dat we hier altijd met de size van de list werken is omdat er niet altijd 10 topscores zijn.
         final int aantal = spelerLijst.size();
 
-        // grootte van de arrays instellen op de lengte van de lijst TODO: Dit moet nog getest worden met minder dan 10 spelers
+        // grootte van de arrays instellen op de lengte van de lijst
         lblSpelernamen = new Label[aantal];
         lblSpelerScores = new Label[aantal];
 
         String nummer;
-        //Collections.reverse(spelerLijst); TODO: verwijderen
 
         // Labels opvullen voor elke speler
         for (int i = 0; i < aantal; i++) {
