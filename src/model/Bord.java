@@ -32,10 +32,15 @@ public class Bord {
     }
 
     /**
-     * genereer een tegel met een random waarde van 2 of 4 in een random positie.
+     * Deze klasse bevat de verzameling van tegel elementen in een 2D array
+     * die in private methodes in een List worden ingeladen en gebruikt .
+     * <p>
+     * De Bord klasse bevat ook de methodes voor het opslagen en laden van het spel en de speler.
      *
-     * @return true als een nieuwe tegel geplaatst is, false als er geen lege tegel meer is
+     * @author Jonathan Peers
+     * @version 1.0
      */
+
     public boolean genereerNieuweTegel() {
         if (!(heeftLegeTegel())) {
             return false;
@@ -74,14 +79,16 @@ public class Bord {
     }
 
     /**
-     * Dit is het hoofdalgoritme van het spel, waar al de andere methodes zitten in vervat.
-     * We maken eigenlijk een list die de tegels  aan adhv de richting waar de gebruiker naar schuift,
-     * wanneer de speler op een pijltje duwt , dan zal elke tegel in  de groep bestaan uit alle rijen tegels (horizontaal).
-     * Hierdoor kunnen we alle tegels op de horizontale rijen in dezelfde richting doen bewegen.
-     * Deze methode wordt gebruikt in de bordPresenter klasse.
+     * Dit is één van de belangrijkste hoofdmethodes, waar al de andere methodes zitten in vervat
+     * en deze wordt opgeroepen (public) in andere klassen zoals BordPresenter.
+     * <p>
+     * We maken eigenlijk een list die de tegels uit de matrix met een bepaalde positie bijhoud ,
+     * Wanneer de speler op een pijltje duwt , dan zal elke tegel in die richting bewegen.
      *
-     * @param richting geeft aan in welke richting de gebruiker schuift.
+     * @param richting: geeft aan in welke richting de gebruiker schuift.
+     * @author: Jonathan Peers
      */
+
     public void verplaats(Direction richting) {
         for (int i = 0; i < GROOTTE; i++) {
 
