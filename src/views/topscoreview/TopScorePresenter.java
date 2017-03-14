@@ -30,7 +30,6 @@ public class TopScorePresenter {
             public void handle(ActionEvent event) {
 
                 MenuView menuView;
-
                 //met deze switch (op basis van de sender die we meekrijgen bij constructor) bepalen we naar welke menu we terug moeten gaan
                 switch (sender) {
                     case "verloren":

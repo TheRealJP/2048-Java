@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import model.Speler;
+
 import java.util.ArrayList;
 
 public class TopScoreView extends BorderPane {
@@ -29,7 +30,6 @@ public class TopScoreView extends BorderPane {
     private Button menuBtn;
 
     public TopScoreView() {
-
         initialiseNodes();
         layoutNodes();
     }
@@ -37,7 +37,7 @@ public class TopScoreView extends BorderPane {
     private void initialiseNodes() {
 
         // setup labels
-        schermNaamLbl = new Label("Top scores");
+        schermNaamLbl = new Label("High scores");
         naamLbl = new Label("Name");
         scoreLbl = new Label("Score");
 

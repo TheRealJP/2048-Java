@@ -5,8 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.input.KeyEvent;
-import javafx.util.Duration;
-import model.Animaties;
 import model.Bord;
 import model.Regels;
 import views.gewonnenview.GewonnenPresenter;
@@ -55,8 +53,6 @@ public class BordPresenter {
         view.getMenu().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //slaagt eerst het huidige spel op
-//                model.spelerOpslaan();
 
                 MenuView menuView = new MenuView(false);
                 new MenuPresenter(model, menuView);
@@ -81,9 +77,6 @@ public class BordPresenter {
         view.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-
-                /*view.gettegels.get*/
-
 
                 switch (event.getCode()) {
                     // KeyCode.UP, DOWN, RIGHT, LEFT
@@ -138,6 +131,7 @@ public class BordPresenter {
             }
         });
 
+        // resetten van de kleuren van de control buttons in de view bij het loslaten v/d knop
         view.setOnKeyReleased(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {

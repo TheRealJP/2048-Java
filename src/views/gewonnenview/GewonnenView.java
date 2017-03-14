@@ -34,9 +34,9 @@ public class GewonnenView extends BorderPane {
     }
 
     private void layoutNodes() {
-        HBox highscorelbls = new HBox(highscore,lblHighScoreNumber);
+        HBox highscorelbls = new HBox(highscore, lblHighScoreNumber);
         VBox tekstBox = new VBox(reached, question, highscorelbls);
-        VBox buttonBox = new VBox(10,btnContinue, btnNewGame, btnExit);
+        VBox buttonBox = new VBox(10, btnContinue, btnNewGame, btnExit);
         VBox groupBox = new VBox(tekstBox, buttonBox);
 
         highscorelbls.setAlignment(Pos.CENTER);
