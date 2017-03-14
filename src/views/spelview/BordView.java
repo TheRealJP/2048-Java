@@ -198,6 +198,7 @@ public class BordView extends BorderPane {
         }
     }
 
+    // id instellen CSS voor veranderen van kleur knoppen tijdens press
     public void setControlButtonsColor(String direction) {
 
         switch (direction) {

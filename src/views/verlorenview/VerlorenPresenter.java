@@ -35,7 +35,7 @@ public class VerlorenPresenter {
             @Override
             public void handle(ActionEvent event) {
                 TopScoreView topScoreView = new TopScoreView();
-                new TopScorePresenter(model, topScoreView,"verloren");
+                new TopScorePresenter(model, topScoreView, "verloren");
                 verlorenView.getScene().setRoot(topScoreView);
             }
         });

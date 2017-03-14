@@ -42,7 +42,6 @@ public class Speler implements Serializable, Comparable<Speler> {
         return this.getScore() - o.getScore();
     }
 
-    // TODO: testmethode, wegdoen!
     @Override
     public String toString() {
         return String.format("%-40s %d", this.getNaam(), this.getScore());

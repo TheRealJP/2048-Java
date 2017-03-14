@@ -57,13 +57,13 @@ public class MenuView extends VBox {
         lblSaved = new Label("Game saved");
 
         /**
-            we controleren of de gebruiker naar de menu is gegaan vanuit een spel
-            of dat de gebruiker het spel net geopend heeft, we passen de menu hierop aan.
-        */
+         we controleren of de gebruiker naar de menu is gegaan vanuit een spel
+         of dat de gebruiker het spel net geopend heeft, we passen de menu hierop aan.
+         */
         if (firstTime) {
             getChildren().addAll(lbl2048, lblMenu, btnNew, btnLoad, btnscoreBord, btnExit);
         } else {
-            getChildren().addAll(lbl2048, lblMenu, btnContinue, btnSave, btnNew, btnscoreBord, btnExit , lblSaved);
+            getChildren().addAll(lbl2048, lblMenu, btnContinue, btnSave, btnNew, btnscoreBord, btnExit, lblSaved);
         }
     }
 

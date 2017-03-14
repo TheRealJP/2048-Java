@@ -2,7 +2,7 @@ package model;
 
 import java.io.Serializable;
 
-public class Tegel implements Serializable{ //serializable voor opslagen en laden van 2D Tegel array
+public class Tegel implements Serializable { //serializable voor opslagen en laden van 2D Tegel array
     private int waarde;
 
     // tegel initialiseren met een waarde van 0

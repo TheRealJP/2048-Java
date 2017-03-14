@@ -75,8 +75,8 @@ public class Bord {
      * We maken eigenlijk een list die de tegels  aan adhv de richting waar de gebruiker naar schuift,
      * wanneer de speler op een pijltje duwt , dan zal elke tegel in  de groep bestaan uit alle rijen tegels (horizontaal).
      * Hierdoor kunnen we alle tegels op de horizontale rijen in dezelfde richting doen bewegen.
-     * <p>
-     * De parameter "richting" geeft aan in welke richting de gebruiker schuift. Deze methode wordt gebruikt in de bordPresenter klasse.
+     *
+     * @param richting De parameter "richting" geeft aan in welke richting de gebruiker schuift. Deze methode wordt gebruikt in de bordPresenter klasse.
      */
     public void verplaats(Direction richting) {
         for (int i = 0; i < GROOTTE; i++) {
@@ -106,7 +106,6 @@ public class Bord {
             if (!(isLegeTegel(tegelSet))) {
                 schuif(tegelSet); // hoofdtegel groep algoritme
             }
-
             //begint aan de volgende rij
         }
     }
@@ -132,7 +131,6 @@ public class Bord {
             if (overblijvendeTegelIsNul(tegelSet, i)) {
                 return;
             }
-
             while (tegelSet.get(i).getWaarde() == 0) {
                 schuifNaar(tegelSet, i);
             }
