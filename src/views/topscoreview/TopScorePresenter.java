@@ -25,29 +25,26 @@ public class TopScorePresenter {
 
     private void addEventHandlers() {
 
-        view.getMenuBtn().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
+        view.getMenuBtn().setOnAction(event -> {
 
-                MenuView menuView;
-                //met deze switch (op basis van de sender die we meekrijgen bij constructor) bepalen we naar welke menu we terug moeten gaan
-                switch (sender) {
-                    case "verloren":
-                        VerlorenView verlorenView = new VerlorenView();
-                        new VerlorenPresenter(model, verlorenView);
-                        view.getScene().setRoot(verlorenView);
-                        break;
-                    case "initial":
-                        menuView = new MenuView(true);
-                        new MenuPresenter(model, menuView);
-                        view.getScene().setRoot(menuView);
-                        break;
-                    case "menu":
-                        menuView = new MenuView(false);
-                        new MenuPresenter(model, menuView);
-                        view.getScene().setRoot(menuView);
-                        break;
-                }
+            MenuView menuView;
+            //met deze switch (op basis van de sender die we meekrijgen bij constructor) bepalen we naar welke menu we terug moeten gaan
+            switch (sender) {
+                case "verloren":
+                    VerlorenView verlorenView = new VerlorenView();
+                    new VerlorenPresenter(model, verlorenView);
+                    view.getScene().setRoot(verlorenView);
+                    break;
+                case "initial":
+                    menuView = new MenuView(true);
+                    new MenuPresenter(model, menuView);
+                    view.getScene().setRoot(menuView);
+                    break;
+                case "menu":
+                    menuView = new MenuView(false);
+                    new MenuPresenter(model, menuView);
+                    view.getScene().setRoot(menuView);
+                    break;
             }
         });
     }

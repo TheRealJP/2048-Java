@@ -21,25 +21,18 @@ public class NieuwSpelPresenter {
         this.model = model;
         this.view = view;
         addEventHandlers();
+        addWindowEventHandlers();
     }
 
     private void addEventHandlers() {
 
         // controleren of btnspeel geklikt is, zo ja, startSpel oproepen
-        view.getBtnSpeel().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                startSpel(event);
-            }
-        });
+        view.getBtnSpeel().setOnAction(event -> startSpel(event));
 
         // controleren of enter ingedrukt is, zo ja, startSpel oproepen
-        view.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                if (event.getCode() == KeyCode.ENTER) {
-                    startSpel(event);
-                }
+        view.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                startSpel(event);
             }
         });
     }
@@ -69,22 +62,19 @@ public class NieuwSpelPresenter {
     }
 
     public void addWindowEventHandlers() {
-        view.getScene().getWindow().setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
+        view.getScene().getWindow().setOnCloseRequest(event -> {
 
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setHeaderText("Hierdoor stopt het spel!");
-                alert.setContentText("Ben je zeker?");
-                alert.setTitle("Opgelet!");
-                alert.getButtonTypes().clear();
-                ButtonType neen = new ButtonType("Neen");
-                ButtonType ja = new ButtonType("Ja");
-                alert.getButtonTypes().addAll(neen, ja);
-                alert.showAndWait();
-                if (alert.getResult() == null || alert.getResult().equals(neen)) {
-                    event.consume();
-                }
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Hierdoor stopt het spel!");
+            alert.setContentText("Ben je zeker?");
+            alert.setTitle("Opgelet!");
+            alert.getButtonTypes().clear();
+            ButtonType neen = new ButtonType("Neen");
+            ButtonType ja = new ButtonType("Ja");
+            alert.getButtonTypes().addAll(neen, ja);
+            alert.showAndWait();
+            if (alert.getResult() == null || alert.getResult().equals(neen)) {
+                event.consume();
             }
         });
     }

@@ -21,32 +21,23 @@ public class GewonnenPresenter {
     }
 
     private void addEventHandlers() {
-        view.getBtnContinue().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                BordView bordView = new BordView();
-                new BordPresenter(model, bordView, false); //start NIET (false) met nieuwe tegels
-                view.getScene().setRoot(bordView);
-                bordView.getScene().getWindow().sizeToScene();
-            }
+        view.getBtnContinue().setOnAction(event -> {
+            BordView bordView = new BordView();
+            new BordPresenter(model, bordView, false); //start NIET (false) met nieuwe tegels
+            view.getScene().setRoot(bordView);
+            bordView.getScene().getWindow().sizeToScene();
         });
 
-        view.getBtnNewGame().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
+        view.getBtnNewGame().setOnAction(event -> {
 
-                NieuwSpelView nieuwSpelView = new NieuwSpelView();
-                new NieuwSpelPresenter(model, nieuwSpelView);
-                view.getScene().setRoot(nieuwSpelView);
-                nieuwSpelView.getScene().getWindow().sizeToScene();
-            }
+            NieuwSpelView nieuwSpelView = new NieuwSpelView();
+            new NieuwSpelPresenter(model, nieuwSpelView);
+            view.getScene().setRoot(nieuwSpelView);
+            nieuwSpelView.getScene().getWindow().sizeToScene();
         });
 
-        view.getBtnExit().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Platform.exit(); //zorgt ervoor dat de javafx applicatie stopt
-            }
+        view.getBtnExit().setOnAction(event -> {
+            Platform.exit();
         });
     }
 

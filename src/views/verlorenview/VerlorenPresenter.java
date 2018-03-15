@@ -21,31 +21,22 @@ public class VerlorenPresenter {
     }
 
     private void addEventHandlers() {
-        verlorenView.getBtnNewGame().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                NieuwSpelView nieuwSpelView = new NieuwSpelView();
-                new NieuwSpelPresenter(model, nieuwSpelView);
-                verlorenView.getScene().setRoot(nieuwSpelView);
-                nieuwSpelView.getScene().getWindow().sizeToScene();
-            }
+        verlorenView.getBtnNewGame().setOnAction(event -> {
+            NieuwSpelView nieuwSpelView = new NieuwSpelView();
+            new NieuwSpelPresenter(model, nieuwSpelView);
+            verlorenView.getScene().setRoot(nieuwSpelView);
+            nieuwSpelView.getScene().getWindow().sizeToScene();
         });
 
-        verlorenView.getBtnScoreBoard().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                TopScoreView topScoreView = new TopScoreView();
-                new TopScorePresenter(model, topScoreView, "verloren");
-                verlorenView.getScene().setRoot(topScoreView);
-            }
+        verlorenView.getBtnScoreBoard().setOnAction(event -> {
+            TopScoreView topScoreView = new TopScoreView();
+            new TopScorePresenter(model, topScoreView, "verloren");
+            verlorenView.getScene().setRoot(topScoreView);
         });
 
-        verlorenView.getBtnExit().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                model.getTopScores().voegScoreToe(model.getSpeler()); // score van speler toevoegen aan topscores.
-                Platform.exit();
-            }
+        verlorenView.getBtnExit().setOnAction(event -> {
+            model.getTopScores().voegScoreToe(model.getSpeler()); // score van speler toevoegen aan topscores.
+            Platform.exit();
         });
     }
 
